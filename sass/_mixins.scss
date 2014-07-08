@@ -1,0 +1,21 @@
+@mixin transition($time) {
+	-webkit-transition: all ($time) ease;
+	-moz-transition: all ($time) ease;
+	-o-transition: all ($time) ease;
+	transition: all ($time) ease;
+}
+
+@mixin width {
+	width: 100%;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
