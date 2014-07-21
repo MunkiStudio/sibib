@@ -58,7 +58,7 @@ $c-warning: #e67e22;
           transition: $transition;
 }
 
-@mixin fade ($duration: 0.2s) {
+@mixin fade ($duration: 0.25s) {
   @include transition(opacity $duration linear, visibility $duration linear);
 }
 

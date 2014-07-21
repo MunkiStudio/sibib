@@ -49,17 +49,16 @@
 				</div>
 			</div>
 		</header>
-		<!--<div id="shadow-down">
-			<div class="container" id="news">
-				<label for="" id="welcome-date">Sábado 02 de Abril de 2011</label>
-				<br />
-				<h5><a href="#" id="welcome-title">Pellentesque rhoncus nisi quam, non ultricies velit porttitor et.</a></h5>
+		<div class="shadow-down">
+			<div class="container" id="title">
+				<label for="" class="welcome-date">Sábado 02 de Abril de 2011</label>
+				<h5><a href="#" class="welcome-title">Pellentesque rhoncus nisi quam, non ultricies velit porttitor et.</a></h5>
 				<div class="btn-main">
-					<button id="btn-left"><</button>
-					<button id="btn-right">></button>
+					<a class="btn-news"><img src="src/arrow-left.png" alt="" /></a>
+					<a class="btn-news"><img src="src/arrow-right.png" alt="" /></a>
 				</div>
 			</div>
-		</div> !-->
+		</div>
 	</div>	
 	
 	<div class="container">
@@ -84,44 +83,45 @@
 	<div class="gray-bg">
 		<div class="container">
 			<h3>Noticias</h3>
-			<div class="last-news-modulo">
-			
+			<div class="modulo-noticia">	
 				<!--Última noticia 1-->
-				<div class="last-news">
-					<div class="img-news" id="first"></div>
-					<div class="noticia">
-						<div class="info">
-							<label class="date-news-main" for="">Sábado 02 de Abril de 2011</label>
-							<hr />
-							<h5><a href="#">Pellentesque rhoncus nisi quam, non ultricies velit porttitor et.</a></h5>
-							<ul class="social">
-								<li><a href="#" class="simptip-position-top simptip-fade" data-tooltip="Comparte en Facebook"><img src="src/fb.png" alt="Facebook" /></a></li>
-								<li><a href="#" class="simptip-position-top simptip-fade" data-tooltip="Comparte en Twitter"><img src="src/tw.png" alt="Twitter" /></a></li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel quam nibh. Praesent quis metus ligula. Phasellus feugiat nec dolor vitae molestie.</p>
-						</div>
+				<div class="noticia">
+					<figure class="imagen-noticia">
+						<img src="src/foto-test.png" alt="" />
+					</figure>
+					<div class="info-noticia">
+						<label for="fecha" class="date-news-main">Domindo 20 de Febrero de 2011</label>
+						<hr />
+						<h5><a href="#">Pellentesque rhoncus nisi quam, non ultricies velit porttitor et</a></h5>
+						<ul class="social">
+							<li><a href="#" class="simptip-position-top simptip-fade" data-tooltip="Comparte en Facebook"><img src="src/fb.png" alt="Facebook" /></a></li>
+							<li><a href="#" class="simptip-position-top simptip-fade" data-tooltip="Comparte en Twitter"><img src="src/tw.png" alt="Twitter" /></a></li>
+						</ul>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel quam nibh. Praesent quis metus ligula. Phasellus feugiat nec dolor vitae molestie.</p>
 						<a class="leer-mas" href="#">Leer más</a>
 					</div>
 				</div>
 				
 				<!--Última noticia 2-->
-				<div class="last-news">
-					<div class="img-news" id="second"></div>
-					<div class="noticia">
-						<div class="info">
-							<label class="date-news-main" for="">Sábado 02 de Abril de 2011</label>
-							<hr />
-							<h5><a href="#">Pellentesque rhoncus nisi quam, non ultricies velit porttitor et.</a></h5>
-							<ul class="social">
-								<li><a href="#" class="simptip-position-top simptip-fade" data-tooltip="Comparte en Facebook"><img src="src/fb.png" alt="Facebook" /></a></li>
-								<li><a href="#" class="simptip-position-top simptip-fade" data-tooltip="Comparte en Twitter"><img src="src/tw.png" alt="Twitter" /></a></li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel quam nibh. Praesent quis metus ligula. Phasellus feugiat nec dolor vitae molestie.</p>
-						</div>
+				<div class="noticia">
+					<figure class="imagen-noticia">
+						<img src="src/foto-test2.png" alt="" />
+					</figure>
+					<div class="info-noticia">
+						<label for="fecha" class="date-news-main">Domindo 20 de Febrero de 2011</label>
+						<hr />
+						<h5><a href="#">Pellentesque rhoncus nisi quam, non ultricies velit porttitor et</a></h5>
+						<ul class="social">
+							<li><a href="#" class="simptip-position-top simptip-fade" data-tooltip="Comparte en Facebook"><img src="src/fb.png" alt="Facebook" /></a></li>
+							<li><a href="#" class="simptip-position-top simptip-fade" data-tooltip="Comparte en Twitter"><img src="src/tw.png" alt="Twitter" /></a></li>
+						</ul>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel quam nibh. Praesent quis metus ligula. Phasellus feugiat nec dolor vitae molestie.</p>
 						<a class="leer-mas" href="#">Leer más</a>
 					</div>
 				</div>
+				
 			</div>
+			
 			
 			<div class="old-news-modulo">
 				<div class="news-modulo">
@@ -197,7 +197,9 @@
 					<label id="plus" for="">+</label>
 				</div>
 				
-				<a class="btn-blue" href="#">Ver todas las noticias</a>
+				<br />
+				
+				<a class="btn-blue" id="list" href="#">Ver todas las noticias</a>
 				
 			</div>
 		</div>
