@@ -1,0 +1,73 @@
+header {
+	.main-logo-header {
+		@include gridle(2);
+		background: url('../src/logo-sibib-color.png') no-repeat center center;
+		float: left;
+		height: 102px;
+		width: 116px;
+		margin-top: 10px;
+		.main-brand-header {
+			display: none;
+		}
+	}
+	nav {
+		float: right;
+		margin-top: 50px;
+		a#main {
+			color: $gray-base;
+			text-shadow: none;
+		}
+		a#main::after {
+			background: $blue-base;
+		}
+	}
+}
+
+.nav-menu {
+	background: #EAEAEA;
+	border-top: 1px solid $gray-line;
+	border-bottom: 1px solid $gray-line;
+	margin-top: 20px;
+	padding: 10px 0;
+	nav {
+		text-align: center;
+		a {
+			@include montserrat(12px, $light-gray);
+			text-transform: uppercase;
+			text-decoration: none;
+			margin: 0 10px;
+			@include transition(0.25s);
+		}
+		a:hover{
+			color: $blue-base;
+		}
+	}
+}
+
+.title-section {
+	@include montserrat(40px, $blue-base);
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+}
+
+.title-line {
+	border: 1px solid $blue-base;
+	width: 110px;
+	margin-bottom: 30px;
+}
+
+.img-section {
+	@include gridle(5);
+}
+
+.info-section {
+	@include gridle(7);
+	p {
+		@include open-sans(400, 13px, $gray-base);
+	}
+}
+
+.img-center {
+	text-align: center;
+}

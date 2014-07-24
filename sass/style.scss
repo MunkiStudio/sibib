@@ -3,12 +3,6 @@
 @import "compass";
 @import "gridle";
 
-//fonts
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,800);
-@import url(http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps);
-@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
-
 //mixins
 
 @import 'settings';
@@ -16,6 +10,9 @@
 @import 'simtip';
 @import 'color';
 @import 'font';
+@import 'team';
+@import 'sub';
+@import 'recursos';
 @include gridle_generate_classes();
 @include gridle_register_state("tablet", 401px, 730px);
 @include gridle_register_state("giant", 1300px, null);
@@ -72,7 +69,7 @@ h3 {
 		padding: 20px 0 35px 0;
 	}
 	&#small {
-		padding: 7px 0 5px 0;
+		padding: 5px 0 5px 0;
 	}
 	&#footer {
 		padding: 40px 0 10px 0;
@@ -188,7 +185,6 @@ header {
 	.busqueda-modulo {
 		@include shadow;
 		background: white;
-		width: 100%;
 		padding: 10px;
 	}
 }
@@ -216,9 +212,17 @@ header {
 
 .gray-bg {
 	background: $gray-bg;
-	h3 {
-		text-align: center;
-	}
+}
+
+.title-center {
+	@include gridle(12);
+	text-align: center;
+}
+
+.title-depto {
+	@include gridle(12);
+	font-size: 16px;
+	margin: 15px 0;
 }
 
 .modulo-noticia {
