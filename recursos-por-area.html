@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width">
-	<title>Sistema de Bibliotecas de la Universidad Católica del Maule</title>
+	<title>SIBIB UCM - Recursos por Área</title>
 	<meta name="description" content="SIBIB UCM: Sistema de Bibliotecas de la Universidad Católica del Maule" />
 	<meta name="keywords" content="biblioteca, universidad católica del maule, talca, chile, ucm, sibib" />
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -50,40 +50,46 @@
 	
 	<div class="nav-menu">
 		<div class="container" id="small">
-			<nav>
-				<a href="#">Misión, descripción y bibliotecas</a>
-				<a href="#">Organigrama</a>
+			<nav class="nav-left">
+				<a href="#" class="nav-link">Recursos de Información</a>
+				<label>></label>
+				<label class="section-selected">Recursos por Área</label>
 			</nav>
 		</div>
 	</div>
 	
-	<div class="container">
-		<h1 class="title-section">Misión, descripción y bibliotecas</h1>
-		<hr class="title-line" />
-	</div>
-	
-	<div class="container" id="title">
-		<img class="img-section" src="src/sibib/mision.png" alt="" />
-		<div class="info-section">
-			<h3>Misión</h3>
-			<p>Al interior de la Universidad, el Sistema de Bibliotecas tiene como misión colaborar en el logro de la excelencia académica y en la formación integral humana y profesional, apoyando la docencia, investigación y extensión y facilitando a la comunidad universitaria el acceso oportuno y expedito a recursos de información, mediante la implementación de servicios de alta calidad tanto internos como externos, locales como virtuales.</p>
-		</div>
-	</div>
-	
-	<div class="gray-bg">
+	<div id="area-bg">
 		<div class="container">
-			<div class="info-section">
-				<h3>Descripción</h3>
-				<p>El Sistema de Bibliotecas de la Universidad Católica del Maule está compuesto por tres bibliotecas ubicadas en sus Campus San Miguel de Talca y en los Campus Nuestra Señora del Carmen y San Isidro de la Sede Curicó. Dispone de una infraestructura física que supera los 2.731 m2., donde se ofrecen diversos espacios para el aprendizaje, destacándose las salas de estudio grupal, áreas equipadas con tecnologías de información, disposición del material bibliográfico en estantería abierta y un sistema integrado de automatización para la entrega de un servicio más rápido y confiable.
-				<br /><br />
-				El acervo bibliográfico está compuesto por una colección de 81.486 volúmenes, 9.890 tesis y 8.215 Materiales Audiovisuales. Es parte de este sistema el Fondo Literario del Maule, ubicado en la Biblioteca Campus San Miguel de Talca.
-				<br /><br />
-				Entre los servicios que se ofrecen destacan: el Catálogo Electrónico vía web, Metabuscador de recursos de información, Préstamo de material bibliográfico, Información y referencia, Capacitación de Usuarios, Provisión de documentos, Acceso a bases de datos generales y especializadas, servicio de biblioteca virtual, boletín informativo, entre otros.</p>
+			<img src="src/icons/icon-area.png" alt="" />
+			<h1 class="title-section">Recursos por Área</h1>
+			<hr class="title-line" />
+			<label class="explanation">Elige facultad y carrera. Encuentra los recursos hechos para ti</label>
+			<br />
+			<div class="multiple-bar">
+				<select autofocus="true">
+					<option value="" disabled selected>Facultad</option>
+					<option>Test</option>
+				</select>
+				<select>
+					<option value="" disabled selected>Carrera</option>
+					<option>Test</option>
+				</select>
+				<select>
+					<option value="#" disabled selected>Tipo de Recurso</option>
+					<option>Test</option>
+				</select>
+				<a class="btn-search">
+					<img id="btn-icon" src="src/icons/icon-search-red.png" alt="" />
+				</a>
 			</div>
-			<img class="img-section" src="src/sibib/descripcion.png" alt="" />
 		</div>
 	</div>
 	
+	<div class="container">
+		
+	</div>
+	
+		
 		
 	<footer>
 		<div class="container" id="footer">	
