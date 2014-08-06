@@ -34,6 +34,15 @@ h3 {
 	margin: 0 0 25px 0;
 }
 
+#no-margin {
+	margin: 0;
+}
+
+.p-standard {
+	@include open-sans(400, 13px, $gray-base);
+	margin: 10px 0;
+}
+
 .submenu {
 	background-color: $blue-base;
 	height: 25px;
@@ -85,10 +94,7 @@ h3 {
 header {
 	.shadow{
 		height: 120px;
-		background-image: -o-linear-gradient(89deg, rgba(0,0,0,0.00) 0%, #000000 100%);
-		background-image: -moz-linear-gradient(89deg, rgba(0,0,0,0.00) 0%, #000000 100%);
-		background-image: -ms-linear-gradient(89deg, rgba(0,0,0,0.00) 0%, #000000 100%);
-		background-image: linear-gradient(-1deg, rgba(0,0,0,0.00) 0%, #000000 100%);
+		background: rgba(0, 0, 0, 0.5);
 	}
 	#logo-header{
 		@include gridle(2);
@@ -102,6 +108,7 @@ header {
 		}
 	}
 	nav {
+		@include gridle_hide(mobile tablet);
 		float: right;
 		margin-top: 50px;
 		a{
@@ -144,10 +151,10 @@ header {
 
 .shadow-down {
 	margin-top: 166px;
-	background-image: -o-linear-gradient(-89deg, rgba(0,0,0,0.00) 0%, #000000 100%);
-	background-image: -moz-linear-gradient(-89deg, rgba(0,0,0,0.00) 0%, #000000 100%);
-	background-image: -ms-linear-gradient(-89deg, rgba(0,0,0,0.00) 0%, #000000 100%);
-	background-image: linear-gradient(-179deg, rgba(0,0,0,0.00) 0%, #000000 100%);
+	background: rgba(0, 0, 0, 0.5);
+	@include gridle_state(mobile tablet) {
+		text-align: center;
+	}
 	.welcome-date {
 		@include droid-serif(13px, white);
 		text-shadow: 0px 1px 2px rgba(0,0,0,0.50);
@@ -155,6 +162,11 @@ header {
 	h5 {
 		margin: 0 0 12px 0;
 		width: 55%;
+		@include gridle_state(mobile tablet) {
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		.welcome-title {
 			@include open-sans(400, 25px, white);
 			text-shadow: 0px 1px 2px rgba(0,0,0,0.50);
@@ -183,7 +195,7 @@ header {
 .busqueda {
 	@include gridle(7);
 	.busqueda-modulo {
-		@include shadow;
+		border: 1px solid $gray-line;
 		background: white;
 		padding: 10px;
 	}
@@ -191,11 +203,13 @@ header {
 
 .destacamos {
 	@include gridle(5);
+	.links-destacamos {
+		padding: 10px;
+	}
 	.destacamos-modulo {
 		background: white;
-		@include shadow;
+		border: 1px solid $gray-line;
 		width: 100%;
-		padding: 10px;
 		a {
 			@include open-sans(400, 14px, $gray-base);
 			text-decoration: none;
@@ -204,10 +218,21 @@ header {
 		a:hover {
 			color: $blue-base;
 		}
-		hr {
-			border: 1px solid $gray-line;
-		}
 	}
+}
+
+.gray-line{
+	height: 1px;
+	background: $gray-line;
+	width: 100%;
+	margin: 10px 0;	
+}
+
+.white-line {
+	@include gridle(12);
+	height: 1px;
+	background: white;
+	margin: 10px 0;	
 }
 
 .gray-bg {
@@ -227,6 +252,7 @@ header {
 
 .modulo-noticia {
 	@include gridle(7);
+	@include gridle(12, mobile tablet);
 }
 
 .noticia {
@@ -234,113 +260,156 @@ header {
 	background-color: white;
 	padding: 0;
 	margin-bottom: 15px;
-	@include shadow;
+	border: 1px solid $gray-line;
 	.imagen-noticia {
 		@include gridle(5);
+		@include gridle(12, mobile);
 		padding: 0;
+		max-height: 248px;
 		margin: 0;
-		height: auto;
 		overflow: hidden;
 		img {
-			max-width: none;
-			min-width: 100%;
+			@include gridle_state(mobile) {
+				width: 100%;
+				height: auto;
+			}
+			max-height: 100%;
+			width: auto;
 		}
 	}
 	.info-noticia {
 		@include gridle(7);
+		@include gridle(12, mobile);
 		padding: 15px;
-		.date-news-main {
-			@include droid-serif(12px, $light-gray);
-		}
-		hr {
-			border: 1px solid $gray-line;
-			margin: 0;
-		}
-		h5 {
-			margin: 0;
-			a {
-				@include open-sans(600, 17px, $gray-base);
-				text-decoration: none;
-				@include transition(0.25s);
-			}
-			a:hover {
-				color: $blue-base;
-			}
-		}
-		.social {
-			display: inline-block;
-			padding: 0;
-			margin: 5px 0;
-			li {		
-				float: left;
-				list-style: none;
-				margin: 0 5px 0 0;
-				height: 31px;
-				img {
-					margin: 0;
-					height: 31px;
-					@include transition(0.4s); 
-				}
-				img:hover {
-					opacity: 0.85;
-					-ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=85)";
-				}
-			}
-		}
 		p {
-			@include open-sans(400, 13px, $gray-base);
 			margin: 0;
 		}
-		.leer-mas {
-			@include droid-serif(14px, $blue-base);
-			height: 2%;
-			margin-top: 10px;
-			text-decoration: none;
-			text-align: right;
-			float: right;
-			@include transition(0.25s);
+	}
+}
+
+.date-news-main {
+	@include droid-serif(12px, $light-gray);
+}
+
+.separator {
+	border: 1px solid $gray-line;
+	margin: 0;
+}
+
+.title-noticia {
+	margin: 5px 0 0 0;
+	a {
+		@include open-sans(600, 17px, $gray-base);
+		text-decoration: none;
+		@include transition(0.25s);
+	}
+	a:hover {
+		color: $blue-base;
+	}
+}
+
+.social {
+	display: inline-block;
+	padding: 0;
+	margin: 5px 0;
+	li {		
+		float: left;
+		list-style: none;
+		margin: 0 5px 0 0;
+		height: 31px;
+		img {
+			margin: 0;
+			height: 31px;
+			@include transition(0.4s); 
 		}
-		.leer-mas:hover {
-			color: darken($blue-base, 20%);
+		img:hover {
+			opacity: 0.85;
+			-ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=85)";
 		}
+	}
+}
+
+.read-more {
+	text-align: right;
+	a {
+		@include droid-serif(14px, $blue-base);
+		text-decoration: none;
+		@include transition(0.25s);
+	}
+	a:hover {
+		color: darken($blue-base, 20%);
 	}
 }
 
 .old-news-modulo {
 	@include gridle(5);
 	@include gridle(12, mobile);
-	.news-modulo {
-		display: inline;
+	@include gridle_state(tablet) {
+		width: 80%;
+		margin: 20px 10%;
+	}
+	.calendar-date{
+		@include gridle(2);
+	}
+	.calendar-title {
+		@include gridle(10);	
 		a {
 			@include open-sans(600, 16px, $gray-base);
-			margin: auto 0 auto 10px;
+			margin-top: 10px;
 			text-decoration: none;
-			width: 315px;
-			position: absolute;
 			@include transition(0.25s);
 		}
 		a:hover {
 			color: $blue-base;
 		}
-		#plus {
-			float: right;
-			color: #9B9E9E;
-			font-size: 30px;
+	}
+	.gray-line {
+		@include gridle(12);
+	}	
+}
+
+
+
+.full-noticia {
+	@include gridle(4);
+	@include gridle(6, tablet);
+	@include gridle(12, mobile);
+	.content-full-noticia {
+		margin-bottom: 20px;
+		border: 1px solid $gray-line;
+		background: white;
+	}
+	.text-full-noticia {
+		padding: 15px;
+	}
+	figure {
+		height: 200px;
+		overflow: hidden;
+		img {
+			max-width: 100%;
+			height: auto;
 		}
 	}
-	hr {
-		border: 1px solid $gray-line;
-		margin: 15px 0;
+}
+
+.main-new {
+	@include gridle(7);
+	@include gridle(12, mobile);
+	margin-bottom: 20px;
+	img {
+		width: 100%;
+		height: auto;
+		margin-top: 15px;
 	}
 }
 
 .calendar {
 	width: 45px;
 	background-color: white;
-	@include shadow;
+	border: 1px solid $gray-line;
 	border-radius: 3px;
 	overflow: hidden;
-	display: inline-block;
+	display: block;
 	.calendar-day {
 		@include droid-serif(24px, $gray-base);
 		text-align: center;
@@ -358,6 +427,7 @@ header {
 .btn-blue {
 	@include montserrat(14px, white);
 	display: block;
+	clear: both;
 	font-weight: 700;
 	padding: 10px 20px;
 	text-transform: uppercase;
@@ -367,9 +437,6 @@ header {
 	margin: 15px auto 0 auto;
 	text-decoration: none;
 	@include transition(0.25s);
-	&#list {
-		margin: 30px auto 0 auto;;
-	}
 	&:hover {
 		background-color: darken($blue-base, 20%);
 	}
@@ -439,9 +506,11 @@ footer {
 	background-color: #323232;
 	.footer-btns {
 		@include gridle(3);
+		@include gridle(12, mobile);
 	}
 	.links {
 		@include gridle(2);
+		@include gridle_hide(mobile);
 		float: right;
 		label {
 			@include montserrat(12px, white);
@@ -469,10 +538,12 @@ footer {
 	}
 	.copyright {
 		@include gridle(5);
+		@include gridle(12, mobile);
 		@include open-sans(400, 12px, white);
 	}
 	.links-footer {
 		@include gridle(5);
+		@include gridle(12, mobile);
 		float: right;
 		nav {
 			display: block;

@@ -83,9 +83,6 @@ header {
 
 .info-section {
 	@include gridle(7);
-	p {
-		@include open-sans(400, 13px, $gray-base);
-	}
 }
 
 .img-center {
