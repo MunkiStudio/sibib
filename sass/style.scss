@@ -69,6 +69,21 @@ h3 {
 	}
 }
 
+.nav-mobile {
+	margin: 30px;
+	padding: 0;
+	li {
+		list-style: none;
+		margin-bottom: 20px;
+	}
+	a {
+		@include montserrat(18px, white);
+		text-decoration: none;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+}
+
 .container {
 	@include width;
 	clear: both;
