@@ -8,6 +8,7 @@
 @import 'settings';
 @import 'mixins';
 @import 'simtip';
+@import 'slidebars';
 @import 'color';
 @import 'font';
 @import 'team';
@@ -15,6 +16,7 @@
 @import 'recursos';
 @include gridle_generate_classes();
 @include gridle_register_state("tablet", 401px, 730px);
+@include gridle_register_state("desktop", 731px, 1299px);
 @include gridle_register_state("giant", 1300px, null);
 
 
@@ -71,16 +73,16 @@ h3 {
 	@include width;
 	clear: both;
 	padding: 40px 0;
-	&#header {
+	&.header {
 		padding: 0;
 	}
-	&#title {
+	&.title {
 		padding: 20px 0 35px 0;
 	}
-	&#small {
+	&.small {
 		padding: 5px 0 5px 0;
 	}
-	&#footer {
+	&.footer {
 		padding: 40px 0 10px 0;
 	}
 }
@@ -394,7 +396,7 @@ header {
 
 .main-new {
 	@include gridle(7);
-	@include gridle(12, mobile);
+	@include gridle(12, tablet mobile);
 	margin-bottom: 20px;
 	img {
 		width: 100%;
@@ -458,6 +460,7 @@ header {
 	}
 	nav {
 		margin: 0 auto;
+		@include gridle_hide(mobile);
 		a {
 			@include montserrat(14px, white);
 			@include gridle(3);
@@ -495,10 +498,18 @@ header {
 			transform: translateY(0px);
 		}
 	}
-	img {
+	.biblioteca-map {
+		@include gridle_hide(mobile);
 		width: 100%;
 		height: auto;
 		margin: 30px 0 20px 0;
+	}
+	.biblioteca-map-small {
+		@include gridle_hide(desktop giant tablet);
+		@include gridle_show(mobile);
+		width: 90%;
+		height: auto;
+		margin: 30px auto 0 auto;
 	}
 }
 
@@ -507,11 +518,15 @@ footer {
 	.footer-btns {
 		@include gridle(3);
 		@include gridle(12, mobile);
+		@include gridle_state(mobile){
+			margin-bottom: 40px;
+		}
 	}
 	.links {
 		@include gridle(2);
 		@include gridle_hide(mobile);
 		float: right;
+		margin-bottom: 15px;
 		label {
 			@include montserrat(12px, white);
 			text-transform: uppercase;
