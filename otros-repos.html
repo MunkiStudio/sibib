@@ -33,9 +33,8 @@
 	
 	<header>
 		<div class="container header">
-			<a href="#" class="main-logo-header">
-				<div class="main-brand-header">Sistema de Bibliotecas de la Universidad Católica del Maule</div>
-			</a>
+			<a href="#"><img class="main-logo-header" src="src/logo-sibib-color.png" alt="" /></a>
+			<a href="#" ><img class="mini sb-toggle-right" src="src/mini-nav.png" alt="" /></a>
 			<nav>
 				<a id="main" href="#">Inicio</a>
 				<a id="main" href="#">Noticias</a>
@@ -144,6 +143,31 @@
 			<a href="http://www.munki.cl" target="_blank"><img src="src/logo-munki.png" alt="" /></a>
 		</div>
 	</div>
+	
+	<div class="sb-slidebar sb-right">
+		<!-- Your right Slidebar content. -->
+		<ul class="nav-mobile">
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Noticias</a></li>
+			<li><a href="#">SIBIB</a></li>
+			<li><a href="#">Recursos de Información</a></li>
+			<li><a href="#">Servicios</a></li>
+			<li><a href="#">Gestión</a></li>
+		</ul>
+	</div>
+			
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<!-- Slidebars -->
+	<script src="js/slidebars.js"></script>
+	<script>
+		(function($) {
+			$(document).ready(function() {
+				$.slidebars();
+			});
+		}) (jQuery);
+	</script>
 	
 </body>
 

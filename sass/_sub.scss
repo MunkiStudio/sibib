@@ -110,4 +110,10 @@ header {
 
 .img-center {
 	text-align: center;
+	img {
+		@include gridle_state(mobile){
+			width: 95%;
+			height: auto;
+		};
+	}
 }

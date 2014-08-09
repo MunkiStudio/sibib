@@ -53,6 +53,10 @@ h3 {
 		display: block;
 		margin-top: 3px;
 		float: right;
+		@include gridle_state(mobile){
+			float: none;
+			text-align: center;
+		};
 		a {
 			@include montserrat(12px, white);
 			margin-left: 10px;
@@ -570,12 +574,16 @@ footer {
 		@include gridle(5);
 		@include gridle(12, mobile);
 		@include open-sans(400, 12px, white);
+		@include gridle_state(mobile){
+			text-align: center;
+		};
 	}
 	.links-footer {
 		@include gridle(5);
 		@include gridle(12, mobile);
 		float: right;
 		nav {
+			@include gridle_hide(mobile);
 			display: block;
 			float: right;
 			a {
@@ -594,6 +602,9 @@ footer {
 .munki-footer {
 	background: #232323;
 	text-align: right;
+	@include gridle_state(mobile tablet){
+		text-align: center;
+	};
 	img {
 		width: 21px;
 		height: auto;
