@@ -80,11 +80,14 @@ h3 {
 		list-style: none;
 		margin-bottom: 20px;
 	}
-	a {
+	.mobile-link {
 		@include montserrat(18px, white);
 		text-decoration: none;
 		text-transform: uppercase;
 		margin-bottom: 15px;
+	}
+	.mobile-selected {
+		color: darken($blue-base, 20%);
 	}
 }
 
@@ -480,6 +483,15 @@ header {
 	nav {
 		margin: 0 auto;
 		@include gridle_hide(mobile);
+		label {
+			@include montserrat(14px, darken($blue-base, 20%));
+			@include gridle(3);
+			text-align: center;
+			text-transform: uppercase;
+			padding: 5px 0;
+			position: relative;
+			display: inline-block;
+		}
 		a {
 			@include montserrat(14px, white);
 			@include gridle(3);

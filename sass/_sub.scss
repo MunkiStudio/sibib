@@ -13,14 +13,22 @@ header {
 	nav {
 		float: right;
 		margin-top: 50px;
-		a#main {
+		a.main {
 			color: $gray-base;
 			text-shadow: none;
 		}
-		a#main::after {
+		a.main::after {
 			background: $blue-base;
 		}
 	}
+}
+
+.selected {
+	@include montserrat(13px, $blue-base);
+	text-transform: uppercase;
+	margin-left: 50px;
+	position: relative;
+	display: inline-block;
 }
 
 .mini {
