@@ -960,7 +960,16 @@ html.sb-static .sb-slidebar,
       font-family: 'Open Sans', Helvetica, Arial, sans-serif;
       font-weight: 400;
       font-size: 13px;
-      color: #8d8d8d; }
+      color: #8d8d8d;
+      text-decoration: none;
+      -webkit-transition: 0.25s;
+      -moz-transition: 0.25s;
+      -o-transition: 0.25s;
+      -ms-transition: 0.25s;
+      transition: 0.25s; }
+    /* line 37, ../sass/_team.scss */
+    .equipo .info-equipo a:hover {
+      color: #1a85db; }
 
 /* line 2, ../sass/_sub.scss */
 header .main-logo-header {
