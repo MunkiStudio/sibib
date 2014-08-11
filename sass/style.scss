@@ -611,6 +611,17 @@ footer {
 	}
 }
 
+.btn-contacto {
+	@include gridle(3);
+	text-align: center;
+	margin-top: 15px;
+	@include transition(0.25s);
+	&:hover { 
+		opacity: 0.5;
+		-ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	}
+}
+
 .munki-footer {
 	background: #232323;
 	text-align: right;
