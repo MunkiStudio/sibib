@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width">
-	<title>Sistema de Bibliotecas de la Universidad Católica del Maule</title>
+	<title>SIBIB UCM - Revistas Electrónicas</title>
 	<meta name="description" content="SIBIB UCM: Sistema de Bibliotecas de la Universidad Católica del Maule" />
 	<meta name="keywords" content="biblioteca, universidad católica del maule, talca, chile, ucm, sibib" />
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -39,8 +39,8 @@
 				<a class="main" href="index.html">Inicio</a>
 				<a class="main" href="noticias.html">Noticias</a>
 				<a class="main" href="sibib.html">SIBIB</a>
-				<a class="main" href="recursos.html">Recursos de Información</a>
-				<label class="selected">Servicios</label>
+				<label class="selected">Recursos de Información</label>
+				<a class="main" href="capacitaciones.html">Servicios</a>
 				<a class="main" href="informacion.html">Gestión</a>
 			</nav>
 		</div>
@@ -49,110 +49,41 @@
 	
 	<div class="nav-menu">
 		<div class="container small">
-			<nav>
-				<a href="capacitaciones.html" class="nav-link">Capacitaciones</a>
-				<a href="credenciales.html" class="nav-link">Credenciales</a>
-				<label class="section-selected">Actualidad</label>
+			<nav class="nav-left">
+				<a href="recursos.html" class="nav-link">Recursos de Información</a>
+				<label>></label>
+				<label class="section-selected">Revistas Electrónicas</label>
 			</nav>
 		</div>
 	</div>
 	
-	<div class="container">
-		<h1 class="title-section">Actualidad</h1>
-		<hr class="title-line" />
+	<div id="revistas-bg">
+		<div class="container">
+			<img src="src/icons/icon-revistas.png" alt="" />
+			<h1 class="title-section">Revistas Electrónicas</h1>
+			<hr class="title-line" />
+			<label class="explanation">Elige facultad y carrera. Encuentra los recursos hechos para ti</label>
+			<br />
+			<div class="multiple-bar">
+				<select>
+					<option value="" disabled selected>Facultad</option>
+					<option>Test</option>
+				</select>
+				<select>
+					<option value="" disabled selected>Carrera</option>
+					<option>Test</option>
+				</select>
+				<a class="btn-search">
+					<img id="btn-icon" src="src/icons/icon-search-blue.png" alt="" />
+				</a>
+			</div>
+		</div>
 	</div>
 	
-	<div class="container small">
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link">
-					<img src="src/otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
-		</a>
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link">
-					<img src="src/otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
-		</a>
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link">
-					<img src="src/otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
-		</a>
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link">
-					<img src="src/otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
-		</a>
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link">
-					<img src="src/otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
-		</a>
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link">
-					<img src="src/otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
-		</a>
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link">
-					<img src="src/otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
-		</a>
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link">
-					<img src="src/otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
-		</a>
-	</div>	
+	<div class="container">
 		
+	</div>
+	
 	<footer>
 		<div class="container footer">	
 			<div>
@@ -229,9 +160,9 @@
 			<li><a class="mobile-link" href="index.html">Inicio</a></li>
 			<li><a class="mobile-link" href="noticias.html">Noticias</a></li>
 			<li><a class="mobile-link" href="sibib.html">SIBIB</a></li>
-			<li><a class="mobile-link" href="recursos.html">Recursos de Información</a></li>
-			<li><label class="mobile-link mobile-selected">Servicios</label></li>
-			<li><a class="mobile-link">Gestión</a></li>
+			<li><label class="mobile-link mobile-selected">Recursos de Información</label></li>
+			<li><a class="mobile-link" href="capacitaciones.html">Servicios</a></li>
+			<li><a class="mobile-link" href="informacion.html">Gestión</a></li>
 		</ul>
 	</div>
 			

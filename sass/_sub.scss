@@ -23,6 +23,10 @@ header {
 	}
 }
 
+.content-link {
+	padding: 0 10px 10px 10px;
+}
+
 .selected {
 	@include montserrat(13px, $blue-base);
 	text-transform: uppercase;
