@@ -8,6 +8,7 @@
 @import 'settings';
 @import 'mixins';
 @import 'simtip';
+@import 'slidebars';
 @import 'color';
 @import 'font';
 @import 'team';
@@ -15,6 +16,7 @@
 @import 'recursos';
 @include gridle_generate_classes();
 @include gridle_register_state("tablet", 401px, 730px);
+@include gridle_register_state("desktop", 731px, 1299px);
 @include gridle_register_state("giant", 1300px, null);
 
 
@@ -51,6 +53,10 @@ h3 {
 		display: block;
 		margin-top: 3px;
 		float: right;
+		@include gridle_state(mobile){
+			float: none;
+			text-align: center;
+		};
 		a {
 			@include montserrat(12px, white);
 			margin-left: 10px;
@@ -67,20 +73,38 @@ h3 {
 	}
 }
 
+.nav-mobile {
+	margin: 30px;
+	padding: 0;
+	li {
+		list-style: none;
+		margin-bottom: 20px;
+	}
+	.mobile-link {
+		@include montserrat(18px, white);
+		text-decoration: none;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+	.mobile-selected {
+		color: darken($blue-base, 20%);
+	}
+}
+
 .container {
 	@include width;
 	clear: both;
 	padding: 40px 0;
-	&#header {
+	&.header {
 		padding: 0;
 	}
-	&#title {
+	&.title {
 		padding: 20px 0 35px 0;
 	}
-	&#small {
+	&.small {
 		padding: 5px 0 5px 0;
 	}
-	&#footer {
+	&.footer {
 		padding: 40px 0 10px 0;
 	}
 }
@@ -394,7 +418,7 @@ header {
 
 .main-new {
 	@include gridle(7);
-	@include gridle(12, mobile);
+	@include gridle(12, tablet mobile);
 	margin-bottom: 20px;
 	img {
 		width: 100%;
@@ -458,6 +482,16 @@ header {
 	}
 	nav {
 		margin: 0 auto;
+		@include gridle_hide(mobile);
+		label {
+			@include montserrat(14px, darken($blue-base, 20%));
+			@include gridle(3);
+			text-align: center;
+			text-transform: uppercase;
+			padding: 5px 0;
+			position: relative;
+			display: inline-block;
+		}
 		a {
 			@include montserrat(14px, white);
 			@include gridle(3);
@@ -495,10 +529,18 @@ header {
 			transform: translateY(0px);
 		}
 	}
-	img {
+	.biblioteca-map {
+		@include gridle_hide(mobile);
 		width: 100%;
 		height: auto;
 		margin: 30px 0 20px 0;
+	}
+	.biblioteca-map-small {
+		@include gridle_hide(desktop giant tablet);
+		@include gridle_show(mobile);
+		width: 90%;
+		height: auto;
+		margin: 30px auto 0 auto;
 	}
 }
 
@@ -507,11 +549,15 @@ footer {
 	.footer-btns {
 		@include gridle(3);
 		@include gridle(12, mobile);
+		@include gridle_state(mobile){
+			margin-bottom: 40px;
+		}
 	}
 	.links {
 		@include gridle(2);
 		@include gridle_hide(mobile);
 		float: right;
+		margin-bottom: 15px;
 		label {
 			@include montserrat(12px, white);
 			text-transform: uppercase;
@@ -540,12 +586,16 @@ footer {
 		@include gridle(5);
 		@include gridle(12, mobile);
 		@include open-sans(400, 12px, white);
+		@include gridle_state(mobile){
+			text-align: center;
+		};
 	}
 	.links-footer {
 		@include gridle(5);
 		@include gridle(12, mobile);
 		float: right;
 		nav {
+			@include gridle_hide(mobile);
 			display: block;
 			float: right;
 			a {
@@ -561,9 +611,23 @@ footer {
 	}
 }
 
+.btn-contacto {
+	@include gridle(3);
+	text-align: center;
+	margin-top: 15px;
+	@include transition(0.25s);
+	&:hover { 
+		opacity: 0.5;
+		-ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	}
+}
+
 .munki-footer {
 	background: #232323;
 	text-align: right;
+	@include gridle_state(mobile tablet){
+		text-align: center;
+	};
 	img {
 		width: 21px;
 		height: auto;

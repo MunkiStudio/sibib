@@ -21,9 +21,8 @@
 </head>
 
 <body>
-
 	<div class="submenu">
-		<div class="container" id="header">
+		<div class="container header">
 			<nav>
 				<a href="#">Formulario Online</a>
 				<a href="#">Alumni</a>
@@ -32,27 +31,26 @@
 	</div>
 	
 	<header>
-		<div class="container" id="header">
-			<a href="#" class="main-logo-header">
-				<div class="main-brand-header">Sistema de Bibliotecas de la Universidad Católica del Maule</div>
-			</a>
+		<div class="container header">
+			<a href="index.html"><img class="main-logo-header" src="src/logo-sibib-color.png" alt="" /></a>
+			<a href="#" ><img class="mini sb-toggle-right" src="src/mini-nav.png" alt="" /></a>
 			<nav>
-				<a id="main" href="/">Inicio</a>
-				<a id="main" href="/noticias.html">Noticias</a>
-				<a id="main" href="/sibib.html">SIBIB</a>
-				<a id="main" href="#">Recursos de Información</a>
-				<a id="main" href="#">Servicios</a>
-				<a id="main" href="#">Gestión</a>
+				<a class="main" href="index.html">Inicio</a>
+				<a class="main" href="noticias.html">Noticias</a>
+				<label class="selected">SIBIB</label>
+				<a class="main" href="recursos.html">Recursos de Información</a>
+				<a class="main" href="capacitaciones.html">Servicios</a>
+				<a class="main" href="informacion.html">Gestión</a>
 			</nav>
 		</div>
 	</header>
 	
 	
 	<div class="nav-menu">
-		<div class="container" id="small">
+		<div class="container small">
 			<nav>
 				<label class="section-selected">Misión & descripción</label>
-				<a href="/organigrama.html" class="nav-link">Organigrama</a>
+				<a href="organigrama.html" class="nav-link">Organigrama & Equipo</a>
 			</nav>
 		</div>
 	</div>
@@ -62,7 +60,7 @@
 		<hr class="title-line" />
 	</div>
 	
-	<div class="container" id="title">
+	<div class="container title">
 		<img class="img-section" src="src/sibib/mision.png" alt="" />
 		<div class="info-section">
 			<h3>Misión</h3>
@@ -86,26 +84,30 @@
 	
 		
 	<footer>
-		<div class="container" id="footer">	
+		<div class="container footer">	
 			<div>
 				<div class="footer-btns">
 					<a href="#" class="btn-blue">Alumni</a>
 					<a href="#" class="btn-blue">Formulario Online</a>
+					<div class="btn-contacto"></div>
+					<a class="btn-contacto" href="#"><img src="src/btn-fb-white.png" alt="" /></a>
+					<a class="btn-contacto" href="#"><img src="src/btn-mail-white.png" alt="" /></a>
+					<div class="btn-contacto"></div>
 				</div>
 				<div class="links">
 					<label for="">Gestión</label>
 					<ul>
-						<li><a href="#">Formulario Solicitud de Compra</a></li>
+						<li><a href="#">Solicitud de Bibliografia</a></li>
 						<li><a href="#">Últimos Títulos Adquiridos</a></li>
 					</ul>
 				</div>
 				<div class="links">
 					<label for="">Servicios</label>
 					<ul>
-						<li><a href="/capacitaciones.html">Capacitaciones</a></li>
+						<li><a href="capacitaciones.html">Capacitaciones</a></li>
 						<li><a href="#">Formulario online</a></li>
-						<li><a href="/credenciales.html">Credenciales</a></li>
-						<li><a href="/actualidad.html">Actualidad</a></li>
+						<li><a href="credenciales.html">Credenciales</a></li>
+						<li><a href="actualidad.html">Actualidad</a></li>
 					</ul>
 				</div>
 				<div class="links">
@@ -115,19 +117,19 @@
 						<li><a href="#">Revistas electrónicas</a></li>
 						<li><a href="#">Catálogo UCM</a></li>
 						<li><a href="#">Otros catálogos</a></li>
-						<li><a href="#">Recursos por área</a></li>
-						<li><a href="/ebooks.html">eBooks</a></li>
+						<li><a href="recursos-por-area.html">Recursos por área</a></li>
+						<li><a href="ebooks.html">eBooks</a></li>
 						<li><a href="#">Repositorio UCM</a></li>
-						<li><a href="/otros-repos.html">Otros repositorios</a></li>
+						<li><a href="otros-repos.html">Otros repositorios</a></li>
 					</ul>
 				</div>
 				<div class="links">
 					<label for="">SIBIB</label>
 					<ul>
-						<li><a href="#">Misión</a></li>
-						<li><a href="#">Descripción</a></li>
-						<li><a href="/organigrama">Organigrama</a></li>
-						<li><a href="#">Equipo</a></li>
+						<li><a href="sibib.html">Misión</a></li>
+						<li><a href="sibib.html">Descripción</a></li>
+						<li><a href="organigrama.html">Organigrama</a></li>
+						<li><a href="organigrama.html">Equipo</a></li>
 					</ul>
 				</div>
 			</div>
@@ -144,11 +146,37 @@
 			</div>
 		</div>
 	</footer>
+	
 	<div class="munki-footer">
-		<div class="container" id="small">
+		<div class="container small">
 			<a href="http://www.munki.cl" target="_blank"><img src="src/logo-munki.png" alt="" /></a>
 		</div>
 	</div>
+	
+	<div class="sb-slidebar sb-right">
+		<!-- Your right Slidebar content. -->
+		<ul class="nav-mobile">
+			<li><a class="mobile-link" href="index.html">Inicio</a></li>
+			<li><a class="mobile-link" href="noticias.html">Noticias</a></li>
+			<li><label class="mobile-link mobile-selected">SIBIB</label></li>
+			<li><a class="mobile-link" href="recursos.html">Recursos de Información</a></li>
+			<li><a class="mobile-link" href="capacitaciones.html">Servicios</a></li>
+			<li><a class="mobile-link" href="informacion.html">Gestión</a></li>
+		</ul>
+	</div>
+			
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<!-- Slidebars -->
+	<script src="js/slidebars.js"></script>
+	<script>
+		(function($) {
+			$(document).ready(function() {
+				$.slidebars();
+			});
+		}) (jQuery);
+	</script>
 	
 </body>
 

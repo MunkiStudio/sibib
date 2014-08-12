@@ -51,6 +51,9 @@
 #revistas {
 	background: #316C9E;
 }
+.revistas {
+	background: #316C9E;
+}
 #ebooks {
 	background: #44ABD5;
 	text-align: center;
@@ -84,8 +87,27 @@
 	}
 }
 
+.explanation {
+	@include droid-serif(18px, white);
+}
+
 #repo-bg {
 	background: #6C5D93;
+	text-align: center;
+	img {
+		width: 70px;
+		height: auto;
+	}
+	h1 {
+		color: white;
+	}
+	hr {
+		border-color: white;
+	}
+}
+
+#datos-bg {
+	background: #5BBAB4;
 	text-align: center;
 	img {
 		width: 70px;
@@ -113,8 +135,21 @@
 		border-color: white;
 		margin-bottom: 5px;
 	}
-	.explanation {
-		@include droid-serif(18px, white);
+}
+
+#revistas-bg {
+	background: #316C9E;
+	text-align: center;
+	img {
+		width: 70px;
+		height: auto;
+	}
+	h1 {
+		color: white;
+	}
+	hr {
+		border-color: white;
+		margin-bottom: 5px;
 	}
 }
 

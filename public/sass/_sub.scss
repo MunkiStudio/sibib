@@ -1,26 +1,46 @@
 header {
 	.main-logo-header {
 		@include gridle(2);
-		background: url('../src/logo-sibib-color.png') no-repeat center center;
+		@include gridle_state(mobile) {
+			height: 90px;
+			width: auto;
+		};
 		float: left;
-		height: 102px;
-		width: 116px;
 		margin-top: 10px;
-		.main-brand-header {
-			display: none;
-		}
+		height: 102px;
+		width: auto;
 	}
 	nav {
 		float: right;
 		margin-top: 50px;
-		a#main {
+		a.main {
 			color: $gray-base;
 			text-shadow: none;
 		}
-		a#main::after {
+		a.main::after {
 			background: $blue-base;
 		}
 	}
+}
+
+.content-link {
+	padding: 0 10px 10px 10px;
+}
+
+.selected {
+	@include montserrat(13px, $blue-base);
+	text-transform: uppercase;
+	margin-left: 50px;
+	position: relative;
+	display: inline-block;
+}
+
+.mini {
+	@include gridle_hide(desktop giant);
+	@include gridle_show(mobile tablet);
+	float: right;
+	display: none;
+	margin: 35px 10px 0 0;
 }
 
 .nav-menu {
@@ -79,12 +99,33 @@ header {
 
 .img-section {
 	@include gridle(5);
+	@include gridle(12, mobile);
+	@include gridle_state(mobile) {
+		margin: 0 auto 15px auto;
+	};
 }
 
 .info-section {
 	@include gridle(7);
+	@include gridle(12, mobile);
+	@include gridle_state(mobile) {
+		margin: 0 auto 15px auto;
+		h3 {
+			text-align: center;
+		}
+		p {
+			width: 95%;
+			margin: 0 auto;
+		}
+	};
 }
 
 .img-center {
 	text-align: center;
+	img {
+		@include gridle_state(mobile){
+			width: 95%;
+			height: auto;
+		};
+	}
 }
