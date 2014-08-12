@@ -1,0 +1,8 @@
+deploy:
+  provider: heroku
+  api_key:
+    secure: pGWF/LJwyVJdWmveslCjxiOf0WLVwZMm0grF/3FozEC8CI3MxYERPU/CFSedlWx/7F9aCbiAY2MzNlra0ws9AAGEkQl3V1hG51huQschuo3pN9koVb8qrKAM9gUwaD/wxX9OmNhPOJApwpJHTEcXKijxv/YdfGHYK+gpkJ/Ryx4=
+  app: sibib
+  on:
+    repo: MunkiStudio/sibib
+    branch: static
