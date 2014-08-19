@@ -45,6 +45,12 @@ h3 {
 	margin: 10px 0;
 }
 
+.p-noticia {
+	@include open-sans(400, 16px, $gray-base);
+	line-height: 1.5em;
+	margin: 10px 0;
+}
+
 .submenu {
 	background-color: $blue-base;
 	height: 25px;
@@ -200,21 +206,26 @@ header {
 			text-decoration: underline;
 		}
 	}
-	.btn-main {
-		margin-top: 20px;
-		.btn-news {
-			border: 1px solid white;
-			padding: 7px 10px 4px 10px;
-			color: white;
-			margin: 0;
-			cursor: pointer;
-			@include transition(0.4s);
-		}
-		.btn-news:hover {
-			background: rgba(255, 255, 255, .5);
-		}	
+}
+
+.btn-main {
+	margin-top: 20px;
+	@include gridle_state(mobile tablet){
+		text-align: center;
 	}
 }
+
+.btn-news {
+	border: 1px solid white;
+	padding: 7px 10px 4px 10px;
+	color: white;
+	margin: 0;
+	cursor: pointer;
+	@include transition(0.4s);
+}
+.btn-news:hover {
+	background: rgba(255, 255, 255, .5);
+}	
 
 .busqueda {
 	@include gridle(7);
@@ -329,6 +340,12 @@ header {
 	}
 	a:hover {
 		color: $blue-base;
+	}
+}
+
+.title-detalle {
+	a {
+		font-size: 26px;
 	}
 }
 
@@ -530,17 +547,26 @@ header {
 		}
 	}
 	.biblioteca-map {
-		@include gridle_hide(mobile);
+		@include gridle_hide(mobile tablet);
 		width: 100%;
 		height: auto;
 		margin: 30px 0 20px 0;
 	}
+	.biblioteca-map-medium {
+		@include gridle_hide(desktop giant mobile);
+		@include gridle_show(tablet);
+		width: 90%;
+		margin: auto;
+		padding-top: 30px;
+	}
 	.biblioteca-map-small {
 		@include gridle_hide(desktop giant tablet);
 		@include gridle_show(mobile);
-		width: 90%;
-		height: auto;
+	}
+	.map-small {
 		margin: 30px auto 0 auto;
+		width: 95%;
+		height: auto;
 	}
 }
 
