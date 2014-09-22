@@ -1,3 +1,2 @@
 source 'https://rubygems.org'
-gem 'rack'
-gem 'vienna'
+gem 'compass', '~> 0.12.6'
