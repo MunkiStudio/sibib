@@ -7568,7 +7568,7 @@ header nav a:focus::after {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/msdark\/Development\/munki\/sibib\/static\/app\/styles\/main\.scss}line{font-family:\00003182}}
 .shadow-down {
-  margin-top: 166px;
+  margin-top: 188px;
   background: rgba(0, 0, 0, 0.5);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/msdark\/Development\/munki\/sibib\/static\/bower_components\/gridle\/sass\/gridle\/_gridle\.scss}line{font-family:\00003815}}
@@ -8943,3 +8943,48 @@ html.tablet .munki-footer {
   opacity: 0.5;
   -ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
+
+.pagination {
+  margin-top: 30px;
+  text-align: center; }
+  .pagination a{
+    text-decoration:none;
+    color: #4A4A4A;
+  }
+  .pagination span {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #4A4A4A;
+    text-decoration: none;
+    padding: 6px 12px;
+    margin: 0 3px;
+    border-radius: 20px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s; }
+    .pagination a:hover {
+      background: #9bccf3;
+      color: white; }
+    .pagination .active {
+      background: #1A85DB;
+      color: white; }
+    .pagination .nav-disabled {
+      padding: 6px 4px;
+      border-radius: 20px;
+      background: none;
+      border: 1px solid #979797;
+      color: #979797;
+      cursor: default; }
+    .pagination .nav-enabled {
+      padding: 6px 4px;
+      border-radius: 20px;
+      background: none;
+      border: 1px solid #4A4A4A;
+      color: #4A4A4A; }
+      .pagination .nav-enabled:hover {
+        border: 1px solid #9bccf3;
+        background: #9bccf3;
+        color: white; }

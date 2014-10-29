@@ -72,3 +72,9 @@
 		</div>
 	<?php endforeach; ?>
 </div>
+<div class="container">
+		<nav class="pagination">
+			<?php echo $links; ?>
+			
+		</nav>
+	</div>
