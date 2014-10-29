@@ -50,7 +50,9 @@
 	</div>
 	
 	<div class="container">
-		
+		<?php if(sizeof($ebooks) <= 0):?>
+			No se encontraron resultados
+		<?php endif; ?>
 		<?php foreach($ebooks as $ebook ): ?>
 		<div class="ebook">
 			<figure>
@@ -64,3 +66,11 @@
 		<?php endforeach; ?>
 		
 	</div>
+	<?php if(isset($links)): ?>
+	<div class="container">
+		<nav class="pagination">
+			<?php echo $links; ?>
+			
+		</nav>
+	</div>
+	<?php endif; ?>

@@ -41,6 +41,27 @@
 $route['default_controller'] = "home";
 $route['404_override'] = '';
 
+/** Front**/
+$route['noticias/(:num)'] = 'noticias/index/$1';
+$route['ebooks/(:num)'] = 'ebooks/index/$1';
+
+/** Admin **/
+$route['admin'] = "admin/admin";
+
+$route['admin/noticias'] = "admin/admin_noticias";
+$route['admin/noticias/(:num)'] = "admin/admin_noticias/edit/$1";
+$route['admin/noticias/delete'] = "admin/admin_noticias/delete";
+$route['admin/noticias/new'] = "admin/admin_noticias/add";
+$route['admin/noticias/save'] = "admin/admin_noticias/save";
+
+
+$route['admin/ebooks'] = "admin/admin_ebooks";
+$route['admin/ebooks/(:num)'] = "admin/admin_ebooks/edit/$1";
+$route['admin/ebooks/delete'] = "admin/admin_ebooks/delete";
+$route['admin/ebooks/new'] = "admin/admin_ebooks/add";
+$route['admin/ebooks/save'] = "admin/admin_ebooks/save";
+
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -17,7 +17,7 @@ class Home extends CI_Controller {
 
 		$noticias = $this->news->limit(2)->get_all();
 		$noticias_sidebar = $this->news->limit(6,2)->get_all();
-		$noticias_header = $this->news->limit(1)->get_all();
+		$noticias_header = $this->news->limit(2)->get_all();
 		$data = array(
 			'images_folder' => '/resources/images/',
 			'noticias' => $noticias,
