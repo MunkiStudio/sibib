@@ -14,9 +14,16 @@ class Noticias extends CI_Controller {
 	
 	public function index()
 	{
+		$this->load->library('pagination');
+		$this->load->config('pagination');
+		$config['total_rows'] = $this->news->count_all();
+		$config['base_url'] = base_url('/noticias');
+		$config['uri_segment'] = 2;
+		$this->pagination->initialize($config);
 		$data = array(
 			'images_folder' => '/resources/images/',
-			'noticias' => $this->news->limit(20)->get_all()
+			'noticias' => $this->news->limit($this->config->item('per_page'),$this->uri->segment(2))->get_all(),
+			'links' => $this->pagination->create_links()
 		);
 		$this->load->view('noticias',$data);
 	}

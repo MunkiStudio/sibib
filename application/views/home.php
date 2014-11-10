@@ -26,27 +26,42 @@
       </div>
     </div>
   </header>
-  <div class="shadow-down slider">
-
-    <?php foreach($noticias_header as $noticia): ?>
-      <div class="slider__wrapper">
-        <div class="container title slider__item">
-          <label for="" class="welcome-date"><?php echo mdate("%l %d de %F %Y", strtotime($noticia->fecha)) ?></label>
-          <h5><a href="#" class="welcome-title"><?php echo $noticia->titulo ?></a></h5>
-          <div class="btn-main">
-            <a class="btn-news slider_left"><img src="<?php echo $images_folder ?>arrow-left.png" alt="" /></a>
-            <a class="btn-news slider_right"><img src="<?php echo $images_folder ?>arrow-right.png" alt="" /></a>
-          </div>
+  <div class="shadow-down">
+    
+    <div class="container title">
+      <div class="slider">
+        <div class="slider__wrapper">
+          <?php foreach($noticias_header as $noticia): ?>
+            <div class="slider__item">
+              <label for="" class="welcome-date"><?php echo mdate("%l %d de %F %Y", strtotime($noticia->fecha)) ?></label>
+              <h5><a href="#" class="welcome-title"><?php echo $noticia->titulo ?></a></h5>
+            </div>
+          <?php endforeach; ?>    
         </div>
       </div>
-    <?php endforeach; ?>
+      <div class="btn-main">
+        <a class="btn-news slider_left"><img src="<?php echo $images_folder ?>arrow-left.png" alt="" /></a>
+        <a class="btn-news slider_right"><img src="<?php echo $images_folder ?>arrow-right.png" alt="" /></a>
+      </div>
+    </div>
+    
+    
   </div>
 </div>  
 
 <div class="container">
   <div class="busqueda">
     <h3>Búsqueda</h3>
-    <div class="busqueda-modulo"></div>
+    <div class="busqueda-modulo">
+      <form id="ebsco">
+        <input id="ebscohostwindow" type="hidden" value="1">
+        <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&custid=s7053667&groupid=main&profid=eds&mode=bool&lang=es&authtype=ip,guest,uid" />
+        <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
+        <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
+        <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
+        
+      </form>
+    </div>
   </div>
   <div class="destacamos">
     <h3>Destacamos</h3>
