@@ -1019,6 +1019,7 @@ html.tablet .equipo .img-equipo {
   overflow: hidden;
   border-radius: 55px;
   background-color: #444444;
+  margin-left:15px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/msdark\/Development\/munki\/sibib\/static\/app\/styles\/_team\.scss}line{font-family:\0000314}}
 .equipo .img-equipo figure img {
@@ -7362,7 +7363,7 @@ h3 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
-  color: #444444;
+  color: #444444 !important;
   margin: 10px 0;
 }
 

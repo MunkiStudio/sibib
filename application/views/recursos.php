@@ -13,12 +13,12 @@
 			<a href="index.html"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
 			<a href="#" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
 			<nav>
-				<a class="main" href="index.html">Inicio</a>
-				<a class="main" href="noticias.html">Noticias</a>
-				<a class="main" href="sibib.html">SIBIB</a>
+				<a class="main" href="/">Inicio</a>
+				<a class="main" href="noticias">Noticias</a>
+				<a class="main" href="sibib">SIBIB</a>
 				<label class="selected">Recursos de Información</label>
-				<a class="main" href="capacitaciones.html">Servicios</a>
-				<a class="main" href="informacion.html">Gestión</a>
+				<a class="main" href="capacitaciones">Servicios</a>
+				<a class="main" href="informacion">Gestión</a>
 			</nav>
 		</div>
 	</header>

@@ -6,14 +6,14 @@ class Ebook_model extends MY_Model{
 		array('field' => 'titulo',
 			'label' => 'titulo',
 			'rules' => 'required'),
-		array('field' => 'descripcion',
-			'label' => 'descripcion',
-			'rules' => 'required'),
 		array('field' => 'autor',
 			'label' => 'autor',
 			'rules' => 'required'),
 		array('field' => 'url',
 			'label' => 'url',
+			'rules' => 'required'),
+		array('field' => 'year',
+			'label' => 'year',
 			'rules' => 'required')
 	);
 

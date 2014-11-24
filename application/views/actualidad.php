@@ -28,8 +28,8 @@
 <div class="nav-menu">
 	<div class="container small">
 		<nav>
-			<a href="capacitaciones.html" class="nav-link">Capacitaciones</a>
-			<a href="credenciales.html" class="nav-link">Credenciales</a>
+			<a href="/capacitaciones" class="nav-link">Capacitaciones</a>
+			<a href="/credenciales" class="nav-link">Credenciales</a>
 			<label class="section-selected">Actualidad</label>
 		</nav>
 	</div>

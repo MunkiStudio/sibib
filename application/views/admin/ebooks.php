@@ -12,6 +12,15 @@
 	</div>
 </header>
 
+<?php if($errors): ?>
+<div class="container">
+	<ul>
+	<?php foreach($errors as $error): ?>
+		<li><?php echo $error; ?></li>
+	<?php endforeach; ?>
+	</ul>
+</div>
+<?php endif; ?>
 <div class="container">
 
 	<div class="buttons-container">
@@ -29,12 +38,12 @@
 			</tr>
 			<?php foreach($ebooks as $ebook): ?>
 			<tr class="table-content">
-				<td><input type="checkbox" name="select_news" value="<?php echo $ebook->ID;?>" /></td>
+				<td><input type="checkbox" name="select_news" value="<?php echo $ebook->id;?>" /></td>
 				<td><?php echo $ebook->titulo; ?></td> 
 				<td>
-					<a href="/admin/ebooks/<?php echo $ebook->ID;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
+					<a href="/admin/ebooks/<?php echo $ebook->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
 					<form method="POST" action="/admin/ebooks/delete" class="list-inline">
-					<input type="hidden" value="<?php echo $ebook->ID?>" name="id" >
+					<input type="hidden" value="<?php echo $ebook->id?>" name="id" >
 					<button type="submit" class="simptip-position-top simptip-fade delete" data-tooltip="Eliminar"><img src="<?php echo base_url() ?>resources/images/admin/delete.png" alt="Borrar" /></button>
 					</form>
 				</td>

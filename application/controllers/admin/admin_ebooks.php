@@ -15,7 +15,8 @@ class Admin_ebooks extends My_Controller {
 		parent::index();
         $data = array(
 			'ebooks' => $this->model->limit($this->config->item('per_page'), $this->uri->segment(3))->get_all(),
-			'links' => $this->pagination->create_links()
+			'links' => $this->pagination->create_links(),
+			'errors' => $this->session->flashdata('error')
 		);
 		$this->load->view('/admin/ebooks',$data);	
 	}
@@ -52,33 +53,46 @@ class Admin_ebooks extends My_Controller {
 		parent::save();
 		if($_SERVER['REQUEST_METHOD']==='POST'){
 			$data = $this->input->post(NULL,TRUE);
+			
 			$insert = array(
 				'titulo' => $data['titulo'],
 				'autor' => $data['autor'],
 				'url' => $data['url'],
 				'year' => $data['year'],
+				'descripcion' => $data['descripcion']
 			);
-			if(isset($data['imagen'])){
-				$config['upload_path'] = './uploads/';
-				$config['allowed_types'] = 'gif|jpg|png';
-				$this->load->library('upload', $config);	
-				$result = $this->upload->do_upload();
-				if(!$result){
-					$error = array('error' => $this->upload->display_errors());
-					$this->session->set_flashdata('error',$error);
-					redirect('/admin/ebooks/new');	
+			
+			$config['upload_path'] = './uploads/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$this->load->library('upload', $config);	
+			$result = $this->upload->do_upload('imagen');
+			if(!$result){
+				$error = array('error' => $this->upload->display_errors());
+				$this->session->set_flashdata('error',$error);
+				if(isset($data['id'])){
+					redirect("/admin/ebooks/{$data['id']}");	
 				}else{
-					$image_data = array('upload_data' => $this->upload->data());
-					$insert['imagen'] = $image_data['full_path'];
+					redirect('/admin/ebooks/new');	
 				}
+				
+			}else{
+				$image_data = $this->upload->data();
+				$insert['imagen'] = $image_data['file_name'];
 			}
+			
 			if(isset($data['id'])){
 				$this->model->update($data['id'],$insert);
 			}else{
-				$this->model->insert($insert);	
+				$result = $this->model->insert($insert);	
+				if(!$result){
+					$this->session->set_flashdata('error','Required fields');	
+					$this->load->view('/admin/ebook',$data);
+					return;		
+				}
+				
 			}
-			
 		}
+		
 		redirect('/admin/ebooks',true);
 	}
 
@@ -86,7 +100,7 @@ class Admin_ebooks extends My_Controller {
 		parent::delete();
 		if($_SERVER['REQUEST_METHOD']==='POST'){
 			$id =$this->input->post('id',TRUE);
-			$this->news->delete($id);
+			$this->model->delete($id);
 		}
 		redirect('/admin/ebooks');
 	}

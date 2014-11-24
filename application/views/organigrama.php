@@ -9,15 +9,15 @@
 	
 	<header>
 		<div class="container header">
-			<a href="index.html"><img class="main-logo-header" src="src/logo-sibib-color.png" alt="" /></a>
-			<a href="#" ><img class="mini sb-toggle-right" src="src/mini-nav.png" alt="" /></a>
+			<a href="/"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
+			<a href="#" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
 			<nav>
-				<a class="main" href="index.html">Inicio</a>
-				<a class="main" href="noticias.html">Noticias</a>
+				<a class="main" href="/">Inicio</a>
+				<a class="main" href="noticias">Noticias</a>
 				<label class="selected">SIBIB</label>
-				<a class="main" href="recursos.html">Recursos de Información</a>
-				<a class="main" href="capacitaciones.html">Servicios</a>
-				<a class="main" href="informacion.html">Gestión</a>
+				<a class="main" href="recursos">Recursos de Información</a>
+				<a class="main" href="capacitaciones">Servicios</a>
+				<a class="main" href="informacion">Gestión</a>
 			</nav>
 		</div>
 	</header>
@@ -40,7 +40,7 @@
 	<div class="container title">
 		<h3 class="title-center">Organigrama</h3>
 		<div class="img-center">
-			<img src="src/sibib/organigrama.png" alt="" />
+			<img src="<?php echo $images_folder ?>sibib/organigrama.png" alt="" />
 		</div>
 	</div>
 	
@@ -53,7 +53,7 @@
 			<div class="equipo">
 				<div class="img-equipo">
 					<figure>
-						<img src="src/sibib/equipo/Pilar Goberna.jpg" alt="" />
+						<img src="<?php echo $images_folder ?>sibib/equipo/Pilar Goberna.jpg" alt="" />
 					</figure>
 				</div>
 				<div class="info-equipo">
@@ -69,7 +69,7 @@
 			<div class="equipo">
 				<div class="img-equipo">
 					<figure>
-						<img src="src/sibib/equipo/Lorena Castro.jpg" alt="" />
+						<img src="<?php echo $images_folder ?>sibib/equipo/Lorena Castro.jpg" alt="" />
 					</figure>
 				</div>
 				<div class="info-equipo">
@@ -87,7 +87,7 @@
 			<div class="equipo">
 				<div class="img-equipo">
 					<figure>
-						<img src="src/sibib/equipo/Lluvisa Soto.jpg" alt="" />
+						<img src="<?php echo $images_folder ?>sibib/equipo/Lluvisa Soto.jpg" alt="" />
 					</figure>
 				</div>
 				<div class="info-equipo">
@@ -103,7 +103,7 @@
 			<div class="equipo">
 				<div class="img-equipo">
 					<figure>
-						<img src="src/sibib/equipo/María Teresa Sánchez.jpg" alt="" />
+						<img src="<?php echo $images_folder ?>sibib/equipo/María Teresa Sánchez.jpg" alt="" />
 					</figure>
 				</div>
 				<div class="info-equipo">

@@ -54,15 +54,21 @@
 			No se encontraron resultados
 		<?php endif; ?>
 		<?php foreach($ebooks as $ebook ): ?>
+		<a href="<?php echo $ebook->url; ?>">
 		<div class="ebook">
 			<figure>
-				<img src="<?php echo $images_folder ?>cover-ebooks/cover-test.png" alt="" />
+				<?php if($ebook->imagen): ?>
+					<img src="<?php echo "/uploads/{$ebook->imagen}";?>" alt="" />
+				<?php else: ?>
+					<img src="<?php echo $images_folder ?>cover-ebooks/cover-test.png" alt="" />
+				<?php endif; ?>
 			</figure>
 			<label for="" class="title-ebook"><?php echo $ebook->titulo;?></label>
 			<hr />
 			<label for="" class="author-ebook"><?php echo $ebook->autor;?></label>
-			<p class="p-standard"<?php echo $ebook->descripcion;?></p>
+			<div class="p-standard"><?php echo $ebook->descripcion;?></div>
 		</div>
+		</a>
 		<?php endforeach; ?>
 		
 	</div>

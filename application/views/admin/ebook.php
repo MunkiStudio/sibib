@@ -13,7 +13,11 @@
 </header>
 <?php if($errors): ?>
 <div class="container">
-	<h2><?php echo $errors; ?>
+	<ul>
+	<?php foreach($errors as $error): ?>
+		<li><?php echo $error; ?></li>
+	<?php endforeach; ?>
+	</ul>
 </div>
 <?php endif; ?>
 <div class="container">
@@ -25,7 +29,7 @@
 		<?php if($ebook): ?>
 		<span class="btn-right">
 			<form method="POST" action="/admin/noticias/delete">
-			<input type="hidden" value="<?php echo $ebook->ID?>" name="id" >
+			<input type="hidden" value="<?php echo $ebook->id?>" name="id" >
 			<button type="submit" class="buttons btn-secondary"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</button>
 			</form>
 		</span>
@@ -33,7 +37,7 @@
 	</div>
 	<form method="post" action="/admin/ebooks/save" enctype="multipart/form-data" />
 		<?php if($ebook): ?>
-			<input type="hidden" name="id" value="<?php echo $ebook->ID;?>">
+			<input type="hidden" name="id" value="<?php echo $ebook->id;?>">
 		<?php endif; ?>
 		<div class="inputs">
 			<label>Link ebook</label>
@@ -41,7 +45,7 @@
 		</div>
 		<div class="inputs">
 			<label>Imagen portada</label>
-			<input type="file" name="imagen"/>
+			<input type="file" name="imagen" />
 		</div>
 		<div class="inputs">
 			<label>Título</label>
@@ -55,7 +59,12 @@
 			<label>Año</label>
 			<input name="year" type="number" value="<?php echo ($ebook) ? $ebook->year: ""?>"/>
 		</div>
-		
+		<div class="inputs">
+			<label>Descripción</label>
+			<textarea class="giant ckeditor" name="descripcion">
+				<?php if($ebook){ echo $ebook->descripcion; }?>
+			</textarea>
+		</div>
 		<div class="save">
 			<input type="submit" class="buttons btn-primary" value="Guardar">
 			<input type="reset" class="buttons btn-secondary" value="Cancelar">
