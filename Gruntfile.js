@@ -33,8 +33,8 @@ module.exports = function (grunt) {
         yeoman: yeomanConfig,
         watch: {
             styles: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-                tasks: ['copy:styles', 'autoprefixer']
+                files: ['<%= yeoman.app %>/sass/{,*/}*.scss'],
+                tasks: ['compass', 'autoprefixer']
             }
         },
         autoprefixer: {
