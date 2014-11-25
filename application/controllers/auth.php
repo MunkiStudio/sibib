@@ -83,6 +83,8 @@ class Auth extends CI_Controller
 						foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
 					}
 				}
+			}else{
+				$errors['invalid'] = 'Form invalid';
 			}
 			$data['show_captcha'] = FALSE;
 			if ($this->tank_auth->is_max_login_attempts_exceeded($login)) {
@@ -93,6 +95,7 @@ class Auth extends CI_Controller
 					$data['captcha_html'] = $this->_create_captcha();
 				}
 			}
+			
 			$this->load->view('admin/login', $data);
 			
 		}

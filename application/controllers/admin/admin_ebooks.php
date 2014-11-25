@@ -13,6 +13,7 @@ class Admin_ebooks extends My_Controller {
 
 	function index(){
 		parent::index();
+		$this->flickrInit();
         $data = array(
 			'ebooks' => $this->model->limit($this->config->item('per_page'), $this->uri->segment(3))->get_all(),
 			'links' => $this->pagination->create_links(),
@@ -43,7 +44,8 @@ class Admin_ebooks extends My_Controller {
 	function add(){
 		parent::add();
 		$data = array(
-			'errors' => $this->session->flashdata('error'),
+			'errors' => $this->session->flashdata('errors'),
+			'token' => $this->session->flashdata('token'),
 			'ebook'=>false
 		);
 		$this->load->view('/admin/ebook',$data);	
@@ -62,22 +64,13 @@ class Admin_ebooks extends My_Controller {
 				'descripcion' => $data['descripcion']
 			);
 			
-			$config['upload_path'] = './uploads/';
-			$config['allowed_types'] = 'gif|jpg|png';
-			$this->load->library('upload', $config);	
-			$result = $this->upload->do_upload('imagen');
-			if(!$result){
-				$error = array('error' => $this->upload->display_errors());
-				$this->session->set_flashdata('error',$error);
-				if(isset($data['id'])){
-					redirect("/admin/ebooks/{$data['id']}");	
-				}else{
-					redirect('/admin/ebooks/new');	
-				}
-				
+			$result = $this->uploadImage($insert['titulo'],$insert['descripcion']);
+			if(!$result['error']){
+				$insert['imagen'] =  $result['data'];
 			}else{
-				$image_data = $this->upload->data();
-				$insert['imagen'] = $image_data['file_name'];
+				$error = array('error' => $result['error']);
+				$this->session->set_flashdata('errors',$error);
+				redirect('/admin/ebooks/new');	
 			}
 			
 			if(isset($data['id'])){

@@ -14,7 +14,11 @@
 
 <?php if($errors): ?>
 <div class="container">
-	<h2><?php echo $errors; ?>
+	<ul>
+	<?php foreach($errors as $error): ?>
+		<li><?php echo $error; ?></li>
+	<?php endforeach; ?>
+	</ul>
 </div>
 <?php endif; ?>
 <div class="container">

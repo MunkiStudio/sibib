@@ -58,7 +58,7 @@
 		<div class="ebook">
 			<figure>
 				<?php if($ebook->imagen): ?>
-					<img src="<?php echo "/uploads/{$ebook->imagen}";?>" alt="" />
+					<img src="<?php echo $ebook->imagen;?>" alt="" />
 				<?php else: ?>
 					<img src="<?php echo $images_folder ?>cover-ebooks/cover-test.png" alt="" />
 				<?php endif; ?>

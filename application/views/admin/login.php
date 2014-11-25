@@ -3,6 +3,15 @@
 		<h2>Administración SIBIB</h2>
 	</div>
 </header>
+<?php if($errors): ?>
+<div class="container">
+	<ul>
+	<?php foreach($errors as $error): ?>
+		<li><?php echo $error; ?></li>
+	<?php endforeach; ?>
+	</ul>
+</div>
+<?php endif; ?>
 <div class="container login">
 	<form method="post" action="/auth/login">
 	<h1>Login</h1>

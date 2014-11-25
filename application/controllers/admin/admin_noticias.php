@@ -55,19 +55,13 @@ class Admin_noticias extends MY_Controller {
 				'titulo' => $data['titulo'],
 				'contenido' => $data['contenido'],
 			);
-			if(isset($data['imagen'])){
-				$config['upload_path'] = './uploads/';
-				$config['allowed_types'] = 'gif|jpg|png';
-				$this->load->library('upload', $config);	
-				$result = $this->upload->do_upload();
-				if(!$result){
-					$error = array('error' => $this->upload->display_errors());
-					$this->session->set_flashdata('error',$error);
-					redirect('/admin/noticias/new');	
-				}else{
-					$image_data = array('upload_data' => $this->upload->data());
-					$insert['imagen'] = $image_data['full_path'];
-				}
+			$result = $this->uploadImage($insert['titulo']);
+			if(!$result['error']){
+				$insert['imagen'] =  $result['data'];
+			}else{
+				$error = array('error' => $result['error']);
+				$this->session->set_flashdata('errors',$error);
+				redirect('/admin/noticias/new');	
 			}
 			if(isset($data['id'])){
 				$this->model->update($data['id'],$insert);

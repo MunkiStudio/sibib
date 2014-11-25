@@ -1,0 +1,305 @@
+//frameworks
+//@import "compass";
+//@import "gridle";
+
+//mixins
+
+@import "colors";
+@import "font";
+@import "mixins";
+@import "settings";
+@import "simtip";
+@include gridle_generate_classes();
+@include gridle_register_state("tablet", 401px, 730px);
+@include gridle_register_state("desktop", 731px, 1299px);
+@include gridle_register_state("giant", 1300px, null);
+
+
+//style
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	background: $blue;
+	height: 80px;
+	margin-bottom: 50px;
+	h2 {
+		margin: 0;
+		text-align: center;
+		padding: 30px 0 20px 0;
+		@include montserrat(24px, white);
+		text-transform: uppercase;
+	}
+	h1 {
+		@include gridle(8);
+		margin: 0;
+		padding: 30px 0 20px 0;
+		@include montserrat(24px, white);
+		text-transform: uppercase;
+		a {
+			text-decoration: none;
+			color: white;
+			@include transition(0.3s);
+			&:hover {
+				color: darken($blue, 20%);
+			}
+		}
+	}
+}
+
+.container {
+	width: 1100px;
+	margin: auto;
+}
+
+.head-button {
+	@include gridle_float(right);
+	margin-left: 20px;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 10px;
+	height: 40px;
+	width: 40px;
+	padding: 10px;
+	border-radius: 30px;
+	@include transition(0.4s);
+	cursor: pointer;
+	p {
+		@include open-sans(400, 12px, white);
+		display: block;
+		cursor: pointer;
+		margin: 0;
+	}
+	&:hover {
+		background: darken($blue, 8%);
+	}
+}
+
+.sections {
+	@include gridle(3);
+	margin: 10px 0;
+	cursor: pointer;
+	a {
+		text-decoration: none;
+	}
+	.btn-section {
+		border-radius: 5px;
+		background: lighten($gray, 60%);
+		height: 120px;
+		text-align: center;
+		@include transition(0.4s);
+		h4 {
+			@include montserrat(15px, $gray);
+			font-weight: 600;
+			padding-top: 50px;
+			margin: 0;
+			text-transform: uppercase;
+		}
+		&:hover {
+			background: lighten($gray, 50%);
+		}
+	}
+}
+
+.buttons-container {
+	margin-bottom: 30px;
+}
+
+.buttons {
+	height: 38px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 600;
+	@include transition(0.4s);
+	border-radius: 5px;
+	margin-right: 5px;
+	padding: 15px 30px;
+	img {
+		margin-right: 10px;
+	}
+}
+
+.btn-primary {
+	@include montserrat(16px, white);
+	background: $blue;
+	&:hover {
+		background: darken($blue, 8%);
+	}
+}
+
+.btn-secondary {
+	@include montserrat(16px, $gray);
+	background: lighten($gray, 60%);
+	&:hover {
+		background: lighten($gray, 50%);
+	}
+}
+
+.btn-right {
+	float: right;
+}
+
+table {
+	width: 100%;
+	text-align: left;
+}
+
+td, th {
+	padding: 5px 15px;
+}
+
+td {
+	@include open-sans(400, 14px, $gray);
+	a {
+		padding: 10px;
+	}
+}
+
+th {
+	@include open-sans(600, 14px, $gray);
+}
+
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.table-content:first-child {
+	border-top: 1px solid #333;
+}
+
+.table-content:last-child {
+	border-bottom: 1px solid #333;
+}
+
+.check {
+	width: 2%;
+}
+
+.title {
+	width: 83%;
+}
+
+.actions {
+	width: 15%;
+}
+
+.inputs {
+	margin-top: 15px;
+	label {
+		@include open-sans(600, 14px, $gray);
+		@include gridle(2);
+		padding-top: 10px;
+	}
+	input, .giant, .medium {
+		border: 1px solid lighten($gray, 30%);
+		height: 15px;
+		width: 400px;
+		padding: 10px;
+		@include open-sans(400, 14px, $gray);
+	}
+	.giant {
+		@include gridle(10);
+		height: 300px;
+		padding: 10px;
+	}
+	.medium {
+		width: 400px;
+		height: 200px;
+		max-width: 400px;
+		max-height: 200px;
+		padding: 10px;
+	}
+}
+
+.save {
+	margin-top: 30px;
+	margin-left: 16.6%;
+	display: inline-block;
+}
+
+.login {
+	text-align: center;
+	h1 {
+		@include montserrat(22px, $blue);
+		text-transform: uppercase;
+	}
+	input {
+		border: 1px solid lighten($gray, 30%);
+		height: 15px;
+		width: 300px;
+		margin: 5px 0;
+		padding: 10px;
+		@include open-sans(400, 14px, $gray);
+	}
+	.button-login {
+		display: inline-block;
+		margin-top: 30px;
+	}
+}
+
+.pagination {
+	margin-top: 30px;
+	text-align: center;
+	a {
+		@include open-sans(400, 15px, $gray);
+		text-decoration: none;
+		padding: 6px 12px;
+		margin: 0 3px;
+		border-radius: 20px;
+		@include transition(0.3s);
+		&:hover {
+			background: lighten($blue, 30%);
+			color: white;
+		}
+		&.active {
+			background: $blue;
+			color: white;
+		}
+		&.nav-disabled {
+			background: none;
+			border: 1px solid lighten($gray, 30%);
+			color: lighten($gray, 30%);
+			cursor: default;
+		}
+		&.nav-enabled {
+			background: none;
+			border: 1px solid $gray;
+			color: $gray;
+			&:hover {
+				border: 1px solid lighten($blue, 30%);
+				background: lighten($blue, 30%);
+				color: white;
+			}
+		}
+	}
+}
+#cke_contenido,#cke_descripcion{
+  width: 83.33333% !important;
+  margin-left: 184px !important;
+}
+
+form{
+  margin-bottom:50px;
+}
+form.list-inline{
+  position: relative;
+  float: right;
+  top: 7px;
+  margin-bottom: -30px;
+  margin-right: 20px;
+}
+
+button.delete{
+  border: 0;
+  background: transparent;
+  margin-left: 5px;
+}

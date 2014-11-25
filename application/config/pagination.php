@@ -15,4 +15,4 @@ $config['cur_tag_open'] = '<span class="active">';
 $config['cur_tag_close'] = '</span>';
 $config['num_tag_open'] = '<span>';
 $config['num_tag_close'] = '</span>';
-$config['per_page'] = 1;
+$config['per_page'] = 20;

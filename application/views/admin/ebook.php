@@ -11,6 +11,7 @@
 		</a>
 	</div>
 </header>
+
 <?php if($errors): ?>
 <div class="container">
 	<ul>

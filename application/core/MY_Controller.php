@@ -19,6 +19,42 @@ class MY_Controller extends CI_Controller{
 		$this->base_url = null;
 	}
 
+	protected function flickrInit(){
+		$this->load->library('phpFlickr');
+		$api_key = $this->config->item('flickr_key');
+		$secret = $this->config->item('flickr_secret');
+		$this->phpflickr->api_key = $api_key;
+    	$this->phpflickr->secret = $secret;
+    	$this->phpflickr->setToken($this->config->item('flickr_token'));
+    }
+
+    protected function uploadImage($title,$descripcion){
+    	$config['upload_path'] = './uploads/';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$this->load->library('upload', $config);
+		$result = $this->upload->do_upload('imagen');
+		if(!$result){
+			$error = array('error' => $this->upload->display_errors());
+			return array('error'=>$error,'data'=>null);
+			
+		}else{
+			$image_data = $this->upload->data();
+			$path = $image_data['full_path'];
+			$this->flickrInit();
+			$data = $this->phpflickr->sync_upload($path,$title,$descripcion);
+			if($data == -1){
+				return array('error'=>$data = 'Sorry, your server must support CURL in order to upload files'
+				,'data' =>null);
+			}elseif($data == false){
+				return array('error'=>$this->phpflickr->error_msg,'data' =>null);
+			}else{
+				unlink($path);	
+
+			}
+			$data = $this->phpflickr->photos_getSizes($data);
+			return array('error'=>false,'data' =>$data[5]['source']);
+		}	
+    }
 
     protected function put(){
 		parse_str(file_get_contents('php://input'), $this->_put_args);

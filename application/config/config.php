@@ -358,5 +358,12 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+/*
+Flickr Data
+*/
+$config['flickr_key'] = 'a6534b26e160c55f9494a90f451afe32';
+$config['flickr_secret'] = 'ac3f57da78e73bd2';
+$config['flickr_token'] = '72157649039617358-1d7c5d7fc8ed732c';
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */
