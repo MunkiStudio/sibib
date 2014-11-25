@@ -15,6 +15,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="icon" type="img/ico" href="src/icon.png">
 	<script src="js/modernizr.custom.js"></script>
@@ -63,10 +64,30 @@
 	</div>	
 	
 	<div class="container">
+		<!-- DESDE AQUI COMIENZA EL BUSCADOR, UTILIZA EL CSS DEL ARCHIVO 'search.css', también hay dos nuevos archivos de imagenes: 'logo-search-blue.png' y 'search-icon.png' -->
 		<div class="busqueda">
 			<h3>Búsqueda</h3>
-			<div class="busqueda-modulo"></div>
+			<div class="busqueda-modulo">
+					<span class="logo-search">
+						<img src="src/logo-search-blue.png">
+					</span>
+					<span class="title-search">
+						<h4>Buscador del Sistema de Bibliotecas</h4>
+						<input type="text" name="#" placeholder="¿Qué estás buscando?">
+					</span>
+					<div class="filters">
+						<input type="radio" name="filtros1" value="Palabra Clave"> Palabra Clave
+						<input type="radio" name="filtros1" value="Título" checked> Título
+						<input type="radio" name="filtros1" value="Autor"> Autor
+					</div>
+					<div class="gray-line"></div>
+					<div class="filters">
+						<input type="checkbox" name="option1" value="#"> Sólo catálogo
+						<input type="checkbox" name="option2" value="#"> Disponible en SIBIB
+					</div>
+			</div>
 		</div>
+		<!-- HASTA ACÁ -->
 		<div class="destacamos">
 			<h3>Destacamos</h3>
 			<div class="destacamos-modulo">
