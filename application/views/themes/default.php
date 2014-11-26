@@ -11,9 +11,7 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="<?php echo base_url() ?>resources/styles/slidebars.min.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>resources/styles/glide.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>resources/styles/main.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>resources/styles/style.css">
     <!-- endbuild -->
   </head>
   <body>
@@ -118,18 +116,13 @@
 
     
     <!--[if lt IE 9]>
-    <script src="<?php echo base_url() ?>resources/scripts/es5-shim.min.js"></script>
-    <script src="<?php echo base_url() ?>resources/scripts/json3.min.js"></script>
+    <script src="<?php echo base_url() ?>resources/scripts/ie.js"></script>
     <![endif]-->
     
 
     
-    <script src="<?php echo base_url() ?>resources/scripts/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>resources/scripts/slidebars.min.js"></script>
-    <script src="<?php echo base_url() ?>resources/scripts/jquery.glide.min.js"></script>
-    <script src="http://support.ebsco.com/eit/scripts/ebscohostsearch.js" async></script>
     <script src="<?php echo base_url() ?>resources/scripts/main.js"></script>
-    
+    <script src="http://support.ebsco.com/eit/scripts/ebscohostsearch.js"></script>
     
 </body>
 

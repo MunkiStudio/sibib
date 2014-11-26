@@ -50,7 +50,7 @@
 </div>  
 
 <div class="container">
-  <div class="busqueda">
+  <!-- <div class="busqueda">
     <h3>Búsqueda</h3>
     <div class="busqueda-modulo">
       <form id="ebsco">
@@ -62,7 +62,37 @@
         
       </form>
     </div>
-  </div>
+  </div> -->
+  <div class="busqueda">
+      <h3>Búsqueda</h3>
+      <div class="busqueda-modulo">
+          <span class="logo-search">
+            <img src="<?php echo $images_folder ?>/logo-search-blue.png">
+          </span>
+          <form id="ebscoSearch" method="post">
+              <input id="ebscohostwindow" type="hidden" value="1">
+              <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&custid=s7053667&groupid=main&profid=eds&mode=bool&lang=es&authtype=ip,guest,uid" />
+              <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
+              <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
+              <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
+
+             <span class="title-search">
+              <h4>Buscador del Sistema de Bibliotecas</h4>
+              <input id="ebscohostsearchtext" name="ebscohostsearchtext" placeholder="¿Qué estás buscando?">
+            </span>
+            <div class="filters">
+              <input type="radio" name="searchFieldSelector" id="guidedField_0" value="Palabra Clave"> Palabra Clave
+              <input type="radio" name="searchFieldSelector" id="guidedField_1" value="Título" checked> Título
+              <input type="radio" name="searchFieldSelector" id="guidedField_2" value="Autor"> Autor
+            </div>
+            <div class="gray-line"></div>
+            <div class="filters">
+              <input type="checkbox" name="chkCatalogOnly" id="chkCatalogOnly" value="#"> Sólo catálogo
+              <input type="checkbox" name="chkLibraryCollection" id="chkLibraryCollection" value="#"> Disponible en SIBIB
+            </div>
+          </form>
+      </div>
+    </div>
   <div class="destacamos">
     <h3>Destacamos</h3>
     <div class="destacamos-modulo">
@@ -107,18 +137,18 @@
         <div class="info-noticia">
           <label for="fecha" class="date-news-main"><?php echo mdate("%l %d de %F %Y",strtotime($noticia->fecha)) ?></label>
           <div class="gray-line"></div>
-          <h5 class="title-noticia"><a href="/noticias/show/<?php echo $noticia->ID; ?>"><?php echo $noticia->titulo ?></a></h5>
+          <h5 class="title-noticia"><a href="/noticias/show/<?php echo $noticia->id; ?>"><?php echo $noticia->titulo ?></a></h5>
           <ul class="social">
             <li>
               <a href="http://www.facebook.com/sharer.php?s=100&p[title]=<?php echo $noticia->titulo?>
-                &p[url]=<?php site_url('noticias/show/')+$noticia->ID?>
+                &p[url]=<?php site_url('noticias/show/')+$noticia->id?>
                 &p[images][0]=<?php echo $noticia->imagen?>"
                 class="simptip-position-top simptip-fade" data-tooltip="Comparte en Facebook">
                 <img src="<?php echo $images_folder ?>fb.png" alt="Facebook" />
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/share?url=<?php site_url('noticias/show/')+$noticia->ID?>
+              <a href="https://twitter.com/share?url=<?php site_url('noticias/show/')+$noticia->id?>
               &text=<?php echo $noticia->titulo?>&via=sibib&hashtags=UCM,SIBIB" 
                 class="simptip-position-top simptip-fade" data-tooltip="Comparte en Twitter">
                 <img src="<?php echo $images_folder ?>tw.png" alt="Twitter" />
@@ -126,7 +156,7 @@
             </li>
           </ul>
           <p class="p-standard"><?php echo word_limiter($noticia->contenido,20) ?></p>
-          <div class="read-more"><a href="/noticias/show/<?php echo $noticia->ID; ?>">Leer más →</a></div>
+          <div class="read-more"><a href="/noticias/show/<?php echo $noticia->id; ?>">Leer más →</a></div>
         </div>
       </div>
     <?php endforeach; ?>
@@ -147,7 +177,7 @@
         </div>
       </div>
       <div class="calendar-title">
-        <a href="/noticias/show/<?php echo $noticia->ID; ?>"><?php echo $noticia->titulo ?></a>
+        <a href="/noticias/show/<?php echo $noticia->id; ?>"><?php echo $noticia->titulo ?></a>
       </div>
 
       <div class="gray-line"></div>

@@ -1,12 +1,4 @@
 'use strict';
-var LIVERELOAD_PORT = 35729;
-var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
-var mountFolder = function (connect, dir) {
-    return connect.static(require('path').resolve(dir));
-};
-
-//create proxy for grunt server
-var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
 
 // # Globbing
 // for performance reasons we're only matching one level down:
@@ -52,8 +44,19 @@ module.exports = function (grunt) {
         },
        concat:{
        	dist:{
-       		src:'<%=yeoman.app %>/js/*.js',
-       		dest:'<%=yeoman.dist %>/scripts/main.js'
+            files:{
+                '<%=yeoman.dist %>/scripts/main.js':[
+                    '<%=yeoman.app %>/js/jquery.min.js',
+                    '<%=yeoman.app %>/js/slidebars.min.js',
+                    '<%=yeoman.app %>/js/jquery.glide.min.js',
+                    '<%=yeoman.app %>/js/ebscohostsearch.js',
+                    '<%=yeoman.app %>/js/main.js'],
+                '<%=yeoman.dist %>/scripts/ie.js':[
+                    '<%=yeoman.app %>/js/es5-shim.min.js',
+                    '<%=yeoman.app %>/js/json3.min.js']    
+            }
+       		
+       		
        	}
        },
         clean: {
@@ -123,11 +126,28 @@ module.exports = function (grunt) {
         		options:{
         			sassDir:'<%=yeoman.app%>/sass',
         			cssDir:'<%=yeoman.dist%>/styles',
-        			sourceMap:true,
         			imagesDir:'<%=yeoman.dist%>/images',
         			outputStyle:'compressed'
         		}
         	}
+        },
+        copy:{
+            dist:{
+                files:[
+                    {
+                        expand:true,
+                        src:['**'],
+                        cwd:'<%=yeoman.app%>/images/',
+                        dest:'<%=yeoman.dist%>/images/',
+
+                    },{
+                        expand:true,
+                        src:['modernizr.custom.js'],
+                        cwd:'<%=yeoman.app%>/js/',
+                        dest:'<%=yeoman.dist%>/scripts'
+                    }
+                ]
+            }
         }
     });
 
@@ -136,7 +156,9 @@ module.exports = function (grunt) {
         'compass',
         'autoprefixer',
         'concat',
-        'uglify'
+        'uglify',
+        // 'imagemin'
+        'copy'
         
     ]);
 

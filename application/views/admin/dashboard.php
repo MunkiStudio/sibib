@@ -30,4 +30,11 @@
 			</div>
 		</a>
 	</div>
+	<div class="sections">
+		<a href="/admin/basedatos">
+			<div class="btn-section">
+				<h4>Bases de datos</h4>
+			</div>
+		</a>
+	</div>
 </div>

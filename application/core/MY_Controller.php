@@ -51,6 +51,7 @@ class MY_Controller extends CI_Controller{
 				unlink($path);	
 
 			}
+
 			$data = $this->phpflickr->photos_getSizes($data);
 			return array('error'=>false,'data' =>$data[5]['source']);
 		}	

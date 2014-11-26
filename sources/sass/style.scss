@@ -1,7 +1,7 @@
 //frameworks
 
 @import "compass";
-@import "gridle";
+@import "gridle/gridle";
 
 //mixins
 
@@ -14,10 +14,7 @@
 @import 'team';
 @import 'sub';
 @import 'recursos';
-@include gridle_generate_classes();
-@include gridle_register_state("tablet", 401px, 730px);
-@include gridle_register_state("desktop", 731px, 1299px);
-@include gridle_register_state("giant", 1300px, null);
+
 
 
 //style
@@ -110,7 +107,7 @@ h3 {
 }
 
 .welcome {
-	background: #f5f5f5 url('../src/img-welcome.png') no-repeat center center;
+	background: #f5f5f5 url('../images/img-welcome.png') no-repeat center center;
 	background-size: cover;
 	height: 465px;
 }
@@ -122,7 +119,7 @@ header {
 	}
 	#logo-header{
 		@include gridle(2);
-		background: url('../src/logo-sibib-white.png') no-repeat center center;
+		background: url('../images/logo-sibib-white.png') no-repeat center center;
 		float: left;
 		height: 102px;
 		width: 116px;
@@ -691,3 +688,9 @@ footer {
 	}
 }
 
+input.btn-primary,input.btn-secondary{
+	border: 0;
+	padding-bottom: 30px;
+}
+
+@import 'search';

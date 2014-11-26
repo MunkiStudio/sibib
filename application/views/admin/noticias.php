@@ -29,13 +29,13 @@
 			</tr>
 			<?php foreach($noticias as $noticia): ?>
 			<tr class="table-content">
-				<td><input type="checkbox" name="select_news" value="<?php echo $noticia->ID;?>" /></td>
+				<td><input type="checkbox" name="select_news" value="<?php echo $noticia->id;?>" /></td>
 				<td><?php echo $noticia->titulo; ?></td> 
 				<td>
-					<a href="/admin/noticias/<?php echo $noticia->ID;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
-					<a href="/noticias/show/<?php echo $noticia->ID;?>" class="simptip-position-top simptip-fade" data-tooltip="Ver"><img src="<?php echo base_url() ?>resources/images/admin/view.png" alt="Ver" /></a>
+					<a href="/admin/noticias/<?php echo $noticia->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
+					<a href="/noticias/show/<?php echo $noticia->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Ver"><img src="<?php echo base_url() ?>resources/images/admin/view.png" alt="Ver" /></a>
 					<form method="POST" action="/admin/noticias/delete" class="list-inline">
-					<input type="hidden" value="<?php echo $noticia->ID?>" name="id" >
+					<input type="hidden" value="<?php echo $noticia->id?>" name="id" >
 					<button type="submit" class="simptip-position-top simptip-fade delete" data-tooltip="Eliminar"><img src="<?php echo base_url() ?>resources/images/admin/delete.png" alt="Borrar" /></button>
 					</form>
 				</td>

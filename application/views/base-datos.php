@@ -41,28 +41,31 @@
 	</div>
 	
 	<div class="container">
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link" style="position: relative;left: -40px;">
-					<img src="<?php echo $images_folder ?>otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-					<div class="simptip-position-top simptip-fade" data-tooltip="Recurso protegido"><img src="<?php echo $images_folder ?>icons/icon-lock.png" alt="" /></div>
+		<?php foreach($basedatos as $bd):?>
+			<a href="<?php echo $bd->url;?>" class="btn-link">
+				<div class="btn-content">
+					<figure class="img-link" style="position: relative;left: -40px;">
+						<?php if($bd->imagen):?>
+							<img src="<?php echo $bd->imagen; ?>" alt="" />
+						<?php else: ?>
+							<img src="<?php echo $images_folder ?>otros-repos/img-link-test.png" alt="" />
+						<?php endif; ?>
+					</figure>
+					<div class="content-link">
+						<label for=""><?php echo $bd->titulo; ?></label>
+						<p class="p-standard"><?php $bd->descripcion; ?></p>
+						<?php if($bd->locked): ?>
+						<div class="simptip-position-top simptip-fade" data-tooltip="Recurso protegido">
+							<img src="<?php echo $images_folder ?>icons/icon-lock.png" alt="" />
+						</div>
+						<?php else: ?>
+							<div class="simptip-position-top simptip-fade" data-tooltip="Recurso publico">
+								<img src="<?php echo $images_folder ?>icons/icon-unlock.png" alt="" />
+							</div>
+						<?php endif; ?>
+					</div>
 				</div>
-			</div>
-		</a>
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link" style="position: relative;left: -40px;">
-					<img src="<?php echo $images_folder ?>otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-					<div class="simptip-position-top simptip-fade" data-tooltip="Recurso libre"><img src="<?php echo $images_folder ?>icons/icon-unlock.png" alt="" /></div>
-				</div>
-			</div>
-		</a>
+			</a>
+		<?php endforeach; ?>
+		
 	</div>

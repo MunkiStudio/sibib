@@ -62,6 +62,12 @@ $route['admin/ebooks/new'] = "admin/admin_ebooks/add";
 $route['admin/ebooks/save'] = "admin/admin_ebooks/save";
 
 
+$route['admin/basedatos'] = "admin/admin_basedatos";
+$route['admin/basedatos/(:num)'] = "admin/admin_basedatos/edit/$1";
+$route['admin/basedatos/delete'] = "admin/admin_basedatos/delete";
+$route['admin/basedatos/new'] = "admin/admin_basedatos/add";
+$route['admin/basedatos/save'] = "admin/admin_basedatos/save";
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -12,7 +12,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>resources/styles/admin.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>resources/styles/normalize.css">
+	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>resources/styles/normalize.css"> -->
 	
 	<link rel="icon" type="img/ico" href="<?php echo base_url() ?>resouces/images/icon.png">
 	<script src="<?php echo base_url() ?>resources/scripts/modernizr.custom.js"></script>

@@ -55,7 +55,7 @@ class Admin_noticias extends MY_Controller {
 				'titulo' => $data['titulo'],
 				'contenido' => $data['contenido'],
 			);
-			$result = $this->uploadImage($insert['titulo']);
+			$result = $this->uploadImage($insert['titulo'],'Noticia en Sibib');
 			if(!$result['error']){
 				$insert['imagen'] =  $result['data'];
 			}else{

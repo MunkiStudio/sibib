@@ -12,7 +12,9 @@ $(document).ready(function(){
     $('.slider_right').click(function(){
     	glide.prev();
     });
-    $('#ebscoSearch').on('submit',function(){
+    $('#ebscoSearch').on('submit',function(e){
     	ebscoHostSearchGo(this);
+      e.preventDefault();
+
     })
 });

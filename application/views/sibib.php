@@ -29,7 +29,7 @@
 		<div class="container small">
 			<nav>
 				<label class="section-selected">Misión & descripción</label>
-				<a href="organigrama.html" class="nav-link">Organigrama & Equipo</a>
+				<a href="/organigrama" class="nav-link">Organigrama & Equipo</a>
 			</nav>
 		</div>
 	</div>
