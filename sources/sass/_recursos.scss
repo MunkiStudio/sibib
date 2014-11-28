@@ -156,6 +156,8 @@
 .search-bar {
 	margin: 10px auto 0 auto;
 	display: inline-block;
+	position:relative;
+	width:100%;
 	input {
 		@include open-sans(400, 15px, $gray-base);
 		float: left;
@@ -165,6 +167,7 @@
 		border: none;
 		padding: 5px;
 		border-radius: 4px;
+		width:80%;
 	}
 	.btn-search {
 		float: left;

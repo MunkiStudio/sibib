@@ -7,7 +7,7 @@
 		</div>
 	</div>
 	
-	<header>
+	<header class="fixed white">
 		<div class="container header">
 			<a href="index.html"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
 			<a href="#" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
@@ -22,13 +22,11 @@
 		</div>
 	</header>
 	
-	
+<div class="main-content top100">			
 	<div class="nav-menu">
 		<div class="container small">
 			<nav>
-				<a href="/capacitaciones" class="nav-link">Capacitaciones</a>
-				<label class="section-selected">Credenciales</label>
-				<a href="/actualidad" class="nav-link">Actualidad</a>
+				<label class="section-selected">Servicios</label>
 			</nav>
 		</div>
 	</div>
@@ -45,3 +43,4 @@
 			<p class="p-standard">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat, est sit amet interdum blandit, mi orci faucibus nibh, vitae auctor mi tellus nec felis. Sed ac scelerisque sapien. Integer semper mauris nec magna mollis ullamcorper. Integer sollicitudin lorem at tempor fermentum. Proin sagittis, lorem et dictum dictum, turpis lorem malesuada elit, vel consectetur lectus augue vitae lectus. Vestibulum posuere scelerisque odio, sed volutpat lorem. Vestibulum quis lacus et ante pulvinar convallis. Vivamus mauris ipsum, consectetur et elit eu, ornare eleifend quam.</p>
 		</div>
 	</div>	
+</div>

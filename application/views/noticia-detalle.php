@@ -7,7 +7,7 @@
 		</div>
 	</div>
 	
-	<header>
+	<header class="fixed white">
 		<div class="container header">
 			<a href="/"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
 		<a href="/" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
@@ -16,12 +16,12 @@
 				<label class="selected">Noticias</label>
 				<a class="main" href="/sibib">SIBIB</a>
 				<a class="main" href="/recursos">Recursos de Información</a>
-				<a class="main" href="/capacitaciones">Servicios</a>
+				<a class="main" href="/servicios">Servicios</a>
 				<a class="main" href="/informacion">Gestión</a>
 			</nav>
 		</div>
 	</header>
-	
+<div class="main-content top100">			
 	<div class="container">
 		<h1 class="title-section">Noticias</h1>
 		<hr class="title-line" />
@@ -74,7 +74,7 @@
 			<a href="/noticias" class="btn-blue">Ver todas las noticias</a>
 		</div>
 		
-		</div>
-		
 	</div>
+		
+</div>
 	

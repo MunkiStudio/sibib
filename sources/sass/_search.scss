@@ -5,6 +5,9 @@
 .title-search {
 	display: inline-block;
 	margin-left: 10px;
+	position:relative;
+	width:100%;
+
 }
 
 .title-search h4 {
@@ -26,7 +29,7 @@
 	height: 25px;
 	padding: 2px 10px;
 	margin-top: 5px;
-	width: 430px;
+	width: 85%;
 	margin-bottom: 20px;
 }
 
@@ -37,6 +40,10 @@
 	color: #8D8D8D;
 }
 
+.filters label{
+	display:inline-block;
+	width:100%;
+}
 .filters input {
 	margin: 0 2px 10px 15px;
 }

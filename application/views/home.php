@@ -8,7 +8,7 @@
 </div>
 
 <div class="welcome">
-  <header>
+  <header class="fixed">
     <div class="shadow">
       <div class="container header">
         <a href="/" id="logo-header">
@@ -20,21 +20,22 @@
           <a href="/noticias">Noticias</a>
           <a href="/sibib">SIBIB</a>
           <a href="/recursos">Recursos de Información</a>
-          <a href="/capacitaciones">Servicios</a>
+          <a href="/servicios">Servicios</a>
           <a href="/informacion">Gestión</a>
         </nav>
       </div>
     </div>
   </header>
-  <div class="shadow-down">
-    
+  <div class="shadow-down withFixed">
     <div class="container title">
-      <div class="slider">
-        <div class="slider__wrapper">
+      <div id="slider-news" class="slider-container">
+        <div class="slider-box">
           <?php foreach($noticias_header as $noticia): ?>
-            <div class="slider__item">
-              <label for="" class="welcome-date"><?php echo mdate("%l %d de %F %Y", strtotime($noticia->fecha)) ?></label>
-              <h5><a href="#" class="welcome-title"><?php echo $noticia->titulo ?></a></h5>
+            <div class="slider-element">
+              <article>
+                <label for="" class="welcome-date"><?php echo mdate("%l %d de %F %Y", strtotime($noticia->fecha)) ?></label>
+                <h5><a href="#" class="welcome-title"><?php echo $noticia->titulo ?></a></h5>
+              </article>
             </div>
           <?php endforeach; ?>    
         </div>
@@ -46,30 +47,18 @@
     </div>
     
     
+    
   </div>
 </div>  
 
 <div class="container">
-  <!-- <div class="busqueda">
-    <h3>Búsqueda</h3>
-    <div class="busqueda-modulo">
-      <form id="ebsco">
-        <input id="ebscohostwindow" type="hidden" value="1">
-        <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&custid=s7053667&groupid=main&profid=eds&mode=bool&lang=es&authtype=ip,guest,uid" />
-        <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
-        <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+" />
-        <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
-        
-      </form>
-    </div>
-  </div> -->
   <div class="busqueda">
       <h3>Búsqueda</h3>
       <div class="busqueda-modulo">
           <span class="logo-search">
             <img src="<?php echo $images_folder ?>/logo-search-blue.png">
           </span>
-          <form id="ebscoSearch" method="post">
+          <form id="ebscoSearch" method="post" class="search">
               <input id="ebscohostwindow" type="hidden" value="1">
               <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="http://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&custid=s7053667&groupid=main&profid=eds&mode=bool&lang=es&authtype=ip,guest,uid" />
               <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
@@ -81,14 +70,14 @@
               <input id="ebscohostsearchtext" name="ebscohostsearchtext" placeholder="¿Qué estás buscando?">
             </span>
             <div class="filters">
-              <input type="radio" name="searchFieldSelector" id="guidedField_0" value="Palabra Clave"> Palabra Clave
-              <input type="radio" name="searchFieldSelector" id="guidedField_1" value="Título" checked> Título
-              <input type="radio" name="searchFieldSelector" id="guidedField_2" value="Autor"> Autor
+              <label><input type="radio" name="searchFieldSelector" id="guidedField_0" value="Palabra Clave"> Palabra Clave</label>
+              <label><input type="radio" name="searchFieldSelector" id="guidedField_1" value="Título" checked> Título</label>
+              <label><input type="radio" name="searchFieldSelector" id="guidedField_2" value="Autor"> Autor</label>
             </div>
             <div class="gray-line"></div>
             <div class="filters">
-              <input type="checkbox" name="chkCatalogOnly" id="chkCatalogOnly" value="#"> Sólo catálogo
-              <input type="checkbox" name="chkLibraryCollection" id="chkLibraryCollection" value="#"> Disponible en SIBIB
+              <label><input type="checkbox" name="chkCatalogOnly" id="chkCatalogOnly" value="#"> Sólo catálogo</label>
+              <label><input type="checkbox" name="chkLibraryCollection" id="chkLibraryCollection" value="#"> Disponible en SIBIB</label>
             </div>
           </form>
       </div>
@@ -97,11 +86,11 @@
     <h3>Destacamos</h3>
     <div class="destacamos-modulo">
       <div class="links-destacamos">
-        <a href="#">Catálogo</a>
+        <a href="http://gliese.ucm.cl:8991/F/-/?func=find-b-0&local_base=UCM01">Catálogo</a>
         <div class="gray-line"></div>
         <a href="#">Renovación de Préstamos</a>
         <div class="gray-line"></div>
-        <a href="#">Base de Datos</a>
+        <a href="http://sibib2.ucm.cl/bexternas.php?dbext=wos">Base de Datos</a>
         <div class="gray-line"></div>
         <a href="/ebooks">eBooks</a>
         <div class="gray-line"></div>
@@ -199,6 +188,7 @@
       <a href="#">San Isidro</a>
       <a href="#">Villa Huilquilemu</a>
     </nav>
+    <!-- TODO TABS -->
     <img class="biblioteca-map" src="<?php echo $images_folder ?>map-l-miguel.png" alt="" />
     <img class="biblioteca-map-medium" src="<?php echo $images_folder ?>map-m-miguel.png" alt="" />
     <img class="map-small biblioteca-map-small " src="<?php echo $images_folder ?>map-s-miguel.png" alt="" />

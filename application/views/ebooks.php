@@ -1,4 +1,4 @@
-<div class="submenu">
+	<div class="submenu">
 		<div class="container header">
 			<nav>
 				<a href="#">Formulario Online</a>
@@ -7,7 +7,7 @@
 		</div>
 	</div>
 	
-	<header>
+	<header class="fixed white">
 		<div class="container header">
 			<a href="index.html"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
 			<a href="#" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
@@ -16,13 +16,13 @@
 				<a class="main" href="/noticias">Noticias</a>
 				<a class="main" href="/sibib">SIBIB</a>
 				<label class="selected">Recursos de Información</label>
-				<a class="main" href="/capacitaciones">Servicios</a>
+				<a class="main" href="/servicios">Servicios</a>
 				<a class="main" href="/informacion">Gestión</a>
 			</nav>
 		</div>
 	</header>
 	
-	
+<div class="main-content top100">		
 	<div class="nav-menu">
 		<div class="container small">
 			<nav class="nav-left">
@@ -80,3 +80,4 @@
 		</nav>
 	</div>
 	<?php endif; ?>
+</div>

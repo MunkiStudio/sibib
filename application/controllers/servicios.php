@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Credenciales extends CI_Controller {
+class Servicios extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
@@ -16,7 +16,7 @@ class Credenciales extends CI_Controller {
 		$data = array(
 			'images_folder' => '/resources/images/'
 		);
-		$this->load->view('credenciales',$data);
+		$this->load->view('servicios',$data);
 	}
 }
 

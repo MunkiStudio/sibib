@@ -8,7 +8,7 @@
 		</div>
 	</div>
 	
-	<header>
+	<header class="fixed white">
 		<div class="container header">
 			<a href="index.html"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
 			<a href="#" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
@@ -22,7 +22,7 @@
 		</div>
 	</header>
 	
-	
+<div class="main-content top100">		
 	<div class="nav-menu">
 		<div class="container small">
 			<nav class="nav-left">
@@ -55,5 +55,5 @@
 		</a>
 	</div>
 	
-		
+</div>		
 	

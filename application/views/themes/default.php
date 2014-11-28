@@ -32,23 +32,21 @@
         <div class="links">
           <label for="">Gestión</label>
           <ul>
-            <li><a href="#">Solicitud de Bibliografia</a></li>
-            <li><a href="#">Últimos Títulos Adquiridos</a></li>
+            <li><a href="#">Información</a></li>
+            <li><a href="http://sibib.ucm.cl/descargas/Formulario_BMO_BC.xls">Solicitud de Bibliografía</a></li>
           </ul>
         </div>
         <div class="links">
           <label for="">Servicios</label>
           <ul>
-            <li><a href="/capacitaciones">Capacitaciones</a></li>
+            <li><a href="/servicios">Servicios</a></li>
             <li><a href="#">Formulario online</a></li>
-            <li><a href="/credenciales">Credenciales</a></li>
-            <li><a href="/actualidad">Actualidad</a></li>
           </ul>
         </div>
         <div class="links">
           <label for="">Recursos de Información</label>
           <ul>
-            <li><a href="/base-datos">Base de datos</a></li>
+            <li><a href="/base_datos">Base de datos</a></li>
             <li><a href="#">Revistas electrónicas</a></li>
             <li><a href="#">Catálogo UCM</a></li>
             <li><a href="#">Otros catálogos</a></li>
@@ -63,8 +61,8 @@
           <ul>
             <li><a href="/sibib">Misión</a></li>
             <li><a href="/sibib">Descripción</a></li>
-            <li><a href="/organigrama">Organigrama</a></li>
-            <li><a href="/organigrama">Equipo</a></li>
+            <li><a href="/sibib#organigrama">Organigrama</a></li>
+            <li><a href="/sibib#organigrama">Equipo</a></li>
           </ul>
         </div>
       </div>
@@ -96,7 +94,7 @@
         <li><a class="mobile-link" href="/noticias">Noticias</a></li>
         <li><a class="mobile-link" href="/sibib">SIBIB</a></li>
         <li><a class="mobile-link" href="/recursos">Recursos de Información</a></li>
-        <li><a class="mobile-link" href="/capacitaciones">Servicios</a></li>
+        <li><a class="mobile-link" href="/servicios">Servicios</a></li>
         <li><a class="mobile-link" href="/informacion">Gestión</a></li>
       </ul>
     </ul>
@@ -120,9 +118,9 @@
     <![endif]-->
     
 
-    
-    <script src="<?php echo base_url() ?>resources/scripts/main.js"></script>
     <script src="http://support.ebsco.com/eit/scripts/ebscohostsearch.js"></script>
+    <script src="<?php echo base_url() ?>resources/scripts/main.js"></script>
+    
     
 </body>
 
