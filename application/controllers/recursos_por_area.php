@@ -20,5 +20,5 @@ class Recursos_por_area extends CI_Controller {
 	}
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* End of file recursos_por_area.php */
+/* Location: ./application/controllers/recursos_por_area.php */

@@ -145,6 +145,11 @@ module.exports = function (grunt) {
                         src:['modernizr.custom.js'],
                         cwd:'<%=yeoman.app%>/js/',
                         dest:'<%=yeoman.dist%>/scripts'
+                    },{
+                        expand:true,
+                        src:['Reglamento SIBIB.docx'],
+                        cwd:'<%=yeoman.app%>',
+                        dest:'<%=yeoman.dist%>'
                     }
                 ]
             }

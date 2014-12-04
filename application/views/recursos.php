@@ -3,7 +3,7 @@
 		<div class="container header">
 			<nav>
 				<a href="#">Formulario Online</a>
-				<a href="#">Alumni</a>
+				<a href="http://www.alumni.ucm.cl/">Alumni</a>
 			</nav>
 		</div>
 	</div>
@@ -30,7 +30,7 @@
 	
 	<div class="container small">
 	
-		<a href="#" class="btn-link">
+		<a href="http://gliese.ucm.cl:8991/F/-/?func=find-b-0&local_base=UCM01" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="catalogo-ucm">
 				<img src="<?php echo $images_folder ?>icons/icon-catalogo.png" />
@@ -38,7 +38,7 @@
 			<label for="">Catálogo UCM</label>
 			</div>
 		</a>
-		<a href="#" class="btn-link">
+		<a href="http://werken.ubiobio.cl/html/bibliotecas_universitarias.htm" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="otros-catalogos">
 				<img src="<?php echo $images_folder ?>icons/icon-catalogo.png" />

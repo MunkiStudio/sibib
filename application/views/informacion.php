@@ -2,7 +2,7 @@
 		<div class="container header">
 			<nav>
 				<a href="#">Formulario Online</a>
-				<a href="#">Alumni</a>
+				<a href="http://www.alumni.ucm.cl/">Alumni</a>
 			</nav>
 		</div>
 	</div>
@@ -37,7 +37,7 @@
 	</div>
 	
 	<div class="container small">
-		<a href="http://sibib.ucm.cl/acreditacion/login.php" class="btn-link">
+		<a href="http://www.sibib.ucm.cl/acreditacion/login.php" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="ebooks">
 				<img src="<?php echo $images_folder ?>icons/icon-revistas.png" />
@@ -45,7 +45,7 @@
 			<label for="">Acreditación</label>
 			</div>
 		</a>
-		<a href="http://sibib.ucm.cl/info_general/reglamento.php" class="btn-link">
+		<a href="/resources/Reglamento SIBIB.docx" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="area">
 				<img src="<?php echo $images_folder ?>icons/icon-revistas.png" />

@@ -3,7 +3,7 @@
 		<div class="container header">
 			<nav>
 				<a href="#">Formulario Online</a>
-				<a href="#">Alumni</a>
+				<a href="http://www.alumni.ucm.cl/">Alumni</a>
 			</nav>
 		</div>
 	</div>
@@ -42,15 +42,14 @@
 			<label class="explanation">Elige facultad y carrera. Encuentra los recursos hechos para ti</label>
 			<br />
 			<div class="multiple-bar">
-				<select>
+				<select id="facultades">
 					<option value="" disabled selected>Facultad</option>
-					<option>Test</option>
+					
 				</select>
-				<select>
+				<select id="carreras">
 					<option value="" disabled selected>Carrera</option>
-					<option>Test</option>
 				</select>
-				<a class="btn-search">
+				<a class="btn-search" id="searchRecurso">
 					<img id="btn-icon" src="<?php echo $images_folder ?>icons/icon-search-red.png" alt="" />
 				</a>
 			</div>
@@ -61,4 +60,5 @@
 		
 	</div>
 </div>	
+
 	

@@ -22,7 +22,7 @@
     <div class="container footer">  
       <div>
         <div class="footer-btns">
-          <a href="#" class="btn-blue">Alumni</a>
+          <a href="http://www.alumni.ucm.cl/" class="btn-blue">Alumni</a>
           <a href="#" class="btn-blue">Formulario Online</a>
           <div class="btn-contacto"></div>
           <a class="btn-contacto" href="#"><img src="<?php echo base_url() ?>resources/images/btn-fb-white.png" alt="" /></a>
@@ -72,8 +72,8 @@
       <label class="copyright" for="">&copy; Sistema de Bibliotecas de la Universidad Católica del Maule, 2014</label>
       <div class="links-footer">
         <nav>
-          <a href="#">Acreditación</a>
-          <a href="#">Reglamento</a>
+          <a href="http://www.sibib.ucm.cl/acreditacion/login.php">Acreditación</a>
+          <a href="/resources/Reglamento SIBIB.docx">Reglamento</a>
           <a href="#">Normativas</a>
         </nav>
       </div>
@@ -117,7 +117,7 @@
     <script src="<?php echo base_url() ?>resources/scripts/ie.js"></script>
     <![endif]-->
     
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
     <script src="http://support.ebsco.com/eit/scripts/ebscohostsearch.js"></script>
     <script src="<?php echo base_url() ?>resources/scripts/main.js"></script>
     
