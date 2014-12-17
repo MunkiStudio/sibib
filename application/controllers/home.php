@@ -10,8 +10,9 @@ class Home extends CI_Controller {
 	private function _init(){
 		$this->output->set_template('default');
 		date_default_timezone_set('America/Santiago');
+    $this->load->model('News', 'news');
 	}
-	
+
 	public function index()
 	{
 
