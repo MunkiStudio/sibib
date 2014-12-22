@@ -5,10 +5,11 @@ class Admin_noticias extends MY_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->output->set_template('admin');
+		$this->load->model('news_model', 'news');
 		$this->model = $this->news;
 		$this->base_url = "/admin/noticias/";
 	}
-	
+
 
 	function index(){
 		parent::index();
@@ -16,7 +17,7 @@ class Admin_noticias extends MY_Controller {
 			'noticias' => $this->model->limit($this->config->item('per_page'), $this->uri->segment(3))->get_all(),
 			'links' => $this->pagination->create_links()
 		);
-		$this->load->view('/admin/noticias',$data);	
+		$this->load->view('/admin/noticias',$data);
 	}
 	function edit($id=null){
 		parent::edit();
@@ -27,15 +28,15 @@ class Admin_noticias extends MY_Controller {
 					'noticia' => $noticia,
 					'errors' => $this->session->flashdata('error')
 				);
-				$this->load->view('/admin/noticia',$data);	
+				$this->load->view('/admin/noticia',$data);
 			}else{
 				redirect('/admin/noticias');
 			}
 		}else{
 			redirect('/admin/noticias');
 		}
-		
-		
+
+
 	}
 
 	function add(){
@@ -44,7 +45,7 @@ class Admin_noticias extends MY_Controller {
 			'errors' => $this->session->flashdata('error'),
 			'noticia'=>false
 		);
-		$this->load->view('/admin/noticia',$data);	
+		$this->load->view('/admin/noticia',$data);
 	}
 
 	function save(){
@@ -61,14 +62,14 @@ class Admin_noticias extends MY_Controller {
 			}else{
 				$error = array('error' => $result['error']);
 				$this->session->set_flashdata('errors',$error);
-				redirect('/admin/noticias/new');	
+				redirect('/admin/noticias/new');
 			}
 			if(isset($data['id'])){
 				$this->model->update($data['id'],$insert);
 			}else{
-				$this->model->insert($insert);	
+				$this->model->insert($insert);
 			}
-			
+
 		}
 		redirect('/admin/noticias',true);
 	}
