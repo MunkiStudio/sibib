@@ -8,3 +8,5 @@ captcha
 uploads/*
 sources/sass/.sass-cache
 recursos/*
+http-access_log
+http-error_log

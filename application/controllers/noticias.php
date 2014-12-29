@@ -10,8 +10,9 @@ class Noticias extends CI_Controller {
 	private function _init(){
 		$this->output->set_template('default');
 		date_default_timezone_set('America/Santiago');
+    $this->load->model('news_model', 'news');
 	}
-	
+
 	public function index()
 	{
 		$this->load->library('pagination');
@@ -35,6 +36,6 @@ class Noticias extends CI_Controller {
 			'noticias_sidebar' => $this->news->limit(6)->get_all(),
 			'query' => $this->db->last_query()
 		);
-		$this->load->view('noticia-detalle',$data);	
+		$this->load->view('noticia-detalle',$data);
 	}
 }

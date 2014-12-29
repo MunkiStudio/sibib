@@ -50,7 +50,8 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'My41560';
+$db['default']['password'] = '123';
+//'My41560';
 $db['default']['database'] = 'sibib';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = 'sibib_';
@@ -63,6 +64,7 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
+
 
 
 /* End of file database.php */
