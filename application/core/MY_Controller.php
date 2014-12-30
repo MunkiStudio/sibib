@@ -20,7 +20,7 @@ class MY_Controller extends CI_Controller{
 	}
 
 	protected function flickrInit(){
-		$this->load->library('phpFlickr');
+		$this->load->library('phpflickr');
 		$api_key = $this->config->item('flickr_key');
 		$secret = $this->config->item('flickr_secret');
 		$this->phpflickr->api_key = $api_key;
@@ -30,7 +30,7 @@ class MY_Controller extends CI_Controller{
 
     protected function uploadImage($title,$descripcion){
       $config['upload_path'] = './uploads/';
-      $config['allowed_types'] = 'gif|jpg|png';
+      $config['allowed_types'] = 'gif|jpg|png|jpeg';
       $this->load->library('upload', $config);
       $result = $this->upload->do_upload('imagen');
       if(!$result){

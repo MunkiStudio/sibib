@@ -6,7 +6,7 @@
 			</nav>
 		</div>
 	</div>
-	
+
 	<header class="fixed white">
 		<div class="container header">
 			<a href="/"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
@@ -21,17 +21,29 @@
 			</nav>
 		</div>
 	</header>
-<div class="main-content top100">			
+<div class="main-content top100">
 	<div class="container">
 		<h1 class="title-section">Noticias</h1>
 		<hr class="title-line" />
 	</div>
-	
-	<div class="container">		
+
+	<div class="container">
 		<div class="main-new">
 			<label for="date" class="date-news-main"><?php echo mdate("%l %d de %F %Y", strtotime($noticia->fecha)) ?></label>
 			<h5 class="title-noticia"><?php echo $noticia->titulo?></h5>
-			<img src="<?php echo $images_folder ?>otros-repos/img-link-test.png" alt="" />
+      <?php
+        if($noticia->imagen){
+          ?>
+          <img src="<?php echo $noticia->imagen?>" alt="" />
+
+          <?php
+        }else{
+          ?>
+          <img src="<?php echo $images_folder ?>otros-repos/img-link-test.png" alt="" />
+          <?php
+        }
+        ?>
+
 			<ul class="social">
 				<li>
 					<a href="http://www.facebook.com/sharer.php?s=100&p[title]=<?php echo $noticia->titulo?>
@@ -48,7 +60,7 @@
 			</ul>
 			<p class="p-standard" id="no-margin"><?php echo $noticia->contenido?></p>
 		</div>
-		
+
 		<div class="old-news-modulo">
 			<h3>Otras Noticias</h3>
 
@@ -66,15 +78,15 @@
 				<div class="calendar-title">
 					<a href="/noticias/show/<?php echo $noticia->id?>"><?php echo $noticia->titulo?></a>
 				</div>
-				
+
 				<div class="gray-line"></div>
-			
+
 			<?php endforeach; ?>
-			
+
 			<a href="/noticias" class="btn-blue">Ver todas las noticias</a>
 		</div>
-		
+
 	</div>
-		
+
 </div>
-	
+
