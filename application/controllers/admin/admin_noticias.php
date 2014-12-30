@@ -42,7 +42,7 @@ class Admin_noticias extends MY_Controller {
 	function add(){
 		parent::add();
 		$data = array(
-			'errors' => $this->session->flashdata('error'),
+			'errors' => $this->session->flashdata('errors'),
 			'noticia'=>false
 		);
 		$this->load->view('/admin/noticia',$data);
@@ -56,14 +56,17 @@ class Admin_noticias extends MY_Controller {
 				'titulo' => $data['titulo'],
 				'contenido' => $data['contenido'],
 			);
-			$result = $this->uploadImage($insert['titulo'],'Noticia en Sibib');
-			if(!$result['error']){
-				$insert['imagen'] =  $result['data'];
-			}else{
-				$error = array('error' => $result['error']);
-				$this->session->set_flashdata('errors',$error);
-				redirect('/admin/noticias/new');
-			}
+
+      $result = $this->uploadImage($insert['titulo'],'Noticia en Sibib');
+      if(!$result['error']){
+        $insert['imagen'] =  $result['data'];
+      }else{
+        $error = $result['error'];
+        $this->session->set_flashdata('errors',$error);
+        redirect('/admin/noticias/new');
+      }
+
+
 			if(isset($data['id'])){
 				$this->model->update($data['id'],$insert);
 			}else{

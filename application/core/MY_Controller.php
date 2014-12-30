@@ -29,38 +29,38 @@ class MY_Controller extends CI_Controller{
     }
 
     protected function uploadImage($title,$descripcion){
-    	$config['upload_path'] = './uploads/';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$this->load->library('upload', $config);
-		$result = $this->upload->do_upload('imagen');
-		if(!$result){
-			$error = array('error' => $this->upload->display_errors());
-			return array('error'=>$error,'data'=>null);
-			
-		}else{
-			$image_data = $this->upload->data();
-			$path = $image_data['full_path'];
-			$this->flickrInit();
-			$data = $this->phpflickr->sync_upload($path,$title,$descripcion);
-			if($data == -1){
-				return array('error'=>$data = 'Sorry, your server must support CURL in order to upload files'
-				,'data' =>null);
-			}elseif($data == false){
-				return array('error'=>$this->phpflickr->error_msg,'data' =>null);
-			}else{
-				unlink($path);	
+      $config['upload_path'] = './uploads/';
+      $config['allowed_types'] = 'gif|jpg|png';
+      $this->load->library('upload', $config);
+      $result = $this->upload->do_upload('imagen');
+      if(!$result){
+        $error = array('error' => $this->upload->display_errors());
+        return array('error'=>$error,'data'=>null);
+      }else{
+        $image_data = $this->upload->data();
+        $path = $image_data['full_path'];
+        $this->flickrInit();
+        $data = $this->phpflickr->sync_upload($path,$title,$descripcion);
+        if($data == -1){
+          return array('error'=>$data = 'Sorry, your server must support CURL in order to upload files'
+          ,'data' =>null);
+        }elseif($data == false){
+          return array('error'=>$this->phpflickr->error_msg,'data' =>null);
+        }else{
+          unlink($path);
 
-			}
+        $data = $this->phpflickr->photos_getSizes($data);
+        return array('error'=>false,'data' =>$data[5]['source']);
+        }
+      }
 
-			$data = $this->phpflickr->photos_getSizes($data);
-			return array('error'=>false,'data' =>$data[5]['source']);
-		}	
+
     }
 
     protected function put(){
-		parse_str(file_get_contents('php://input'), $this->_put_args);
+		  parse_str(file_get_contents('php://input'), $this->_put_args);
     }
-    
+
 
 	protected function _go_login(){
 		if (!$this->tank_auth->is_logged_in()) {
@@ -81,7 +81,7 @@ class MY_Controller extends CI_Controller{
 
 	function add(){
 		$this->_go_login();
-		
+
 	}
 
 	function save(){
