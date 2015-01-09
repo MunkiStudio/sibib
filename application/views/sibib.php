@@ -7,24 +7,23 @@
 			</nav>
 		</div>
 	</div>
-	
+
 	<header class="fixed white">
 		<div class="container header">
 				<a href="/"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
 			<a href="/" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
 			<nav>
 				<a class="main" href="/">Inicio</a>
-				<a class="main" href="/noticias">Noticias</a>
 				<label class="selected">SIBIB</label>
-				
+
 				<a class="main" href="/recursos">Recursos de Información</a>
 				<a class="main" href="/servicios">Servicios</a>
 				<a class="main" href="/informacion">Gestión</a>
 			</nav>
 		</div>
 	</header>
-	
-<div class="main-content top100">	
+
+<div class="main-content top100">
 	<div class="nav-menu">
 		<div class="container small">
 			<nav class="tabs">
@@ -39,7 +38,7 @@
 			<h1 class="title-section">Misión & descripción</h1>
 			<hr class="title-line" />
 		</div>
-		
+
 		<div class="container title">
 			<img class="img-section" src="<?php echo $images_folder ?>sibib/mision.png" alt="" />
 			<div class="info-section">
@@ -47,7 +46,7 @@
 				<p class="p-standard">Al interior de la Universidad, el Sistema de Bibliotecas tiene como misión colaborar en el logro de la excelencia académica y en la formación integral humana y profesional, apoyando la docencia, investigación y extensión y facilitando a la comunidad universitaria el acceso oportuno y expedito a recursos de información, mediante la implementación de servicios de alta calidad tanto internos como externos, locales como virtuales.</p>
 			</div>
 		</div>
-		
+
 		<div class="gray-bg">
 			<div class="container">
 				<div class="info-section">
@@ -79,7 +78,7 @@
 		<div class="gray-bg">
 		<div class="container">
 			<h3 class="title-center">Equipo</h3>
-			
+
 			<h3 class="title-depto">Dirección del Sistema de Bibliotecas</h3>
 			<br />
 			<div class="equipo">
@@ -114,7 +113,7 @@
 					<label for="telefono" class="contacto">+56-71-2203359</label>
 				</div>
 			</div>
-			
+
 			<h3 class="title-depto">Departamento Desarrollo de Colecciones</h3>
 			<div class="equipo">
 				<div class="img-equipo">
@@ -164,7 +163,7 @@
 					<label for="telefono" class="contacto">+56-71-2203332</label>
 				</div>
 			</div>
-			
+
 			<h3 class="title-depto">Departamento de Análisis de Información</h3>
 			<div class="equipo">
 				<div class="img-equipo">
@@ -214,7 +213,7 @@
 					<label for="telefono" class="contacto">+56-71-2203316</label>
 				</div>
 			</div>
-			
+
 			<div class="equipo">
 				<div class="img-equipo">
 					<figure>
@@ -263,8 +262,8 @@
 					<label for="telefono" class="contacto">+56-71-2203317</label>
 				</div>
 			</div>
-			
-			
+
+
 			<h3 class="title-depto">Biblioteca Campus San Miguel</h3>
 			<div class="equipo">
 				<div class="img-equipo">
@@ -394,7 +393,7 @@
 					<label for="telefono" class="contacto">+56-71-2203352</label>
 				</div>
 			</div>
-			
+
 			<h3 class="title-depto">Biblioteca  Campus  Nuestra Señora del Carmen</h3>
 			<div class="equipo">
 				<div class="img-equipo">
@@ -444,7 +443,7 @@
 					<label for="telefono" class="contacto">+56-75-2203135</label>
 				</div>
 			</div>
-			
+
 			<h3 class="title-depto">Biblioteca Campus San Isidro</h3>
 			<div class="equipo">
 				<div class="img-equipo">
@@ -478,7 +477,7 @@
 					<label for="telefono" class="contacto">+56-75-2203617</label>
 				</div>
 			</div>
-			
+
 			<h3 class="title-depto">Biblioteca Villa Huilquilemu</h3>
 			<div class="equipo">
 				<div class="img-equipo">
@@ -499,6 +498,6 @@
 		</div>
 	</div>
 	</div>
-</div>	
-		
-	
+</div>
+
+

@@ -19,11 +19,11 @@
   	<?php echo $output;?>
   </section>
   <footer>
-    <div class="container footer">  
+    <div class="container footer">
       <div>
         <div class="footer-btns">
           <a href="http://www.alumni.ucm.cl/" class="btn-blue">Alumni</a>
-          <a href="#" class="btn-blue">Formulario Online</a>
+          <!-- <a href="#" class="btn-blue">Formulario Online</a> -->
           <div class="btn-contacto"></div>
           <a class="btn-contacto" href="#"><img src="<?php echo base_url() ?>resources/images/btn-fb-white.png" alt="" /></a>
           <a class="btn-contacto" href="#"><img src="<?php echo base_url() ?>resources/images/btn-mail-white.png" alt="" /></a>
@@ -66,9 +66,9 @@
           </ul>
         </div>
       </div>
-      
+
       <div class="white-line"></div>
-      
+
       <label class="copyright" for="">&copy; Sistema de Bibliotecas de la Universidad Católica del Maule, 2014</label>
       <div class="links-footer">
         <nav>
@@ -79,13 +79,13 @@
       </div>
     </div>
   </footer>
-  
+
   <div class="munki-footer">
     <div class="container small">
-      <a href="http://www.munki.cl" target="_blank"><img src="<?php echo base_url() ?>resources/images/logo-munki.png" alt="" /></a>
+      <a href="http://www.munki.cl" target="_blank">Diseño y Desarrollo por <img src="<?php echo base_url() ?>resources/images/logo-munki.png" alt="" /></a>
     </div>
   </div>
-  
+
   <div class="sb-slidebar sb-right">
     <!-- Your right Slidebar content. -->
     <ul class="nav-mobile">
@@ -99,8 +99,8 @@
       </ul>
     </ul>
   </div>
-      
-  
+
+
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -112,21 +112,21 @@
        ga('send', 'pageview');
     </script>
 
-    
+
     <!--[if lt IE 9]>
     <script src="<?php echo base_url() ?>resources/scripts/ie.js"></script>
     <![endif]-->
-    
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
     <script src="http://support.ebsco.com/eit/scripts/ebscohostsearch.js"></script>
     <script src="<?php echo base_url() ?>resources/scripts/main.js"></script>
-    
-    
+
+
 </body>
 
 </html>
 
 
-    
+
 </body>
 </html>

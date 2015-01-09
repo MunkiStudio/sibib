@@ -116,7 +116,7 @@ h3 {
 }
 .fixed{
 	position:fixed;
-	top:34px;
+	top:0px;
 	width:100%;
 	z-index:99999;
 	transition: 0.3s linear;
@@ -129,7 +129,7 @@ h3 {
 header {
 	&.onTop{
 		top:0;
-		
+
 		.mini{
 			&.sb-toggle-right{
 				position: relative;
@@ -256,7 +256,7 @@ header {
 		}
 		.btn-news:hover {
 			background: rgba(255, 255, 255, .5);
-		}	
+		}
 	}
 }
 
@@ -274,6 +274,8 @@ header {
 		border: 1px solid $gray-line;
 		background: white;
 		padding: 10px;
+    height:120px;
+    max-height:120px;
 	}
 }
 
@@ -301,14 +303,14 @@ header {
 	height: 1px;
 	background: $gray-line;
 	width: 100%;
-	margin: 10px 0;	
+	margin: 10px 0;
 }
 
 .white-line {
 	@include gridle(12);
 	height: 1px;
 	background: white;
-	margin: 10px 0;	
+	margin: 10px 0;
 }
 
 .gray-bg {
@@ -327,7 +329,7 @@ header {
 }
 
 .modulo-noticia {
-	@include gridle(7);
+	@include gridle(12);
 	@include gridle(12, mobile tablet);
 }
 
@@ -356,10 +358,18 @@ header {
 	.info-noticia {
 		@include gridle(7);
 		@include gridle(12, mobile);
+    position: relative;
+    height:250px;
+    min-height: 250px;
 		padding: 15px;
 		p {
 			margin: 0;
 		}
+    .read-more{
+      position: absolute;
+      bottom: 0%;
+      right: 30px;
+    }
 	}
 }
 
@@ -388,7 +398,7 @@ header {
 	display: inline-block;
 	padding: 0;
 	margin: 5px 0;
-	li {		
+	li {
 		float: left;
 		list-style: none;
 		margin: 0 5px 0 0;
@@ -396,7 +406,7 @@ header {
 		img {
 			margin: 0;
 			height: 31px;
-			@include transition(0.4s); 
+			@include transition(0.4s);
 		}
 		img:hover {
 			opacity: 0.85;
@@ -428,7 +438,7 @@ header {
 		@include gridle(2);
 	}
 	.calendar-title {
-		@include gridle(10);	
+		@include gridle(10);
 		a {
 			@include open-sans(600, 16px, $gray-base);
 			margin-top: 10px;
@@ -441,7 +451,7 @@ header {
 	}
 	.gray-line {
 		@include gridle(12);
-	}	
+	}
 }
 
 
@@ -606,7 +616,8 @@ header {
 }
 
 footer {
-	background-color: #323232;
+	background-color: #F3f3f3;
+  color:#323232;
 	.footer-btns {
 		@include gridle(3);
 		@include gridle(12, mobile);
@@ -620,7 +631,7 @@ footer {
 		float: right;
 		margin-bottom: 15px;
 		label {
-			@include montserrat(12px, white);
+			@include montserrat(12px, #323232);
 			text-transform: uppercase;
 		}
 		ul {
@@ -628,7 +639,7 @@ footer {
 			margin: 5px 0 0 0;
 			padding: 0;
 			a {
-				@include open-sans(400, 12px, white);
+				@include open-sans(400, 12px, #323232);
 				text-decoration: none;
 				margin-bottom: 2px;
 				@include transition(0.25s);
@@ -640,13 +651,13 @@ footer {
 	}
 	hr {
 		@include gridle(12);
-		border: 1px solid white;
+		border: 1px solid #323232;
 		margin: 30px 0 10px 0;
 	}
 	.copyright {
 		@include gridle(5);
 		@include gridle(12, mobile);
-		@include open-sans(400, 12px, white);
+		@include open-sans(400, 12px, #323232);
 		@include gridle_state(mobile){
 			text-align: center;
 		};
@@ -660,7 +671,7 @@ footer {
 			display: block;
 			float: right;
 			a {
-				@include open-sans(400, 12px, white);
+				@include open-sans(400, 12px, #323232);
 				text-decoration: none;
 				margin-left: 15px;
 				@include transition(0.25s);
@@ -677,7 +688,7 @@ footer {
 	text-align: center;
 	margin-top: 15px;
 	@include transition(0.25s);
-	&:hover { 
+	&:hover {
 		opacity: 0.5;
 		-ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	}
@@ -686,6 +697,15 @@ footer {
 .munki-footer {
 	background: #232323;
 	text-align: right;
+  color:white;
+  a{
+    @include montserrat(12px, white);
+    text-decoration: none;
+    &:hover{
+      @include montserrat(12px, white);
+      text-decoration: none;
+    }
+  }
 	@include gridle_state(mobile tablet){
 		text-align: center;
 	};
@@ -698,11 +718,11 @@ footer {
 		opacity: 0.5;
 		-ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=50)"
 	}
-}	
+}
 
 .pagination {
 	margin-top: 30px;
-	text-align: center; 
+	text-align: center;
 	a{
 		text-decoration:none;
 		color: #4A4A4A;
@@ -724,11 +744,11 @@ footer {
 		-moz-transition: 0.3s;
 		-o-transition: 0.3s;
 		-ms-transition: 0.3s;
-		transition: 0.3s; 
+		transition: 0.3s;
 	}
 	.active {
 		background: #1A85DB;
-		color: white; 
+		color: white;
 	}
 	.nav-disabled {
 		padding: 6px 4px;
@@ -736,14 +756,14 @@ footer {
 		background: none;
 		border: 1px solid #979797;
 		color: #979797;
-		cursor: default; 
+		cursor: default;
 	}
 	.nav-enabled {
 		padding: 6px 4px;
 		border-radius: 20px;
 		background: none;
 		border: 1px solid #4A4A4A;
-		color: #4A4A4A; 
+		color: #4A4A4A;
 		&:hover {
 			border: 1px solid #9bccf3;
 			background: #9bccf3;

@@ -13,7 +13,6 @@
 		<a href="/" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
 			<nav>
 				<a class="main" href="/">Inicio</a>
-				<label class="selected">Noticias</label>
 				<a class="main" href="/sibib">SIBIB</a>
 				<a class="main" href="/recursos">Recursos de Información</a>
 				<a class="main" href="/servicios">Servicios</a>

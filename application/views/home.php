@@ -1,11 +1,11 @@
- <div class="submenu">
+<!-- <div class="submenu">
   <div class="container header">
     <nav>
       <a href="#">Formulario Online</a>
       <a href="http://www.alumni.ucm.cl/">Alumni</a>
     </nav>
   </div>
-</div>
+</div> -->
 
 <div class="welcome">
   <header class="fixed">
@@ -17,7 +17,6 @@
         <a href="#" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav-white.png" alt="" /></a>
         <nav>
           <a href="/">Inicio</a>
-          <a href="/noticias">Noticias</a>
           <a href="/sibib">SIBIB</a>
           <a href="/recursos">Recursos de Información</a>
           <a href="/servicios">Servicios</a>
@@ -26,34 +25,12 @@
       </div>
     </div>
   </header>
-  <div class="shadow-down withFixed">
-    <div class="container title">
-      <div id="slider-news" class="slider-container">
-        <div class="slider-box">
-          <?php foreach($noticias_header as $noticia): ?>
-            <div class="slider-element">
-              <article>
-                <label for="" class="welcome-date"><?php echo mdate("%l %d de %F %Y", strtotime($noticia->fecha)) ?></label>
-                <h5><a href="#" class="welcome-title"><?php echo $noticia->titulo ?></a></h5>
-              </article>
-            </div>
-          <?php endforeach; ?>    
-        </div>
-      </div>
-      <div class="btn-main">
-        <a class="btn-news slider_left"><img src="<?php echo $images_folder ?>arrow-left.png" alt="" /></a>
-        <a class="btn-news slider_right"><img src="<?php echo $images_folder ?>arrow-right.png" alt="" /></a>
-      </div>
-    </div>
-    
-    
-    
-  </div>
-</div>  
+
+</div>
 
 <div class="container">
   <div class="busqueda">
-      <h3>Búsqueda</h3>
+      <h3>Buscador del Sistema de Bibliotecas</h3>
       <div class="busqueda-modulo">
           <span class="logo-search">
             <img src="<?php echo $images_folder ?>/logo-search-blue.png">
@@ -66,19 +43,22 @@
               <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
 
              <span class="title-search">
-              <h4>Buscador del Sistema de Bibliotecas</h4>
+              <!-- <h4>Buscador del Sistema de Bibliotecas</h4> -->
               <input id="ebscohostsearchtext" name="ebscohostsearchtext" placeholder="¿Qué estás buscando?">
             </span>
             <div class="filters">
-              <label><input type="radio" name="searchFieldSelector" id="guidedField_0" value="Palabra Clave"> Palabra Clave</label>
-              <label><input type="radio" name="searchFieldSelector" id="guidedField_1" value="Título" checked> Título</label>
-              <label><input type="radio" name="searchFieldSelector" id="guidedField_2" value="Autor"> Autor</label>
+              <div class="left">
+                <label><input type="radio" name="searchFieldSelector" id="guidedField_0" value="Palabra Clave"> Palabra Clave</label>
+                <label><input type="radio" name="searchFieldSelector" id="guidedField_1" value="Título" checked> Título</label>
+                <label><input type="radio" name="searchFieldSelector" id="guidedField_2" value="Autor"> Autor</label>
+              </div>
+
+              <div class="right">
+                <label><input type="checkbox" name="chkCatalogOnly" id="chkCatalogOnly" value="#"> Sólo catálogo</label>
+                <label><input type="checkbox" name="chkLibraryCollection" id="chkLibraryCollection" value="#"> Disponible en SIBIB</label>
+              </div>
             </div>
-            <div class="gray-line"></div>
-            <div class="filters">
-              <label><input type="checkbox" name="chkCatalogOnly" id="chkCatalogOnly" value="#"> Sólo catálogo</label>
-              <label><input type="checkbox" name="chkLibraryCollection" id="chkLibraryCollection" value="#"> Disponible en SIBIB</label>
-            </div>
+
           </form>
       </div>
     </div>
@@ -103,14 +83,14 @@
 <div class="gray-bg">
   <div class="container">
     <h3 class="title-center">Noticias</h3>
-    <div class="modulo-noticia">  
+    <div class="modulo-noticia">
       <!--Última noticia 1-->
-      <?php 
-      foreach($noticias as $noticia): 
+      <?php
+      foreach($noticias as $noticia):
         ?>
       <div class="noticia">
         <figure class="imagen-noticia">
-          <?php 
+          <?php
           if($noticia->imagen==null){
             ?>
             <img src="<?php echo $images_folder ?>otros-repos/img-link-test.png" alt="" />
@@ -138,7 +118,7 @@
             </li>
             <li>
               <a href="https://twitter.com/share?url=<?php site_url('noticias/show/')+$noticia->id?>
-              &text=<?php echo $noticia->titulo?>&via=sibib&hashtags=UCM,SIBIB" 
+              &text=<?php echo $noticia->titulo?>&via=sibib&hashtags=UCM,SIBIB"
                 class="simptip-position-top simptip-fade" data-tooltip="Comparte en Twitter">
                 <img src="<?php echo $images_folder ?>tw.png" alt="Twitter" />
               </a>
@@ -153,29 +133,8 @@
   </div>
 
 
-  <div class="old-news-modulo">
-    <?php foreach ($noticias_sidebar as $noticia):?>
-      <div class="calendar-date">
-        <div class="calendar">
-          <div class="calendar-day">
-            <label for=""><?php echo date("d", strtotime($noticia->fecha)) ?></label>
-          </div>
-          <div class="calendar-month">
-            <label for=""><?php echo date("M", strtotime($noticia->fecha)) ?></label>
-          </div>
-        </div>
-      </div>
-      <div class="calendar-title">
-        <a href="/noticias/show/<?php echo $noticia->id; ?>"><?php echo $noticia->titulo ?></a>
-      </div>
-
-      <div class="gray-line"></div>
-    <?php endforeach; ?>
-
-
     <a href="/noticias" class="btn-blue">Ver todas las noticias</a>
   </div>
-</div>
 </div>
 
 <div class="bibliotecas">

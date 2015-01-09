@@ -13,7 +13,6 @@
 		<a href="/" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
 		<nav>
 			<a class="main" href="/">Inicio</a>
-			<label class="selected">Noticias</label>
 			<a class="main" href="/sibib">SIBIB</a>
 			<a class="main" href="/recursos">Recursos de Información</a>
 			<a class="main" href="/servicios">Servicios</a>
@@ -33,11 +32,11 @@
 			<div class="full-noticia">
 				<div class="content-full-noticia">
 					<figure>
-						 <?php 
+						 <?php
 				          if($noticia->imagen){
 				            ?>
 				            <img src="<?php echo $noticia->imagen?>" alt="" />
-				            
+
 				            <?php
 				          }else{
 				            ?>
@@ -59,11 +58,11 @@
 							<li>
 								<a href="https://twitter.com/share?url=<?php site_url('noticias/show/')+$noticia->id?>
 								&text=<?php echo $noticia->titulo?>&via=sibib&hashtags=UCM,SIBIB"
-								class="simptip-position-top simptip-fade" 
+								class="simptip-position-top simptip-fade"
 								data-tooltip="Comparte en Twitter">
 									<img src="<?php echo $images_folder ?>tw.png" alt="Twitter" />
 								</a>
-								 
+
 
 							</li>
 						</ul>
@@ -77,7 +76,7 @@
 	<div class="container">
 			<nav class="pagination">
 				<?php echo $links; ?>
-				
+
 			</nav>
 		</div>
 </div>
