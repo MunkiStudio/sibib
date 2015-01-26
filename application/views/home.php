@@ -129,19 +129,51 @@
   <div class="container">
     <h3 id="h-white">Bibliotecas</h3>
     <div class="white-line"></div>
-    <nav>
-      <label>San Miguel</label>
-      <a href="#">Nuestra Señora del Carmen</a>
-      <a href="#">San Isidro</a>
-      <a href="#">Villa Huilquilemu</a>
+    <nav class="tabs">
+      <a href="#sanmiguel">San Miguel</a>
+      <a href="#carmen">Nuestra Señora del Carmen</a>
+      <a href="#isidro">San Isidro</a>
+      <a href="#huilquilemu">Villa Huilquilemu</a>
     </nav>
     <!-- TODO TABS -->
-    <img class="biblioteca-map" src="<?php echo $images_folder ?>map-l-miguel.png" alt="" />
-    <img class="biblioteca-map-medium" src="<?php echo $images_folder ?>map-m-miguel.png" alt="" />
-    <img class="map-small biblioteca-map-small " src="<?php echo $images_folder ?>map-s-miguel.png" alt="" />
-    <div class="btn-main biblioteca-map-small">
-      <a class="btn-news"><img src="<?php echo $images_folder ?>arrow-left.png" alt="" /></a>
-      <a class="btn-news"><img src="<?php echo $images_folder ?>arrow-right.png" alt="" /></a>
+    <div id="sanmiguel">
+      <img class="biblioteca-map" src="<?php echo $images_folder ?>map-l-miguel.png" alt="" />
+      <img class="biblioteca-map-medium" src="<?php echo $images_folder ?>map-m-miguel.png" alt="" />
+      <img class="map-small biblioteca-map-small " src="<?php echo $images_folder ?>map-s-miguel.png" alt="" />
+      <div class="btn-main biblioteca-map-small">
+        <a class="btn-news"><img src="<?php echo $images_folder ?>arrow-left.png" alt="" /></a>
+        <a class="btn-news"><img src="<?php echo $images_folder ?>arrow-right.png" alt="" /></a>
+      </div>
+    </div>
+
+    <div id="carmen">
+      <img class="biblioteca-map" src="<?php echo $images_folder ?>map-l-carmen.png" alt="" />
+      <img class="biblioteca-map-medium" src="<?php echo $images_folder ?>map-m-carmen.png" alt="" />
+      <img class="map-small biblioteca-map-small " src="<?php echo $images_folder ?>map-s-carmen.png" alt="" />
+      <div class="btn-main biblioteca-map-small">
+        <a class="btn-news"><img src="<?php echo $images_folder ?>arrow-left.png" alt="" /></a>
+        <a class="btn-news"><img src="<?php echo $images_folder ?>arrow-right.png" alt="" /></a>
+      </div>
+    </div>
+
+    <div id="huilquilemu">
+      <img class="biblioteca-map" src="<?php echo $images_folder ?>map-l-huilquilemu.png" alt="" />
+      <img class="biblioteca-map-medium" src="<?php echo $images_folder ?>map-m-huilquilemu.png" alt="" />
+      <img class="map-small biblioteca-map-small " src="<?php echo $images_folder ?>map-s-huilquilemu.png" alt="" />
+      <div class="btn-main biblioteca-map-small">
+        <a class="btn-news"><img src="<?php echo $images_folder ?>arrow-left.png" alt="" /></a>
+        <a class="btn-news"><img src="<?php echo $images_folder ?>arrow-right.png" alt="" /></a>
+      </div>
+    </div>
+
+    <div id="isidro">
+      <img class="biblioteca-map" src="<?php echo $images_folder ?>map-l-isidro.png" alt="" />
+      <img class="biblioteca-map-medium" src="<?php echo $images_folder ?>map-m-isidro.png" alt="" />
+      <img class="map-small biblioteca-map-small " src="<?php echo $images_folder ?>map-s-isidro.png" alt="" />
+      <div class="btn-main biblioteca-map-small">
+        <a class="btn-news"><img src="<?php echo $images_folder ?>arrow-left.png" alt="" /></a>
+        <a class="btn-news"><img src="<?php echo $images_folder ?>arrow-right.png" alt="" /></a>
+      </div>
     </div>
   </div>
 </div>

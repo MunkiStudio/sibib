@@ -570,7 +570,7 @@ header {
 		}
 		a {
 			@include montserrat(14px, white);
-			@include gridle(3);
+			width:24%;
 			text-decoration: none;
 			text-align: center;
 			text-transform: uppercase;
@@ -578,6 +578,12 @@ header {
 			position: relative;
 			display: inline-block;
 			outline: none;
+      &.section-selected{
+        @include montserrat(14px, darken($blue-base, 20%));
+        position: relative;
+        background:white;
+        border-radius:10px;
+      }
 		}
 		a::after {
 			position: absolute;

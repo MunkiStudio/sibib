@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <div id="categorias-bg">
+  <div id="ebooks-bg">
     <div class="container">
       <img src="<?php echo $images_folder ?>icons/icon-ebooks.png" alt="" />
       <h1 class="title-section">categorias ebooks</h1>
