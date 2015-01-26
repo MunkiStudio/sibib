@@ -1,0 +1,57 @@
+/*
+Syntax error: File to import not found or unreadable: compass/reset.
+              Load paths:
+                /Users/oinkme/Desktop/sibib-base/public
+                /Users/oinkme/Desktop/sibib-base/public/sass
+        on line 6 of sass/screen.scss
+
+1: /* Welcome to Compass.
+2:  * In this file you should write your main styles. (or centralize your imports)
+3:  * Import this file using the following HTML or equivalent:
+4:  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> *\/
+5: 
+6: @import "compass/reset";
+
+Backtrace:
+sass/screen.scss:6
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/import_node.rb:45:in `import'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/tree/root_node.rb:20:in `render'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/engine.rb:315:in `_render'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/engine.rb:262:in `render'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:235:in `watch'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/plugin.rb:107:in `method_missing'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/exec.rb:463:in `watch_or_update'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/exec.rb:326:in `process_result'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/exec.rb:41:in `parse'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/lib/sass/exec.rb:21:in `parse!'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/gems/sass-3.2.19/bin/sass:13:in `<top (required)>'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/bin/sass:23:in `load'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/bin/sass:23:in `<main>'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/bin/ruby_executable_hooks:15:in `eval'
+/Users/oinkme/.rvm/gems/ruby-2.1.4/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: compass/reset.\A               Load paths:\A                 /Users/oinkme/Desktop/sibib-base/public\A                 /Users/oinkme/Desktop/sibib-base/public/sass\A         on line 6 of sass/screen.scss\A \A 1: /* Welcome to Compass.\A 2:  * In this file you should write your main styles. (or centralize your imports)\A 3:  * Import this file using the following HTML or equivalent:\A 4:  * <link href=\"/stylesheets/screen.css\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" /> */\A 5: \A 6: @import \"compass/reset\";"; }
