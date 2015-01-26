@@ -1,7 +1,7 @@
 <?php
 class Basedatos_model extends MY_Model{
 	public $_table = 'basedatos';
-	
+
 	public $validate = array(
 		array('field' => 'url',
 			'label' => 'url',
@@ -18,6 +18,5 @@ class Basedatos_model extends MY_Model{
 			'label' => 'bloqueado')
 
 	);
-	
+
 }
-?>

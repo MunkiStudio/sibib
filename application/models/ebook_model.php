@@ -1,7 +1,7 @@
 <?php
 class Ebook_model extends MY_Model{
 	public $_table = 'ebooks';
-	
+
 	public $validate = array(
 		array('field' => 'titulo',
 			'label' => 'titulo',
@@ -17,11 +17,12 @@ class Ebook_model extends MY_Model{
 			'rules' => 'required')
 	);
 
+  public $belongs_to = array('categoria' => array('model' => 'categoria_model'));
+
 	public function search($term){
 		$this->db->like('titulo',$term);
 		$this->db->or_like('descripcion',$term);
 		return $this;
 	}
-	
+
 }
-?>

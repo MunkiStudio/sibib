@@ -1,11 +1,3 @@
-<div class="submenu">
-		<div class="container header">
-			<nav>
-				<a href="#">Formulario Online</a>
-				<a href="http://www.alumni.ucm.cl/">Alumni</a>
-			</nav>
-		</div>
-	</div>
 
 	<header class="fixed white">
 		<div class="container header">
@@ -26,20 +18,17 @@
 		<div class="container small">
 			<nav>
 				<label class="section-selected">Servicios</label>
+
 			</nav>
 		</div>
 	</div>
 
 	<div class="container">
-		<h1 class="title-section">Credenciales</h1>
+		<h1 class="title-section">Servicios</h1>
 		<hr class="title-line" />
 	</div>
 
-	<div class="container title">
-		<img class="img-section" src="<?php echo $images_folder ?>sibib/mision.png" alt="" />
-		<div class="info-section">
-			<h3>Información</h3>
-			<p class="p-standard">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat, est sit amet interdum blandit, mi orci faucibus nibh, vitae auctor mi tellus nec felis. Sed ac scelerisque sapien. Integer semper mauris nec magna mollis ullamcorper. Integer sollicitudin lorem at tempor fermentum. Proin sagittis, lorem et dictum dictum, turpis lorem malesuada elit, vel consectetur lectus augue vitae lectus. Vestibulum posuere scelerisque odio, sed volutpat lorem. Vestibulum quis lacus et ante pulvinar convallis. Vivamus mauris ipsum, consectetur et elit eu, ornare eleifend quam.</p>
-		</div>
-	</div>
+	<div class="container title servicios">
+    <?php echo $servicios->texto ?>
+  </div>
 </div>

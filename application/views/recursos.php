@@ -1,13 +1,4 @@
 
-	<div class="submenu">
-		<div class="container header">
-			<nav>
-				<a href="#">Formulario Online</a>
-				<a href="http://www.alumni.ucm.cl/">Alumni</a>
-			</nav>
-		</div>
-	</div>
-
 	<header class="fixed white">
 		<div class="container header">
 			<a href="index.html"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
@@ -29,7 +20,7 @@
 
 	<div class="container small">
 
-		<a href="http://gliese.ucm.cl:8991/F/-/?func=find-b-0&local_base=UCM01" class="btn-link">
+		<a href="http://gliese.ucm.cl:8991/F/-/?func=find-b-0&local_base=UCM01" target="_blank" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="catalogo-ucm">
 				<img src="<?php echo $images_folder ?>icons/icon-catalogo.png" />
@@ -53,7 +44,7 @@
 			<label for="">Base de Datos</label>
 			</div>
 		</a>
-		<a href="#" class="btn-link">
+		<a href="http://atoz.ebsco.COM/titles/6371" target="_blank" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="revistas">
 				<img src="<?php echo $images_folder ?>icons/icon-revistas.png" />
@@ -61,7 +52,7 @@
 			<label for="">Revistas Electrónicas</label>
 			</div>
 		</a>
-		<a href="/ebooks" class="btn-link">
+		<a href="/categorias" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="ebooks">
 				<img src="<?php echo $images_folder ?>icons/icon-ebooks.png" />
@@ -85,12 +76,12 @@
 			<label for="">Otros Repositorios</label>
 			</div>
 		</a>
-		<a href="/recursos_por_area" class="btn-link">
+		<a href="http://guiastematicas.biblioteca.ucm.cl/" target="_blank" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="area">
 				<img src="<?php echo $images_folder ?>icons/icon-area.png" />
 			</div>
-			<label for="">Recursos por Área</label>
+			<label for="">Guías Temáticas</label>
 			</div>
 		</a>
 

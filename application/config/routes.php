@@ -44,6 +44,7 @@ $route['404_override'] = '';
 /** Front**/
 $route['noticias/(:num)'] = 'noticias/index/$1';
 $route['ebooks/(:num)'] = 'ebooks/index/$1';
+$route['ebooks/categoria/(:num)'] = 'ebooks/categoria/$1';
 
 /** Admin **/
 $route['admin'] = "admin/admin";
@@ -53,6 +54,13 @@ $route['admin/noticias/(:num)'] = "admin/admin_noticias/edit/$1";
 $route['admin/noticias/delete'] = "admin/admin_noticias/delete";
 $route['admin/noticias/new'] = "admin/admin_noticias/add";
 $route['admin/noticias/save'] = "admin/admin_noticias/save";
+
+
+$route['admin/categorias-ebooks'] = "admin/admin_categorias";
+$route['admin/categorias-ebooks/(:num)'] = "admin/admin_categorias/edit/$1";
+$route['admin/categorias-ebooks/delete'] = "admin/admin_categorias/delete";
+$route['admin/categorias-ebooks/new'] = "admin/admin_categorias/add";
+$route['admin/categorias-ebooks/save'] = "admin/admin_categorias/save";
 
 
 $route['admin/ebooks'] = "admin/admin_ebooks";
@@ -68,6 +76,10 @@ $route['admin/basedatos/delete'] = "admin/admin_basedatos/delete";
 $route['admin/basedatos/new'] = "admin/admin_basedatos/add";
 $route['admin/basedatos/save'] = "admin/admin_basedatos/save";
 
+
+$route['admin/servicios'] = 'admin/admin_servicios';
+$route['admin/servicios/edit'] = 'admin/admin_servicios/edit';
+$route['admin/servicios/save'] = 'admin/admin_servicios/save';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

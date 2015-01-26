@@ -27,19 +27,21 @@
 		<a href="/admin/ebooks/new" class="buttons btn-primary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/plus.png"/>Nuevo</a>
 		<!-- TODO USE JAVASCRIPT TO DELETE -->
 		<a class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</a>
-		
+
 	</div>
 	<div class="list">
 		<table>
 			<tr>
 				<th class="check"></th>
-				<th class="title">Título</th> 
+				<th class="title">Título</th>
+        <th class="actions">Categoría</th>
 				<th class="actions">Acciones</th>
 			</tr>
 			<?php foreach($ebooks as $ebook): ?>
 			<tr class="table-content">
 				<td><input type="checkbox" name="select_news" value="<?php echo $ebook->id;?>" /></td>
-				<td><?php echo $ebook->titulo; ?></td> 
+				<td><?php echo $ebook->titulo; ?></td>
+        <td><?php echo $ebook->categoria;?></td>
 				<td>
 					<a href="/admin/ebooks/<?php echo $ebook->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
 					<form method="POST" action="/admin/ebooks/delete" class="list-inline">
@@ -49,15 +51,15 @@
 				</td>
 			</tr>
 			<?php endforeach; ?>
-			
+
 		</table>
-		
+
 	</div>
 </div>
 
 <div class="container">
 		<nav class="pagination">
 			<?php echo $links; ?>
-			
+
 		</nav>
 	</div>

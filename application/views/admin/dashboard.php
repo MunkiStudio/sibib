@@ -23,6 +23,13 @@
 			</div>
 		</a>
 	</div>
+  <div class="sections">
+    <a href="/admin/categorias-ebooks">
+      <div class="btn-section">
+        <h4>Categorías Ebooks</h4>
+      </div>
+    </a>
+  </div>
 	<div class="sections">
 		<a href="/admin/ebooks">
 			<div class="btn-section">
@@ -37,4 +44,13 @@
 			</div>
 		</a>
 	</div>
+
+  <div class="sections">
+    <a href="/admin/servicios">
+      <div class="btn-section">
+        <h4>Texto Servicios</h4>
+      </div>
+    </a>
+  </div>
+
 </div>

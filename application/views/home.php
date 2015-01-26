@@ -1,12 +1,3 @@
-<!-- <div class="submenu">
-  <div class="container header">
-    <nav>
-      <a href="#">Formulario Online</a>
-      <a href="http://www.alumni.ucm.cl/">Alumni</a>
-    </nav>
-  </div>
-</div> -->
-
 <div class="welcome">
   <header class="fixed">
     <div class="shadow">
@@ -47,13 +38,13 @@
               <input id="ebscohostsearchtext" name="ebscohostsearchtext" placeholder="¿Qué estás buscando?">
             </span>
             <div class="filters">
-              <div class="left">
+              <div class="top">
                 <label><input type="radio" name="searchFieldSelector" id="guidedField_0" value="Palabra Clave"> Palabra Clave</label>
                 <label><input type="radio" name="searchFieldSelector" id="guidedField_1" value="Título" checked> Título</label>
                 <label><input type="radio" name="searchFieldSelector" id="guidedField_2" value="Autor"> Autor</label>
               </div>
 
-              <div class="right">
+              <div class="bottom">
                 <label><input type="checkbox" name="chkCatalogOnly" id="chkCatalogOnly" value="#"> Sólo catálogo</label>
                 <label><input type="checkbox" name="chkLibraryCollection" id="chkLibraryCollection" value="#"> Disponible en SIBIB</label>
               </div>
@@ -66,15 +57,12 @@
     <h3>Destacamos</h3>
     <div class="destacamos-modulo">
       <div class="links-destacamos">
-        <a href="http://gliese.ucm.cl:8991/F/-/?func=find-b-0&local_base=UCM01">Catálogo</a>
-        <div class="gray-line"></div>
-        <a href="#">Renovación de Préstamos</a>
-        <div class="gray-line"></div>
-        <a href="http://sibib2.ucm.cl/bexternas.php?dbext=wos">Base de Datos</a>
-        <div class="gray-line"></div>
-        <a href="/ebooks">eBooks</a>
-        <div class="gray-line"></div>
-        <a href="#">Repositorio UCM</a>
+        <a class="destacado"  href="http://gliese.ucm.cl:8991/F/-/?func=find-b-0&local_base=UCM01">Catálogo</a>
+        <a class="destacado" href="#">Renovación</a>
+        <a class="destacado" href="http://sibib2.ucm.cl/bexternas.php?dbext=wos">Base de Datos</a>
+        <a class="destacado" href="/ebooks">eBooks</a>
+        <a class="destacado" href="#">Repositorio UCM</a>
+        <a class="destacado" href="http://guiastematicas.biblioteca.ucm.cl/">Guías temáticas</a>
       </div>
     </div>
   </div>

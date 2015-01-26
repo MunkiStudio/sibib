@@ -1,13 +1,4 @@
-<div class="submenu">
-		<div class="container header">
-			<nav>
-				<a href="#">Formulario Online</a>
-				<a href="http://www.alumni.ucm.cl/">Alumni</a>
-			</nav>
-		</div>
-	</div>
-
-	<header class="fixed white">
+<header class="fixed white">
 		<div class="container header">
 			<a href="index.html"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
 			<a href="#" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
@@ -44,15 +35,15 @@
 			<label for="">Acreditación</label>
 			</div>
 		</a>
-		<a href="/resources/Reglamento SIBIB.docx" class="btn-link">
+		<a href="http://www.sibib.ucm.cl/adquisiciones/titulos/tituloss.php" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="area">
 				<img src="<?php echo $images_folder ?>icons/icon-revistas.png" />
 			</div>
-			<label for="">Reglamento</label>
+			<label for="">Nuevas Adquisiciones</label>
 			</div>
 		</a>
-		<a href="#" class="btn-link">
+		<a href="/resources/Reglamento SIBIB.docx" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="otros-repo">
 				<img src="<?php echo $images_folder ?>icons/icon-revistas.png" />

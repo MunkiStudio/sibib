@@ -14,9 +14,9 @@ class Ebooks extends CI_Controller {
 		$this->load->library('pagination');
 		$this->load->config('pagination');
 	}
-	
+
 	public function index()
-	{	
+	{
 		$config['total_rows'] = $this->ebooks->count_all();
 		$config['base_url'] = base_url('/ebooks');
 		$config['uri_segment'] = 2;
@@ -30,9 +30,24 @@ class Ebooks extends CI_Controller {
 		$this->load->view('ebooks',$data);
 	}
 
+  public function categoria(){
+    $config['total_rows'] = $this->ebooks->count_by(array('categoria' => $this->uri->segment(3)));
+    $config['base_url'] = base_url('/ebooks');
+    $config['uri_segment'] = 4;
+    $this->pagination->initialize($config);
+    $ebooks = $this->ebooks->limit($this->config->item('per_page'),$this->uri->segment(2))->get_many_by('categoria',$this->uri->segment(3));
+    $data = array(
+      'images_folder' => '/resources/images/',
+      'ebooks' => $ebooks,
+      'links' => $this->pagination->create_links()
+    );
+    $this->load->view('ebooks',$data);
+
+  }
+
 	public function search(){
 		$term = $this->input->post('search');
-		
+
 		$data = array(
 			'images_folder' => '/resources/images/',
 			'ebooks' => $this->ebooks->search($term)->get_all()

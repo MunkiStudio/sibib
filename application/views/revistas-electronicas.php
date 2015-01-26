@@ -1,15 +1,5 @@
 
-
-	<div class="submenu">
-		<div class="container header">
-			<nav>
-				<a href="#">Formulario Online</a>
-				<a href="http://www.alumni.ucm.cl/">Alumni</a>
-			</nav>
-		</div>
-	</div>
-
-	<header>
+<header>
 		<div class="container header">
 			<a href="index.html"><img class="main-logo-header" src="src/logo-sibib-color.png" alt="" /></a>
 			<a href="#" ><img class="mini sb-toggle-right" src="src/mini-nav.png" alt="" /></a>

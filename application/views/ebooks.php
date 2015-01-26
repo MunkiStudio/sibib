@@ -1,12 +1,3 @@
-	<div class="submenu">
-		<div class="container header">
-			<nav>
-				<a href="#">Formulario Online</a>
-				<a href="http://www.alumni.ucm.cl/">Alumni</a>
-			</nav>
-		</div>
-	</div>
-
 	<header class="fixed white">
 		<div class="container header">
 			<a href="index.html"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
@@ -53,7 +44,7 @@
 			No se encontraron resultados
 		<?php endif; ?>
 		<?php foreach($ebooks as $ebook ): ?>
-		<a href="<?php echo $ebook->url; ?>">
+		<a href="<?php echo $ebook->url; ?>" target="_blank">
 		<div class="ebook">
 			<figure>
 				<?php if($ebook->imagen): ?>

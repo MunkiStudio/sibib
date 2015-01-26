@@ -25,11 +25,11 @@
 	<div class="buttons-container">
 		<span>
 			<a class="buttons btn-secondary" href="/admin/ebooks"><img src="<?php echo base_url() ?>resources/images/admin/back.png"/>Volver</a>
-			
+
 		</span>
 		<?php if($ebook): ?>
 		<span class="btn-right">
-			<form method="POST" action="/admin/noticias/delete">
+			<form method="POST" action="/admin/ebooks/delete">
 			<input type="hidden" value="<?php echo $ebook->id?>" name="id" >
 			<button type="submit" class="buttons btn-secondary"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</button>
 			</form>
@@ -40,6 +40,15 @@
 		<?php if($ebook): ?>
 			<input type="hidden" name="id" value="<?php echo $ebook->id;?>">
 		<?php endif; ?>
+    <div class="inputs">
+      <label for="">Categoría</label>
+      <select name="categoria">
+      <?php foreach($categorias as $categoria): ?>
+        <option value="<?php echo $categoria->id;?>"><?php echo $categoria->titulo; ?></option>
+
+      <?php endforeach; ?>
+      </select>
+    </div>
 		<div class="inputs">
 			<label>Link ebook</label>
 			<input name="url" type="url" value="<?php echo ($ebook) ? $ebook->url : "" ?>"/>

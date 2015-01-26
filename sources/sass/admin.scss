@@ -124,6 +124,10 @@ header {
 		margin-right: 10px;
 	}
 }
+button.buttons{
+  border: 0;
+  padding-bottom: 40px;
+}
 
 .btn-primary {
 	@include montserrat(16px, white);
@@ -185,7 +189,7 @@ table tr:nth-child(odd) {
 }
 
 .title {
-	width: 83%;
+	width: 72%;
 }
 
 .actions {

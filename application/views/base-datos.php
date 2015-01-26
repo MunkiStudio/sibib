@@ -1,12 +1,3 @@
-	<div class="submenu">
-		<div class="container header">
-			<nav>
-				<a href="#">Formulario Online</a>
-				<a href="http://www.alumni.ucm.cl/">Alumni</a>
-			</nav>
-		</div>
-	</div>
-	
 	<header class="fixed white">
 		<div class="container header">
 			<a href="index.html"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
@@ -20,8 +11,8 @@
 				<a class="main" href="/informacion">Gestión</a>			</nav>
 		</div>
 	</header>
-	
-<div class="main-content top100">		
+
+<div class="main-content top100">
 	<div class="nav-menu">
 		<div class="container small">
 			<nav class="nav-left">
@@ -31,7 +22,7 @@
 			</nav>
 		</div>
 	</div>
-	
+
 	<div id="datos-bg">
 		<div class="container">
 			<img src="<?php echo $images_folder ?>icons/icon-datos.png" alt="" />
@@ -39,7 +30,7 @@
 			<hr class="title-line" />
 		</div>
 	</div>
-	
+
 	<div class="container">
 		<?php foreach($basedatos as $bd):?>
 			<a href="<?php echo $bd->url;?>" class="btn-link">
@@ -67,6 +58,6 @@
 				</div>
 			</a>
 		<?php endforeach; ?>
-		
+
 	</div>
 </div>

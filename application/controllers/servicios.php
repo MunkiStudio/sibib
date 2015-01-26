@@ -9,12 +9,16 @@ class Servicios extends CI_Controller {
 
 	private function _init(){
 		$this->output->set_template('default');
+    date_default_timezone_set('America/Santiago');
+    $this->load->model('servicios_model', 'servicios');
 	}
-	
+
 	public function index()
 	{
+    $servicios = $this->servicios->get(1);
 		$data = array(
-			'images_folder' => '/resources/images/'
+			'images_folder' => '/resources/images/',
+      'servicios' => $servicios
 		);
 		$this->load->view('servicios',$data);
 	}

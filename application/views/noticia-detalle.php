@@ -1,11 +1,3 @@
-<div class="submenu">
-		<div class="container header">
-			<nav>
-				<a href="#">Formulario Online</a>
-				<a href="http://www.alumni.ucm.cl/">Alumni</a>
-			</nav>
-		</div>
-	</div>
 
 	<header class="fixed white">
 		<div class="container header">

@@ -6,10 +6,11 @@ class Admin_ebooks extends My_Controller {
 		parent::__construct();
 		$this->output->set_template('admin');
 		$this->load->model('ebook_model', 'ebooks');
+    $this->load->model('categoria_model','categorias');
 		$this->model = $this->ebooks;
 		$this->base_url = "/admin/ebooks/";
 	}
-	
+
 
 	function index(){
 		parent::index();
@@ -18,8 +19,9 @@ class Admin_ebooks extends My_Controller {
 			'ebooks' => $this->model->limit($this->config->item('per_page'), $this->uri->segment(3))->get_all(),
 			'links' => $this->pagination->create_links(),
 			'errors' => $this->session->flashdata('error')
+
 		);
-		$this->load->view('/admin/ebooks',$data);	
+		$this->load->view('/admin/ebooks',$data);
 	}
 	function edit($id=null){
 		parent::edit();
@@ -28,17 +30,18 @@ class Admin_ebooks extends My_Controller {
 			if($ebook!=null){
 				$data = array(
 					'ebook' => $ebook,
-					'errors' => $this->session->flashdata('error')
+					'errors' => $this->session->flashdata('error'),
+          'categorias' => $this->categorias->get_all()
 				);
-				$this->load->view('/admin/ebook',$data);	
+				$this->load->view('/admin/ebook',$data);
 			}else{
 				redirect('/admin/ebooks');
 			}
 		}else{
 			redirect('/admin/ebooks');
 		}
-		
-		
+
+
 	}
 
 	function add(){
@@ -48,14 +51,14 @@ class Admin_ebooks extends My_Controller {
 			'token' => $this->session->flashdata('token'),
 			'ebook'=>false
 		);
-		$this->load->view('/admin/ebook',$data);	
+		$this->load->view('/admin/ebook',$data);
 	}
 
 	function save(){
 		parent::save();
 		if($_SERVER['REQUEST_METHOD']==='POST'){
 			$data = $this->input->post(NULL,TRUE);
-			
+
 			$insert = array(
 				'titulo' => $data['titulo'],
 				'autor' => $data['autor'],
@@ -63,29 +66,29 @@ class Admin_ebooks extends My_Controller {
 				'year' => $data['year'],
 				'descripcion' => $data['descripcion']
 			);
-			
+
 			$result = $this->uploadImage($insert['titulo'],$insert['descripcion']);
 			if(!$result['error']){
 				$insert['imagen'] =  $result['data'];
 			}else{
 				$error = array('error' => $result['error']);
 				$this->session->set_flashdata('errors',$error);
-				redirect('/admin/ebooks/new');	
+				redirect('/admin/ebooks/new');
 			}
-			
+
 			if(isset($data['id'])){
 				$this->model->update($data['id'],$insert);
 			}else{
-				$result = $this->model->insert($insert);	
+				$result = $this->model->insert($insert);
 				if(!$result){
-					$this->session->set_flashdata('error','Required fields');	
+					$this->session->set_flashdata('error','Required fields');
 					$this->load->view('/admin/ebook',$data);
-					return;		
+					return;
 				}
-				
+
 			}
 		}
-		
+
 		redirect('/admin/ebooks',true);
 	}
 
