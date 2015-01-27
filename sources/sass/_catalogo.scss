@@ -1,0 +1,33 @@
+.list-catalogue a {
+
+  /* @include open-sans($weight, 400, $gray-base); */
+
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #444;
+
+  text-decoration: none;
+}
+
+.list-catalogue a:hover {
+  color: #1A85DB;
+}
+
+.list-catalogue li {
+  list-style-type: none;
+  margin-bottom: 25px;
+}
+
+.yellow-bg {
+  background: #EBC900 !important;
+}
+
+.list-catalogue {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.lists {
+  padding-top: 70px;
+}

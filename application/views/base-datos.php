@@ -4,7 +4,6 @@
 			<a href="#" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
 			<nav>
 				<a class="main" href="/">Inicio</a>
-				<a class="main" href="/noticias">Noticias</a>
 				<a class="main" href="/sibib">SIBIB</a>
 				<label class="selected">Recursos de Información</label>
 				<a class="main" href="/servicios">Servicios</a>
