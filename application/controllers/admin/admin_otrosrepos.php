@@ -24,13 +24,13 @@ class Admin_otrosrepos extends My_Controller {
 	function edit($id=null){
 		parent::edit();
 		if($id){
-			$basedato = $this->model->get($id);
-			if($basedato!=null){
+			$otrorepo = $this->model->get($id);
+			if($otrorepo!=null){
 				$data = array(
-					'otrorepo' => $basedato,
+					'otrorepo' => $otrorepo,
 					'errors' => $this->session->flashdata('error')
 				);
-				$this->load->view('/admin/basedato',$data);
+				$this->load->view('/admin/otrorepo',$data);
 			}else{
 				redirect('/admin/otrosrepos');
 			}
