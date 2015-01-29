@@ -70,3 +70,60 @@ git status
 ls
 nano .htaccess 
 exit
+git st
+git status
+git stash
+git status
+git pull
+git stash pop
+ls
+mkdir uploads
+chmod 777 uploads
+ls
+nano application/core/MY_Controller.php 
+nano application/core/MY_Controller.php 
+nano application/libraries/phpFlickr.php 
+nano application/libraries/phpFlickr.php 
+mv application/libraries/phpFlickr.php application/libraries/phpflickr.php 
+git pull
+git reset --hard HEAD
+git pull
+lx application/libraries/
+ls application/libraries/
+nano application/libraries/phpflickr.php 
+nano application/config/database.php 
+ls
+git pull
+exit
+git pull
+grunt build
+grunt
+ls
+npm install
+node
+node -v
+exit
+ls
+git status
+git stash
+git pull
+grunt build
+git stash pop
+nano application/config/database.php 
+nano application/views/ebooks-categorias.php 
+xit
+exit
+git t
+git status
+git stash
+git pull
+git stash pop
+exit
+git stash
+git pull
+git stash pop
+exit
+git stash
+git pull
+git stash pop
+exit
