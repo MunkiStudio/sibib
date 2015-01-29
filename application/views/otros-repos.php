@@ -31,17 +31,32 @@
 	</div>
 
 	<div class="container">
-		<a href="#" class="btn-link">
-			<div class="btn-content">
-				<figure class="img-link" style="position: relative;left: -40px;">
-					<img src="<?php echo $images_folder ?>otros-repos/img-link-test.png" alt="" />
-				</figure>
-				<div class="content-link">
-					<label for="">Link 1</label>
-					<p class="p-standard">Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
-		</a>
+    <?php foreach($otrosrepos as $otrorepo):?>
+  		<a href="<?php echo $otrorepo->url;?>" class="btn-link">
+  			<div class="btn-content">
+          <figure class="img-link" style="position: relative;left: -40px;">
+            <?php if($otrorepo->imagen):?>
+              <img src="<?php echo $otrorepo->imagen; ?>" alt="" />
+            <?php else: ?>
+              <img src="<?php echo $images_folder ?>otros-repos/img-link-test.png" alt="" />
+            <?php endif; ?>
+          </figure>
+          <div class="content-link">
+            <label for=""><?php echo $otrorepo->titulo; ?></label>
+            <p class="p-standard"><?php $otrorepo->descripcion; ?></p>
+            <?php if($otrorepo->locked): ?>
+            <div class="simptip-position-top simptip-fade" data-tooltip="Recurso protegido">
+              <img src="<?php echo $images_folder ?>icons/icon-lock.png" alt="" />
+            </div>
+            <?php else: ?>
+              <div class="simptip-position-top simptip-fade" data-tooltip="Recurso publico">
+                <img src="<?php echo $images_folder ?>icons/icon-unlock.png" alt="" />
+              </div>
+            <?php endif; ?>
+          </div>
+        </div>
+  		</a>
+    <?php endforeach; ?>
 	</div>
 
 </div>

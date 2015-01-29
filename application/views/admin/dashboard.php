@@ -46,6 +46,14 @@
 	</div>
 
   <div class="sections">
+    <a href="/admin/otrosrepos">
+      <div class="btn-section">
+        <h4>Otros repositorios</h4>
+      </div>
+    </a>
+  </div>
+
+  <div class="sections">
     <a href="/admin/servicios">
       <div class="btn-section">
         <h4>Texto Servicios</h4>
