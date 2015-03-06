@@ -125,11 +125,11 @@
 			<div class="equipo">
 				<div class="img-equipo">
 					<figure>
-						<img src="<?php echo $images_folder; ?>/sibib/equipo/María Teresa Sánchez.jpg" alt="" />
+						<img src="<?php echo $images_folder; ?>/sibib/equipo/Maria Teresa Sanchez.jpg" alt="" />
 					</figure>
 				</div>
 				<div class="info-equipo">
-					<label for="nombre" class="nombre">María Teresa Sánchez</label>
+					<label for="nombre" class="nombre">María Teresa Sánchez</label>
 					<br />
 					<label for="cargo" class="cargo">Administrativa</label>
 					<br />
@@ -259,7 +259,7 @@
 			<div class="equipo">
 				<div class="img-equipo">
 					<figure>
-						<img src="<?php echo $images_folder; ?>/sibib/equipo/Alfonso Acuña.jpg" alt="" />
+						<img src="<?php echo $images_folder; ?>/sibib/equipo/Alfonso Acuna.jpg" alt="" />
 					</figure>
 				</div>
 				<div class="info-equipo">
@@ -323,7 +323,7 @@
 			<div class="equipo">
 				<div class="img-equipo">
 					<figure>
-						<img src="<?php echo $images_folder; ?>/sibib/equipo/José Toledo.jpg" alt="" />
+						<img src="<?php echo $images_folder; ?>/sibib/equipo/Jose Toledo.jpg" alt="" />
 					</figure>
 				</div>
 				<div class="info-equipo">
@@ -339,7 +339,7 @@
 			<div class="equipo">
 				<div class="img-equipo">
 					<figure>
-						<img src="<?php echo $images_folder; ?>/sibib/equipo/José Beltrán.jpg" alt="" />
+						<img src="<?php echo $images_folder; ?>/sibib/equipo/Jose Beltran.jpg" alt="" />
 					</figure>
 				</div>
 				<div class="info-equipo">
