@@ -175,7 +175,7 @@
 			<div class="equipo">
 				<div class="img-equipo">
 					<figure>
-						<img src="" alt="" />
+						<img src="<?php echo $images_folder; ?>/sibib/equipo/Clodomira Munoz.jpg" alt="" />
 					</figure>
 				</div>
 				<div class="info-equipo">

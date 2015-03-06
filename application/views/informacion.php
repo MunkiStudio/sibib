@@ -13,16 +13,10 @@
 	</header>
 
 <div class="main-content top100">
-	<div class="nav-menu">
-		<div class="container small">
-			<nav>
-				<label class="section-selected">Información</label>
-			</nav>
-		</div>
-	</div>
+
 
 	<div class="container">
-		<h1 class="title-section">Información</h1>
+		<h1 class="title-section">Gestión</h1>
 		<hr class="title-line" />
 	</div>
 

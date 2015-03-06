@@ -32,7 +32,7 @@
         <div class="links">
           <label for="">Gestión</label>
           <ul>
-            <li><a href="#">Información</a></li>
+            <li><a href="/informacion">Gestión</a></li>
             <li><a href="http://sibib.ucm.cl/descargas/Formulario_BMO_BC.xls">Solicitud de Bibliografía</a></li>
           </ul>
         </div>
@@ -47,9 +47,9 @@
           <label for="">Recursos de Información</label>
           <ul>
             <li><a href="/base_datos">Base de datos</a></li>
-            <li><a href="#">Revistas electrónicas</a></li>
-            <li><a href="#">Catálogo UCM</a></li>
-            <li><a href="#">Otros catálogos</a></li>
+            <li><a href="http://atoz.ebsco.com/titles/6371">Revistas electrónicas</a></li>
+            <li><a href="http://gliese.ucm.cl:8991/F/-/?func=find-b-0&local_base=UCM01">Catálogo UCM</a></li>
+            <li><a href="http://sibibtest.ucm.cl/catalogos">Otros catálogos</a></li>
             <li><a href="/recursos-por-area">Recursos por área</a></li>
             <li><a href="/ebooks">eBooks</a></li>
             <li><a href="#">Repositorio UCM</a></li>
@@ -69,12 +69,12 @@
 
       <div class="white-line"></div>
 
-      <label class="copyright" for="">&copy; Sistema de Bibliotecas de la Universidad Católica del Maule, 2014</label>
+      <label class="copyright" for="">&copy; Sistema de Bibliotecas de la Universidad Católica del Maule, 2015</label>
       <div class="links-footer">
         <nav>
           <a href="http://www.sibib.ucm.cl/acreditacion/login.php">Acreditación</a>
           <a href="/resources/Reglamento SIBIB.docx">Reglamento</a>
-          <a href="#">Normativas</a>
+          <a href="http://sibibtest.ucm.cl/resources/Reglamento%20SIBIB.docx">Normativas</a>
         </nav>
       </div>
     </div>

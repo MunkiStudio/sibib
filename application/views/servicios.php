@@ -14,14 +14,14 @@
 	</header>
 
 <div class="main-content top100">
-	<div class="nav-menu">
+	<!-- <div class="nav-menu">
 		<div class="container small">
 			<nav>
 				<label class="section-selected">Servicios</label>
 
 			</nav>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="container">
 		<h1 class="title-section">Servicios</h1>
