@@ -1,7 +1,7 @@
 
 	<header class="fixed white">
 		<div class="container header">
-			<a href="index.html"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
+			<a href="/"><img class="main-logo-header" src="<?php echo $images_folder ?>logo-sibib-color.png" alt="" /></a>
 			<a href="#" ><img class="mini sb-toggle-right" src="<?php echo $images_folder ?>mini-nav.png" alt="" /></a>
 			<nav>
 				<a class="main" href="/">Inicio</a>
@@ -60,7 +60,7 @@
 			<label for="">E-BOOKS</label>
 			</div>
 		</a>
-		<a href="#" class="btn-link">
+		<a href="http://cibertesis.ucm.cl:8080/jspui/" class="btn-link" target="_blank">
 			<div class="btn-content">
 			<div class="icon-link" id="repo">
 				<img src="<?php echo $images_folder ?>icons/icon-repo.png" />

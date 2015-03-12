@@ -25,8 +25,8 @@
           <a href="http://www.alumni.ucm.cl/" class="btn-blue">Alumni</a>
           <!-- <a href="#" class="btn-blue">Formulario Online</a> -->
           <div class="btn-contacto"></div>
-          <a class="btn-contacto" href="#"><img src="<?php echo base_url() ?>resources/images/btn-fb-white.png" alt="" /></a>
-          <a class="btn-contacto" href="#"><img src="<?php echo base_url() ?>resources/images/btn-mail-white.png" alt="" /></a>
+          <a class="btn-contacto" href="https://www.facebook.com/sibibucm"><img src="<?php echo base_url() ?>resources/images/btn-fb-white.png" alt="" /></a>
+          <a class="btn-contacto" href="mailto:sibib@ucm.cl"><img src="<?php echo base_url() ?>resources/images/btn-mail-white.png" alt="" /></a>
           <div class="btn-contacto"></div>
         </div>
         <div class="links">
