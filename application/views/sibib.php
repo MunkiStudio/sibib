@@ -424,17 +424,17 @@
           <div class="equipo">
             <div class="img-equipo">
               <figure>
-                <!-- <img src="<?php echo $images_folder; ?>/sibib/equipo/Francisca Rubio.jpg" alt="" /> -->
+                <img src="<?php echo $images_folder; ?>/sibib/equipo/Andrea-Yanez.jpg" alt="" />
               </figure>
             </div>
             <div class="info-equipo">
-              <label for="nombre" class="nombre">Andrea Yañez</label>
+              <label for="nombre" class="nombre">Andrea Yañez Batarce</label>
               <br />
               <label for="cargo" class="cargo">Bibliotecóloga  Encargada Biblioteca Carmen / San Isidro</label>
               <br />
-              <a href="mailto:ayanez@ucm.cl" for="email" class="contacto">ayanez@ucm.cl</a>
+              <a href="mailto:anyanez@ucm.cl" for="email" class="contacto">anyanez@ucm.cl</a>
               <br />
-              <label for="telefono" class="contacto">+56-71-2203317</label>
+              <label for="telefono" class="contacto">+56-75-2203316</label>
             </div>
           </div>
 
