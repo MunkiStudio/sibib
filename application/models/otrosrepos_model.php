@@ -11,8 +11,10 @@ class Otrosrepos_model extends MY_Model{
     array('field' => 'titulo',
       'label' => 'tiulo',
       'rules' => 'required'),
-    array('field' => 'bloqueado',
-      'label' => 'bloqueado')
+    array('field' => 'locked',
+      'label' => 'bloqueado'),
+    array('field' => 'descripcion',
+      'label' => 'descripcion')
 
   );
 

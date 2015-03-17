@@ -1,11 +1,11 @@
 
 <header>
 		<div class="container header">
-			<a href="index.html"><img class="main-logo-header" src="src/logo-sibib-color.png" alt="" /></a>
+			<a href="/"><img class="main-logo-header" src="src/logo-sibib-color.png" alt="" /></a>
 			<a href="#" ><img class="mini sb-toggle-right" src="src/mini-nav.png" alt="" /></a>
 			<nav>
-				<a class="main" href="index.html">Inicio</a>
-				<a class="main" href="sibib.html">SIBIB</a>
+				<a class="main" href="/">Inicio</a>
+				<a class="main" href="/sibib">SIBIB</a>
 				<label class="selected">Recursos de Información</label>
 				<a class="main" href="capacitaciones.html">Servicios</a>
 				<a class="main" href="informacion.html">Gestión</a>
@@ -17,7 +17,7 @@
 	<div class="nav-menu">
 		<div class="container small">
 			<nav class="nav-left">
-				<a href="recursos.html" class="nav-link">Recursos de Información</a>
+				<a href="/recursos" class="nav-link">Recursos de Información</a>
 				<label>></label>
 				<label class="section-selected">Revistas Electrónicas</label>
 			</nav>

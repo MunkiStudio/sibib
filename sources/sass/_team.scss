@@ -1,3 +1,10 @@
+.container-depto{
+  border-bottom:1px #aaa solid;
+  .row{
+    display:inline-block;
+  }
+}
+
 .equipo {
 	@include gridle(4);
 	@include gridle(6, mobile);
