@@ -383,6 +383,7 @@
     			</div>
   			</div>
 
+        <div class="row">
           <div class="equipo">
             <div class="img-equipo">
               <figure>
@@ -415,6 +416,24 @@
               <label for="telefono" class="contacto">+56-75-2413633</label>
             </div>
           </div>
+
+          <div class="equipo">
+           <div class="img-equipo">
+             <figure>
+               <img src="<?php echo $images_folder; ?>/sibib/equipo/Maximo Navarro.jpg" alt="" />
+             </figure>
+           </div>
+           <div class="info-equipo">
+            <label for="nombre" class="nombre">Máximo Navarro Contreras</label>
+             <br />
+             <label for="cargo" class="cargo">Administrativo</label>
+             <br />
+             <a href="mailto:mnavarro@ucm.cl" for="email" class="contacto">mnavarro@ucm.cl</a>
+             <br />
+             <label for="telefono" class="contacto">+56-71-2203333</label>
+           </div>
+         </div>
+        </div>
 
 
       </div>

@@ -7,7 +7,7 @@
 
 .equipo {
 	@include gridle(4);
-	@include gridle(6, mobile);
+	@include gridle(12, mobile);
 	margin-bottom: 15px;
 	.img-equipo {
 		@include gridle(5);
