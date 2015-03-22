@@ -61,6 +61,13 @@
 				<input name="bloqueado" type="checkbox"/>
 			<?php endif; ?>
 		</div>
+
+    <div class="inputs">
+      <label>Descripción</label>
+      <textarea class="giant ckeditor" name="descripcion">
+        <?php if($otrorepo){ echo $otrorepo->descripcion; }?>
+      </textarea>
+    </div>
 		<div class="save">
 			<input type="submit" class="buttons btn-primary" value="Guardar">
 			<input type="reset" class="buttons btn-secondary" value="Cancelar">
