@@ -21,6 +21,8 @@ class Admin_otrosrepos extends My_Controller {
 		);
 		$this->load->view('/admin/otrosrepos',$data);
 	}
+
+
 	function edit($id=null){
 		parent::edit();
 		if($id){
@@ -30,7 +32,7 @@ class Admin_otrosrepos extends My_Controller {
 					'otrorepo' => $otrorepo,
 					'errors' => $this->session->flashdata('error')
 				);
-				$this->load->view('/admin/basedato',$data);
+				$this->load->view('/admin/otrorepo',$data);
 			}else{
 				redirect('/admin/otrosrepos');
 			}
