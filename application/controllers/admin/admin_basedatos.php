@@ -9,7 +9,7 @@ class Admin_basedatos extends My_Controller {
 		$this->model = $this->basedatos;
 		$this->base_url = "/admin/basedatos/";
 	}
-	
+
 
 	function index(){
 		parent::index();
@@ -19,7 +19,7 @@ class Admin_basedatos extends My_Controller {
 			'links' => $this->pagination->create_links(),
 			'errors' => $this->session->flashdata('error')
 		);
-		$this->load->view('/admin/basedatos',$data);	
+		$this->load->view('/admin/basedatos',$data);
 	}
 	function edit($id=null){
 		parent::edit();
@@ -30,15 +30,15 @@ class Admin_basedatos extends My_Controller {
 					'basedato' => $basedato,
 					'errors' => $this->session->flashdata('error')
 				);
-				$this->load->view('/admin/basedato',$data);	
+				$this->load->view('/admin/basedato',$data);
 			}else{
 				redirect('/admin/basedatos');
 			}
 		}else{
 			redirect('/admin/basedatos');
 		}
-		
-		
+
+
 	}
 
 	function add(){
@@ -47,45 +47,45 @@ class Admin_basedatos extends My_Controller {
 			'errors' => $this->session->flashdata('errors'),
 			'basedato'=>false
 		);
-		$this->load->view('/admin/basedato',$data);	
+		$this->load->view('/admin/basedato',$data);
 	}
 
 	function save(){
 		parent::save();
 		if($_SERVER['REQUEST_METHOD']==='POST'){
 			$data = $this->input->post(NULL,TRUE);
-			
+
 			$insert = array(
 				'titulo' => $data['titulo'],
 				'url' => $data['url'],
 				'descripcion' => $data['descripcion'],
 				'locked' => array_key_exists('bloqueado',$data) ? '1':'0'
 			);
-			// if(array_key_exists('imagen', $data)){
+			if(array_key_exists('imagen', $data)){
 				$result = $this->uploadImage($insert['titulo'],$insert['descripcion']);
 				if(!$result['error']){
 					$insert['imagen'] =  $result['data'];
 				}else{
 					$error = array('error' => $result['error']);
 					$this->session->set_flashdata('errors',$error);
-					redirect('/admin/basedatos/new');	
-				}	
-			// }
-			
-			
+					redirect('/admin/basedatos/new');
+				}
+			}
+
+
 			if(isset($data['id'])){
 				$this->model->update($data['id'],$insert);
 			}else{
-				$result = $this->model->insert($insert);	
+				$result = $this->model->insert($insert);
 				if(!$result){
-					$this->session->set_flashdata('errors',array('Required fields'));	
+					$this->session->set_flashdata('errors',array('Required fields'));
 					redirect('/admin/basedatos/new');
-					return;		
+					return;
 				}
-				
+
 			}
 		}
-		
+
 		redirect('/admin/basedatos',true);
 	}
 

@@ -61,13 +61,15 @@ class Admin_categorias extends My_Controller {
         'descripcion' => $data['descripcion']
       );
 
-      $result = $this->uploadImage($insert['titulo'],$insert['descripcion']);
-      if(!$result['error']){
-        $insert['imagen'] =  $result['data'];
-      }else{
-        $error = array('error' => $result['error']);
-        $this->session->set_flashdata('errors',$error);
-        redirect('/admin/categorias-ebooks/new');
+      if(array_key_exists('imagen', $data)){
+        $result = $this->uploadImage($insert['titulo'],$insert['descripcion']);
+        if(!$result['error']){
+          $insert['imagen'] =  $result['data'];
+        }else{
+          $error = array('error' => $result['error']);
+          $this->session->set_flashdata('errors',$error);
+          redirect('/admin/categorias-ebooks/new');
+        }
       }
 
       if(isset($data['id'])){

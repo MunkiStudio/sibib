@@ -26,13 +26,13 @@
 		<span>
 			<a class="buttons btn-secondary" href="/admin/noticias"><img src="<?php echo base_url() ?>resources/images/admin/back.png"/>Volver</a>
 			<?php if($noticia): ?>
-			<a class="buttons btn-primary" href="/noticias/show/<?php echo $noticia->ID; ?>"><img src="<?php echo base_url() ?>resources/images/admin/view_white.png"/>Ver</a>
+			<a class="buttons btn-primary" href="/noticias/show/<?php echo $noticia->id; ?>"><img src="<?php echo base_url() ?>resources/images/admin/view_white.png"/>Ver</a>
 			<?php endif; ?>
 		</span>
 		<?php if($noticia): ?>
 		<span class="btn-right">
 			<form method="POST" action="/admin/noticias/delete">
-			<input type="hidden" value="<?php echo $noticia->ID?>" name="id" >
+			<input type="hidden" value="<?php echo $noticia->id?>" name="id" >
 			<button type="submit" class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</button>
 			</form>
 		</span>
@@ -40,7 +40,7 @@
 	</div>
 	<form method="post" action="/admin/noticias/save" enctype="multipart/form-data" />
 		<?php if($noticia): ?>
-			<input type="hidden" name="id" value="<?php echo $noticia->ID;?>">
+			<input type="hidden" name="id" value="<?php echo $noticia->id;?>">
 		<?php endif; ?>
 
 		<div class="inputs">
