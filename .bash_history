@@ -127,3 +127,24 @@ git stash
 git pull
 git stash pop
 exit
+git st
+ls
+git log
+ls
+git stash list
+git co deploy
+git checkout deploy
+git stash
+git checkout deploy
+ls
+git checkout master
+ls application/libraries/
+mv application/libraries/phpFlickr.php application/libraries/phpflickr.php
+nano application/views/admin/dashboard.php 
+exit
+ls
+git pull
+git log
+git branch
+ls
+exit

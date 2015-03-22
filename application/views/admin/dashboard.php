@@ -16,13 +16,13 @@
 			</div>
 		</a>
 	</div>
-	<div class="sections">
+<!--	<div class="sections">
 		<a href="/admin/links">
 			<div class="btn-section">
 				<h4>Links</h4>
 			</div>
 		</a>
-	</div>
+	</div>-->
   <div class="sections">
     <a href="/admin/categorias-ebooks">
       <div class="btn-section">
