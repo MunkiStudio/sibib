@@ -57,13 +57,15 @@ class Admin_noticias extends MY_Controller {
 				'contenido' => $data['contenido'],
 			);
 
-      $result = $this->uploadImage($insert['titulo'],'Noticia en Sibib');
-      if(!$result['error']){
-        $insert['imagen'] =  $result['data'];
-      }else{
-        $error = $result['error'];
-        $this->session->set_flashdata('errors',$error);
-        redirect('/admin/noticias/new');
+      if(array_key_exists('imagen', $data)){
+        $result = $this->uploadImage($insert['titulo'],'Noticia en Sibib');
+        if(!$result['error']){
+          $insert['imagen'] =  $result['data'];
+        }else{
+          $error = $result['error'];
+          $this->session->set_flashdata('errors',$error);
+          redirect('/admin/noticias/new');
+        }
       }
 
 

@@ -63,16 +63,16 @@ class Admin_otrosrepos extends My_Controller {
 				'descripcion' => $data['descripcion'],
 				'locked' => array_key_exists('bloqueado',$data) ? '1':'0'
 			);
-			// if(array_key_exists('imagen', $data)){
+			if(array_key_exists('imagen', $data)){
 				$result = $this->uploadImage($insert['titulo'],$insert['descripcion']);
 				if(!$result['error']){
 					$insert['imagen'] =  $result['data'];
 				}else{
-					$error = array('error' => $result['error']);
+					$error = $result['error'];
 					$this->session->set_flashdata('errors',$error);
 					redirect('/admin/otrosrepos/new');
 				}
-			// }
+			}
 
 
 			if(isset($data['id'])){
