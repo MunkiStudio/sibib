@@ -65,15 +65,17 @@ class Admin_ebooks extends My_Controller {
 				'autor' => $data['autor'],
 				'url' => $data['url'],
 				'year' => $data['year'],
-				'descripcion' => $data['descripcion']
+				'descripcion' => $data['descripcion'],
+				'categoria' => $data['categoria']
 			);
 
-      if(array_key_exists('imagen', $data)){
+      //if(array_key_exists('imagen', $data)){
+			if (!empty($_FILES['userfile']['imagen'])) {
   			$result = $this->uploadImage($insert['titulo'],$insert['descripcion']);
   			if(!$result['error']){
   				$insert['imagen'] =  $result['data'];
   			}else{
-  				$error = array('error' => $result['error']);
+  				$error = $result['error'];
   				$this->session->set_flashdata('errors',$error);
   				redirect('/admin/ebooks/new');
   			}
