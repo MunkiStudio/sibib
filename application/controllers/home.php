@@ -16,7 +16,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 
-		$noticias = $this->news->limit(1)->get_all();
+		$noticias = $this->news->limit(1)->order_by('updated_at','desc')->get_all();
 		$data = array(
 			'images_folder' => '/resources/images/',
 			'noticias' => $noticias

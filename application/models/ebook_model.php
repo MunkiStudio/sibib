@@ -14,7 +14,10 @@ class Ebook_model extends MY_Model{
 			'rules' => 'required'),
 		array('field' => 'year',
 			'label' => 'year',
-			'rules' => 'required')
+			'rules' => 'required'),
+			array('field' => 'categoria',
+				'label' => 'categoria',
+				'rules' => 'required')
 	);
 
   public $belongs_to = array('categoria' => array('model' => 'categoria_model'));

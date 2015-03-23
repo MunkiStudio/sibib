@@ -49,7 +49,8 @@ class Admin_ebooks extends My_Controller {
 		$data = array(
 			'errors' => $this->session->flashdata('errors'),
 			'token' => $this->session->flashdata('token'),
-			'ebook'=>false
+			'ebook'=>false,
+			'categorias' => $this->categorias->get_all()
 		);
 		$this->load->view('/admin/ebook',$data);
 	}

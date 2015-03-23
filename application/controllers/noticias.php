@@ -23,7 +23,7 @@ class Noticias extends CI_Controller {
 		$this->pagination->initialize($config);
 		$data = array(
 			'images_folder' => '/resources/images/',
-			'noticias' => $this->news->limit($this->config->item('per_page'),$this->uri->segment(2))->get_all(),
+			'noticias' => $this->news->limit($this->config->item('per_page'),$this->uri->segment(2))->order_by('updated_at','desc')->get_all(),
 			'links' => $this->pagination->create_links()
 		);
 		$this->load->view('noticias',$data);

@@ -42,7 +42,7 @@
 		<?php endif; ?>
     <div class="inputs">
       <label for="">Categoría</label>
-      <select name="categoria">
+			<select name="categoria">
       <?php foreach($categorias as $categoria): ?>
         <option value="<?php echo $categoria->id;?>"><?php echo $categoria->titulo; ?></option>
 

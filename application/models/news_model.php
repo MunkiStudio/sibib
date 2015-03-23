@@ -10,4 +10,8 @@ class News_model extends MY_Model{
 			'label' => 'contenido',
 			'rules' => 'required')
 	);
+
+	public $before_create = array( 'created_at', 'updated_at' );
+  public $before_update = array( 'updated_at' );
+
 }
