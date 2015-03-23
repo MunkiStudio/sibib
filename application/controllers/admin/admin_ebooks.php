@@ -70,7 +70,7 @@ class Admin_ebooks extends My_Controller {
 			);
 
       //if(array_key_exists('imagen', $data)){
-			if (!empty($_FILES['userfile']['imagen'])) {
+			if (!empty($_FILES['imagen']['name'])) {
   			$result = $this->uploadImage($insert['titulo'],$insert['descripcion']);
   			if(!$result['error']){
   				$insert['imagen'] =  $result['data'];

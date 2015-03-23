@@ -63,7 +63,7 @@ class Admin_otrosrepos extends My_Controller {
 				'descripcion' => $data['descripcion'],
 				'locked' => array_key_exists('bloqueado',$data) ? '1':'0'
 			);
-			if(array_key_exists('imagen', $data)){
+			if (!empty($_FILES['imagen']['name'])) {
 				$result = $this->uploadImage($insert['titulo'],$insert['descripcion']);
 				if(!$result['error']){
 					$insert['imagen'] =  $result['data'];

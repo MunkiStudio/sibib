@@ -30,7 +30,7 @@ class Admin_categorias extends My_Controller {
           'ebook' => $ebook,
           'errors' => $this->session->flashdata('error')
         );
-        $this->load->view('/admin/categorias-ebook',$data);
+        $this->load->view('/admin/categoria-ebook',$data);
       }else{
         redirect('/admin/categorias-ebooks');
       }
@@ -61,7 +61,7 @@ class Admin_categorias extends My_Controller {
         'descripcion' => $data['descripcion']
       );
 
-      if(array_key_exists('imagen', $data)){
+      if (!empty($_FILES['imagen']['name'])) {
         $result = $this->uploadImage($insert['titulo'],$insert['descripcion']);
         if(!$result['error']){
           $insert['imagen'] =  $result['data'];
