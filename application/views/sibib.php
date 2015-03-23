@@ -306,6 +306,8 @@
     					<br />
     					<label for="cargo" class="cargo">Administrativo</label>
     					<br />
+              <label for="cargo" class="cargo">B. Talca</label>
+              <br />
     					<a href="mailto:aacuna@ucm.cl" for="email" class="contacto">aacuna@ucm.cl</a>
     					<br />
     					<label for="telefono" class="contacto">+56-71-2203333</label>
@@ -323,6 +325,8 @@
     					<br />
     					<label for="cargo" class="cargo">Administrativo</label>
     					<br />
+              <label for="cargo" class="cargo">B. Talca</label>
+              <br />
     					<a href="mailto:mnorambuena@ucm.cl" for="email" class="contacto">mnorambuena@ucm.cl</a>
     					<br />
     					<label for="telefono" class="contacto">+56-71-2203333</label>
@@ -342,6 +346,8 @@
     					<br />
     					<label for="cargo" class="cargo">Administrativo</label>
     					<br />
+              <label for="cargo" class="cargo">B. Talca</label>
+              <br />
     					<a href="mailto:jrojas@ucm.cl" for="email" class="contacto">jrojas@ucm.cl</a>
     					<br />
     					<label for="telefono" class="contacto">+56-71-2203333</label>
@@ -359,6 +365,8 @@
     					<br />
     					<label for="cargo" class="cargo">Administrativo</label>
     					<br />
+              <label for="cargo" class="cargo">B. Talca</label>
+              <br />
     					<a href="mailto:jtoledo@ucm.cl" for="email" class="contacto">jtoledo@ucm.cl</a>
     					<br />
     					<label for="telefono" class="contacto">+56-71-2203333</label>
@@ -376,6 +384,8 @@
     					<br />
     					<label for="cargo" class="cargo">Administrativo</label>
     					<br />
+              <label for="cargo" class="cargo">B. Talca</label>
+              <br />
     					<a href="mailto:jbeltran@ucm.cl" for="email" class="contacto">jbeltran@ucm.cl</a>
     					<br />
     					<label for="telefono" class="contacto">+56-71-2203333</label>
@@ -395,6 +405,8 @@
               <br />
               <label for="cargo" class="cargo">Administrativo</label>
               <br />
+              <label for="cargo" class="cargo">B. Talca</label>
+              <br />
               <a href="mailto:wrojas@ucm.cl" for="email" class="contacto">wrojas@ucm.cl</a>
               <br />
               <label for="telefono" class="contacto">+56-71-2203316</label>
@@ -403,35 +415,41 @@
           <div class="equipo">
             <div class="img-equipo">
               <figure>
-                <img src="<?php echo $images_folder; ?>/sibib/equipo/Guillermo Mendoza.jpg" alt="" />
+                <img src="<?php echo $images_folder; ?>/sibib/equipo/Maximo Navarro.jpg" alt="" />
               </figure>
             </div>
             <div class="info-equipo">
-              <label for="nombre" class="nombre">Guillermo Mendoza Castro</label>
+            <label for="nombre" class="nombre">Máximo Navarro Contreras</label>
+             <br />
+             <label for="cargo" class="cargo">Administrativo</label>
+             <br />
+             <label for="cargo" class="cargo">B. Talca</label>
               <br />
-              <label for="cargo" class="cargo">Administrativo</label>
-              <br />
-              <a href="mailto:gmendoz@ucm.cl" for="email" class="contacto">gmendoz@ucm.cl</a>
-              <br />
-              <label for="telefono" class="contacto">+56-75-2413633</label>
-            </div>
+             <a href="mailto:mnavarro@ucm.cl" for="email" class="contacto">mnavarro@ucm.cl</a>
+             <br />
+             <label for="telefono" class="contacto">+56-71-2203333</label>
+           </div>
+
           </div>
 
           <div class="equipo">
            <div class="img-equipo">
              <figure>
-               <img src="<?php echo $images_folder; ?>/sibib/equipo/Maximo Navarro.jpg" alt="" />
+               <img src="<?php echo $images_folder; ?>/sibib/equipo/Guillermo Mendoza.jpg" alt="" />
+
              </figure>
            </div>
-           <div class="info-equipo">
-            <label for="nombre" class="nombre">Máximo Navarro Contreras</label>
-             <br />
-             <label for="cargo" class="cargo">Administrativo</label>
-             <br />
-             <a href="mailto:mnavarro@ucm.cl" for="email" class="contacto">mnavarro@ucm.cl</a>
-             <br />
-             <label for="telefono" class="contacto">+56-71-2203333</label>
-           </div>
+          <div class="info-equipo">
+              <label for="nombre" class="nombre">Guillermo Mendoza Castro</label>
+              <br />
+              <label for="cargo" class="cargo">Administrativo</label>
+              <br />
+              <label for="cargo" class="cargo">B. Huilquilemu</label>
+              <br />
+              <a href="mailto:gmendoz@ucm.cl" for="email" class="contacto">gmendoz@ucm.cl</a>
+              <br />
+              <label for="telefono" class="contacto">+56-75-2413633</label>
+            </div>
          </div>
         </div>
 
@@ -468,6 +486,8 @@
     					<br />
     					<label for="cargo" class="cargo">Administrativa</label>
     					<br />
+              <label for="cargo" class="cargo">B. Curico</label>
+              <br />
     					<a href="mailto:csilva@ucm.cl" for="email" class="contacto">csilva@ucm.cl</a>
     					<br />
     					<label for="telefono" class="contacto">+56-75-2203111</label>
@@ -485,6 +505,8 @@
     					<br />
     					<label for="cargo" class="cargo">Administrativo</label>
     					<br />
+              <label for="cargo" class="cargo">B. Curico</label>
+              <br />
     					<a href="mailto:jramirez@ucm.cl" for="email" class="contacto">jramirez@ucm.cl</a>
     					<br />
     					<label for="telefono" class="contacto">+56-75-2203137</label>
@@ -504,6 +526,8 @@
     					<br />
     					<label for="cargo" class="cargo">Administrativo</label>
     					<br />
+              <label for="cargo" class="cargo">B. Curico</label>
+              <br />
     					<a href="mailto:rbravo@ucm.cl" for="email" class="contacto">rbravo@ucm.cl</a>
     					<br />
     					<label for="telefono" class="contacto">+56-75-2203135</label>
@@ -521,6 +545,8 @@
     					<br />
     					<label for="cargo" class="cargo">Administrativa</label>
     					<br />
+              <label for="cargo" class="cargo">B. Los Niches</label>
+              <br />
     					<a href="mailto:ccastro@ucm.cl" for="email" class="contacto">ccastro@ucm.cl</a>
     					<br />
     					<label for="telefono" class="contacto">+56-75-2203617</label>
@@ -537,6 +563,8 @@
     					<br />
     					<label for="cargo" class="cargo">Administrativa</label>
     					<br />
+              <label for="cargo" class="cargo">B. Los Niches</label>
+              <br />
     					<a href="mailto:mcampos@ucm.cl" for="email" class="contacto">mcampos@ucm.cl</a>
     					<br />
     					<label for="telefono" class="contacto">+56-75-2203617</label>
