@@ -49,8 +49,10 @@ class MY_Controller extends CI_Controller{
         }else{
           unlink($path);
 
-        $data = $this->phpflickr->photos_getSizes($data);
-        return array('error'=>false,'data' =>$data[5]['source']);
+          $data = $this->phpflickr->photos_getSizes($data);
+          $url = $data[sizeof($data)-1]['source'];
+          return array('error'=>false,'data' =>$url);
+
         }
       }
 
