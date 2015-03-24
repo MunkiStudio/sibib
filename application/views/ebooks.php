@@ -46,7 +46,7 @@
 		<?php foreach($ebooks as $ebook ): ?>
       <a href="<?php echo $ebook->url; ?>" target="_blank" class="btn-link">
         <div class="btn-content">
-          <figure class="img-link" style="position: relative;left: -40px;">
+          <figure class="ebook" style="position: relative;left: -40px;">
             <?php if($ebook->imagen): ?>
               <img src="<?php echo $ebook->imagen;?>" alt="" />
             <?php else: ?>

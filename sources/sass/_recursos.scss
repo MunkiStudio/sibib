@@ -26,12 +26,24 @@
 	width: 100%;
 	overflow: hidden;
 	margin-bottom: 15px;
-	img {
+  img {
 		max-width: 100%;
 		height: auto;
 	}
 }
 
+
+figure.ebook{
+  min-height: 150px;
+  max-height: 250px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 15px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 .icon-link {
 	height: 150px;
