@@ -13,6 +13,11 @@
 			@include montserrat(14px, $gray-base);
 			text-transform: capitalize;
 		}
+    hr {
+    border: 1px solid $light-gray;
+    width: 80px;
+    margin: 5px auto;
+  }
 	}
 }
 
@@ -242,15 +247,17 @@
 			max-height: 100%;
 		}
 	}
-	.title-ebook {
-		@include droid-serif(14px, $gray-base);
-	}
-	hr {
-		border: 1px solid $light-gray;
-		width: 80px;
-		margin: 5px auto;
-	}
-	.author-ebook {
-		@include open-sans(400, 13px, $light-gray);
-	}
+  hr {
+    border: 1px solid $light-gray;
+    width: 80px;
+    margin: 5px auto;
+  }
 }
+.title-ebook {
+	@include droid-serif(14px, $gray-base);
+}
+
+.author-ebook {
+	@include open-sans(400, 13px, $light-gray);
+}
+
