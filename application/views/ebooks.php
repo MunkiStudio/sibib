@@ -44,21 +44,21 @@
 			No se encontraron resultados
 		<?php endif; ?>
 		<?php foreach($ebooks as $ebook ): ?>
-		<a href="<?php echo $ebook->url; ?>" target="_blank">
-		<div class="ebook">
-			<figure>
-				<?php if($ebook->imagen): ?>
-					<img src="<?php echo $ebook->imagen;?>" alt="" />
-				<?php else: ?>
-					<img src="<?php echo $images_folder ?>cover-ebooks/cover-test.png" alt="" />
-				<?php endif; ?>
-			</figure>
-			<label for="" class="title-ebook"><?php echo $ebook->titulo;?></label>
-			<hr />
-			<label for="" class="author-ebook"><?php echo $ebook->autor;?></label>
-			<div class="p-standard"><?php echo $ebook->descripcion;?></div>
-		</div>
-		</a>
+  		<a href="<?php echo $ebook->url; ?>" target="_blank">
+    		<div class="ebook">
+    			<figure>
+    				<?php if($ebook->imagen): ?>
+    					<img src="<?php echo $ebook->imagen;?>" alt="" />
+    				<?php else: ?>
+    					<img src="<?php echo $images_folder ?>cover-ebooks/cover-test.png" alt="" />
+    				<?php endif; ?>
+    			</figure>
+    			<label for="" class="title-ebook"><?php echo $ebook->titulo;?></label>
+    			<hr />
+    			<label for="" class="author-ebook"><?php echo $ebook->autor;?></label>
+    			<div class="p-standard"><?php echo word_limiter($ebook->descripcion,10); ?>...</div>
+    		</div>
+  		</a>
 		<?php endforeach; ?>
 
 	</div>

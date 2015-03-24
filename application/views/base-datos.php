@@ -43,7 +43,7 @@
 					</figure>
 					<div class="content-link">
 						<label for=""><?php echo $bd->titulo; ?></label>
-						<p class="p-standard"><?php echo $bd->descripcion; ?></p>
+						<p class="p-standard"><?php echo word_limiter($bd->descripcion,10); ?>...</p>
 						<?php if($bd->locked): ?>
 						<div class="simptip-position-top simptip-fade" data-tooltip="Recurso protegido">
 							<img src="<?php echo $images_folder ?>icons/icon-lock.png" alt="" />
