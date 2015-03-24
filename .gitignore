@@ -9,3 +9,5 @@ uploads/*
 sources/sass/.sass-cache
 http-access_log
 http-error_log
+.nano_history
+.bash_history

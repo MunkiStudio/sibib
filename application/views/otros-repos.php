@@ -46,7 +46,7 @@
             <br />
             <?php if($otrorepo->locked): ?>
             <div class="simptip-position-top simptip-fade" data-tooltip="Recurso protegido">
-              <img src="<?php echo $images_folder ?>icons/icon-lock.png" alt="" />
+		<img src="<?php echo $images_folder ?>icons/icon-lock.png" alt="<?php echo $otrorepo->locked ?>" />
             </div>
             <?php else: ?>
               <div class="simptip-position-top simptip-fade" data-tooltip="Recurso publico">
