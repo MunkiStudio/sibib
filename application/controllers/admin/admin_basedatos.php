@@ -59,7 +59,7 @@ class Admin_basedatos extends My_Controller {
 				'titulo' => $data['titulo'],
 				'url' => $data['url'],
 				'descripcion' => $data['descripcion'],
-				'locked' => array_key_exists('bloqueado',$data) ? '1':'0'
+				'locked' => isset($data['bloqueado']) ? 1:0
 			);
 			if (!empty($_FILES['imagen']['name'])) {
 				$result = $this->uploadImage($insert['titulo'],$insert['descripcion']);

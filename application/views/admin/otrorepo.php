@@ -56,9 +56,9 @@
 		<div class="inputs">
 			<label>Bloqueado</label>
 			<?php if($otrorepo): ?>
-				<input name="bloqueado" type="checkbox" <?php echo ($otrorepo->locked) ? "checked": ""?>/>
+				<input name="bloqueado" type="checkbox" <?php echo ($otrorepo->locked) ? "checked": ""?> value="1"/>
 			<?php else: ?>
-				<input name="bloqueado" type="checkbox"/>
+				<input name="bloqueado" type="checkbox" value="1"/>
 			<?php endif; ?>
 		</div>
 
