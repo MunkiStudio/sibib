@@ -53,7 +53,15 @@
 								<img src="<?php echo $images_folder ?>icons/icon-unlock.png" alt="" />
 							</div>
 						<?php endif; ?>
-            <p class="p-standard"><?php echo word_limiter($bd->descripcion,10); ?>...</p>
+            <span class="p-standard">
+              <?php
+                if(str_word_count($bd->descripcion) > 10){
+                  echo word_limiter($bd->descripcion,10).'...';
+                }else{
+                  echo $bd->descripcion;
+                }
+              ?>
+            </span>
 					</div>
 				</div>
 			</a>
