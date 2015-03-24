@@ -11,7 +11,7 @@
 		border: 1px solid $gray-line;
 		label {
 			@include montserrat(14px, $gray-base);
-			text-transform: uppercase;
+			text-transform: capitalize;
 		}
 	}
 }

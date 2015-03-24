@@ -49,7 +49,7 @@
 			<div class="icon-link" id="revistas">
 				<img src="<?php echo $images_folder ?>icons/icon-revistas.png" />
 			</div>
-			<label for="">Revistas Electrónicas</label>
+			<label for="">Revistas Digitales</label>
 			</div>
 		</a>
 		<a href="/categorias" class="btn-link">
@@ -65,7 +65,7 @@
 			<div class="icon-link" id="repo">
 				<img src="<?php echo $images_folder ?>icons/icon-repo.png" />
 			</div>
-			<label for="">Repositorio UCM</label>
+			<label for="">Tesis digitales</label>
 			</div>
 		</a>
 		<a href="/otros_repos" class="btn-link">
@@ -73,7 +73,7 @@
 			<div class="icon-link" id="otros-repo">
 				<img src="<?php echo $images_folder ?>icons/icon-repo.png" />
 			</div>
-			<label for="">Otros Repositorios</label>
+			<label for="">Repositorios</label>
 			</div>
 		</a>
 		<a href="http://guiastematicas.biblioteca.ucm.cl/" target="_blank" class="btn-link">
