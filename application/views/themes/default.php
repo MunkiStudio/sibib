@@ -50,19 +50,19 @@
             <li><a href="http://atoz.ebsco.com/titles/6371">Revistas electrónicas</a></li>
             <li><a href="http://gliese.ucm.cl:8991/F/-/?func=find-b-0&local_base=UCM01">Catálogo UCM</a></li>
             <li><a href="http://sibibtest.ucm.cl/catalogos">Otros catálogos</a></li>
-            <li><a href="/recursos-por-area">Recursos por área</a></li>
-            <li><a href="/ebooks">eBooks</a></li>
-            <li><a href="#">Repositorio UCM</a></li>
-            <li><a href="/otros-repos">Otros repositorios</a></li>
+            <li><a href="http://guiastematicas.biblioteca.ucm.cl/">Guías temáticas</a></li>
+            <li><a href="/categorias">eBooks</a></li>
+            <li><a href="http://cibertesis.ucm.cl:8080/jspui/">Tesis digitales</a></li>
+            <li><a href="/otros_repos">Repositorios</a></li>
           </ul>
         </div>
         <div class="links">
           <label for="">SIBIB</label>
           <ul>
             <li><a href="/sibib">Misión</a></li>
-            <li><a href="/sibib">Descripción</a></li>
-            <li><a href="/sibib#organigrama">Organigrama</a></li>
-            <li><a href="/sibib#organigrama">Equipo</a></li>
+            <li><a href="/sibib#descripcion">Descripción</a></li>
+            <li><a href="/organigrama">Organigrama</a></li>
+            <li><a href="/organigrama#equipo">Equipo</a></li>
           </ul>
         </div>
       </div>

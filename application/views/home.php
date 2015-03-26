@@ -59,9 +59,9 @@
       <div class="links-destacamos">
         <a class="destacado"  href="http://gliese.ucm.cl:8991/F/-/?func=find-b-0&local_base=UCM01">Catálogo</a>
         <a class="destacado" href="http://gliese.ucm.cl:8991/F/-/&server;_f?func=file&file_name=login">Renovación</a>
-        <a class="destacado" href="http://sibib2.ucm.cl/bexternas.php?dbext=wos">Base de Datos</a>
-        <a class="destacado" href="/ebooks">eBooks</a>
-        <!-- <a class="destacado" href="#">Repositorio UCM</a> -->
+        <a class="destacado" href="/base_datos">Base de Datos</a>
+        <a class="destacado" href="/categorias">eBooks</a>
+        <a class="destacado" href="http://atoz.ebsco.com/titles/6371">Revistas digitales</a>
         <a class="destacado" href="http://guiastematicas.biblioteca.ucm.cl/">Guías temáticas</a>
       </div>
     </div>
