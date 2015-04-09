@@ -44,6 +44,7 @@ $route['404_override'] = '';
 /** Front**/
 $route['noticias/(:num)'] = 'noticias/index/$1';
 $route['ebooks/(:num)'] = 'ebooks/index/$1';
+$route['base_datos/(:num)'] = 'base_datos/index/$1';
 $route['ebooks/categoria/(:num)'] = 'ebooks/categoria/$1';
 
 /** Admin **/
