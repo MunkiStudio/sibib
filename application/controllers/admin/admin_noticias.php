@@ -13,8 +13,19 @@ class Admin_noticias extends MY_Controller {
 
 	function index(){
 		parent::index();
+    $this->load->config('pagination');
+    $this->load->library('pagination');
+
+    $config['total_rows'] = $this->model->count_all();
+    $config['base_url'] = base_url('/admin/noticias');
+    $config['uri_segment'] = 3;
+
+    $this->pagination->initialize($config);
+
+    $results = $this->model->limit($this->config->item('per_page'), $this->uri->segment(3))->get_all();
+
 		$data = array(
-			'noticias' => $this->model->limit($this->config->item('per_page'), $this->uri->segment(3))->get_all(),
+			'noticias' => $results,
 			'links' => $this->pagination->create_links()
 		);
 		$this->load->view('/admin/noticias',$data);

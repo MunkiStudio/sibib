@@ -29,14 +29,14 @@
 		</span>
 		<?php if($basedato): ?>
 		<span class="btn-right">
-			<form method="POST" action="/admin/basedatos/delete">
+			<form method="POST" action="/admin/basedato/delete">
 			<input type="hidden" value="<?php echo $basedato->id?>" name="id" >
 			<button type="submit" class="buttons btn-secondary"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</button>
 			</form>
 		</span>
 		<?php endif; ?>
 	</div>
-	<form method="post" action="/admin/basedatos/save" enctype="multipart/form-data" />
+	<form method="post" action="/admin/basedato/save" enctype="multipart/form-data" />
 		<?php if($basedato): ?>
 			<input type="hidden" name="id" value="<?php echo $basedato->id;?>">
 		<?php endif; ?>

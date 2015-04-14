@@ -15,9 +15,9 @@
 <div class="container">
 
 	<div class="buttons-container">
-		<a href="/admin/noticias/new" class="buttons btn-primary"><img src="<?php echo base_url() ?>resources/images/admin/plus.png"/>Nuevo</a>
+		<a href="/admin/noticia/new" class="buttons btn-primary"><img src="<?php echo base_url() ?>resources/images/admin/plus.png"/>Nuevo</a>
 		<!-- TODO USE JAVASCRIPT TO DELETE -->
-		<a class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</a>
+		<!-- <a class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</a> -->
 
 	</div>
 	<div class="list">
@@ -32,9 +32,9 @@
 				<td><input type="checkbox" name="select_news" value="<?php echo $noticia->id;?>" /></td>
 				<td><?php echo $noticia->titulo; ?></td>
 				<td>
-					<a href="/admin/noticias/<?php echo $noticia->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
+					<a href="/admin/noticia/<?php echo $noticia->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
 					<a href="/noticias/show/<?php echo $noticia->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Ver"><img src="<?php echo base_url() ?>resources/images/admin/view.png" alt="Ver" /></a>
-					<form method="POST" action="/admin/noticias/delete" class="list-inline">
+					<form method="POST" action="/admin/noticia/delete" class="list-inline">
 					<input type="hidden" value="<?php echo $noticia->id?>" name="id" >
 					<button type="submit" class="simptip-position-top simptip-fade delete" data-tooltip="Eliminar"><img src="<?php echo base_url() ?>resources/images/admin/delete.png" alt="Borrar" /></button>
 					</form>

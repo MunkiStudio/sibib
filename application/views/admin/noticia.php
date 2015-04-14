@@ -31,14 +31,14 @@
 		</span>
 		<?php if($noticia): ?>
 		<span class="btn-right">
-			<form method="POST" action="/admin/noticias/delete">
+			<form method="POST" action="/admin/noticia/delete">
 			<input type="hidden" value="<?php echo $noticia->id?>" name="id" >
 			<button type="submit" class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</button>
 			</form>
 		</span>
 		<?php endif; ?>
 	</div>
-	<form method="post" action="/admin/noticias/save" enctype="multipart/form-data" />
+	<form method="post" action="/admin/noticia/save" enctype="multipart/form-data" />
 		<?php if($noticia): ?>
 			<input type="hidden" name="id" value="<?php echo $noticia->id;?>">
 		<?php endif; ?>

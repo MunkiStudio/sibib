@@ -26,7 +26,7 @@
 	<div class="buttons-container">
 		<a href="/admin/basedato/new" class="buttons btn-primary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/plus.png"/>Nuevo</a>
 		<!-- TODO USE JAVASCRIPT TO DELETE -->
-		<a class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</a>
+		<!-- <a class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</a> -->
 
 	</div>
 	<div class="list">

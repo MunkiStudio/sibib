@@ -29,14 +29,14 @@
 		</span>
 		<?php if($ebook): ?>
 		<span class="btn-right">
-			<form method="POST" action="/admin/ebooks/delete">
+			<form method="POST" action="/admin/ebook/delete">
 			<input type="hidden" value="<?php echo $ebook->id?>" name="id" >
 			<button type="submit" class="buttons btn-secondary"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</button>
 			</form>
 		</span>
 		<?php endif; ?>
 	</div>
-	<form method="post" action="/admin/ebooks/save" enctype="multipart/form-data" />
+	<form method="post" action="/admin/ebook/save" enctype="multipart/form-data" />
 		<?php if($ebook): ?>
 			<input type="hidden" name="id" value="<?php echo $ebook->id;?>">
 		<?php endif; ?>

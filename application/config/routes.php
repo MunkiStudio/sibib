@@ -51,10 +51,11 @@ $route['ebooks/categoria/(:num)'] = 'ebooks/categoria/$1';
 $route['admin'] = "admin/admin";
 
 $route['admin/noticias'] = "admin/admin_noticias";
-$route['admin/noticias/(:num)'] = "admin/admin_noticias/edit/$1";
-$route['admin/noticias/delete'] = "admin/admin_noticias/delete";
-$route['admin/noticias/new'] = "admin/admin_noticias/add";
-$route['admin/noticias/save'] = "admin/admin_noticias/save";
+$route['admin/noticias/(:num)'] = "admin/admin_noticias";
+$route['admin/noticia/(:num)'] = "admin/admin_noticias/edit/$1";
+$route['admin/noticia/delete'] = "admin/admin_noticias/delete";
+$route['admin/noticia/new'] = "admin/admin_noticias/add";
+$route['admin/noticia/save'] = "admin/admin_noticias/save";
 
 
 $route['admin/categorias-ebooks'] = "admin/admin_categorias";
@@ -65,10 +66,11 @@ $route['admin/categorias-ebooks/save'] = "admin/admin_categorias/save";
 
 
 $route['admin/ebooks'] = "admin/admin_ebooks";
-$route['admin/ebooks/(:num)'] = "admin/admin_ebooks/edit/$1";
-$route['admin/ebooks/delete'] = "admin/admin_ebooks/delete";
-$route['admin/ebooks/new'] = "admin/admin_ebooks/add";
-$route['admin/ebooks/save'] = "admin/admin_ebooks/save";
+$route['admin/ebooks/(:num)'] = "admin/admin_ebooks";
+$route['admin/ebook/(:num)'] = "admin/admin_ebooks/edit/$1";
+$route['admin/ebook/delete'] = "admin/admin_ebooks/delete";
+$route['admin/ebook/new'] = "admin/admin_ebooks/add";
+$route['admin/ebook/save'] = "admin/admin_ebooks/save";
 
 
 $route['admin/basedatos'] = "admin/admin_basedatos";

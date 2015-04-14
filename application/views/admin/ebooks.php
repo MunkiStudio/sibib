@@ -24,9 +24,9 @@
 <div class="container">
 
 	<div class="buttons-container">
-		<a href="/admin/ebooks/new" class="buttons btn-primary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/plus.png"/>Nuevo</a>
+		<a href="/admin/ebook/new" class="buttons btn-primary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/plus.png"/>Nuevo</a>
 		<!-- TODO USE JAVASCRIPT TO DELETE -->
-		<a class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</a>
+		<!-- <a class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</a> -->
 
 	</div>
 	<div class="list">
@@ -43,8 +43,8 @@
 				<td><?php echo $ebook->titulo; ?></td>
         <td><?php echo $ebook->categoria;?></td>
 				<td>
-					<a href="/admin/ebooks/<?php echo $ebook->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
-					<form method="POST" action="/admin/ebooks/delete" class="list-inline">
+					<a href="/admin/ebook/<?php echo $ebook->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
+					<form method="POST" action="/admin/ebook/delete" class="list-inline">
 					<input type="hidden" value="<?php echo $ebook->id?>" name="id" >
 					<button type="submit" class="simptip-position-top simptip-fade delete" data-tooltip="Eliminar"><img src="<?php echo base_url() ?>resources/images/admin/delete.png" alt="Borrar" /></button>
 					</form>
