@@ -148,3 +148,40 @@ git log
 git branch
 ls
 exit
+nano application/controllers/admin/admin_otrosrepos.php 
+nano application/views/otros-repos.php 
+git st
+git status
+git co -- .bash_history
+git commit -- .bash_history
+git log
+git status
+git checkout -- .bash_history
+git checkout -- .nano_history
+nano .gitignore 
+git status
+git commit -am 'update locked configuration'
+git push origin master
+git pull
+git pull
+git pull
+nano application/config/database.php 
+git push
+git pull origin master
+git pull
+exit
+git pull
+git pull
+nano application/controllers/admin/admin_otrosrepos.php 
+ls
+nano application/views/admin/ebook.php 
+git pull
+nano application/config/database.php 
+ls
+nano application/views/base-datos.php 
+nano application/controllers/base_datos.php 
+nano application/config/routes.php 
+nano application/config/routes.php 
+nano application/config/routes.php 
+nano application/config/pagination.php 
+nano application/views/home.php 

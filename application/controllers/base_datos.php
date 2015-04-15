@@ -18,7 +18,7 @@ class Base_datos extends CI_Controller {
 	public function index()
 	{	
 		$config['total_rows'] = $this->basedatos->count_all();
-		$config['base_url'] = base_url('/basedatos');
+		$config['base_url'] = base_url('/base_datos');
 		$config['uri_segment'] = 2;
 		$this->pagination->initialize($config);
 		$basedatos = $this->basedatos->limit($this->config->item('per_page'),$this->uri->segment(2))->get_all();
