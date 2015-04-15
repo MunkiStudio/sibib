@@ -14,14 +14,14 @@ class Base_datos extends CI_Controller {
 		$this->load->library('pagination');
 		$this->load->config('pagination');
 	}
-	
+
 	public function index()
-	{	
+	{
 		$config['total_rows'] = $this->basedatos->count_all();
 		$config['base_url'] = base_url('/base_datos');
 		$config['uri_segment'] = 2;
 		$this->pagination->initialize($config);
-		$basedatos = $this->basedatos->limit($this->config->item('per_page'),$this->uri->segment(2))->get_all();
+		$basedatos = $this->basedatos->limit($this->config->item('per_page'),$this->uri->segment(2))->order_by('titulo')->get_all();
 		$data = array(
 			'images_folder' => '/resources/images/',
 			'basedatos' => $basedatos,

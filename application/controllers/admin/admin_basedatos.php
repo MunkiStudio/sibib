@@ -14,8 +14,18 @@ class Admin_basedatos extends My_Controller {
 	function index(){
 		parent::index();
 		$this->flickrInit();
-        $data = array(
-			'basedatos' => $this->model->limit($this->config->item('per_page'), $this->uri->segment(3))->get_all(),
+    $this->load->config('pagination');
+    $this->load->library('pagination');
+
+    $config['total_rows'] = $this->model->count_all();
+    $config['base_url'] = base_url('/admin/basedatos');
+    $config['uri_segment'] = 3;
+
+    $this->pagination->initialize($config);
+
+    $results = $this->model->limit($this->config->item('per_page'), $this->uri->segment(3))->order_by('titulo')->get_all();
+    $data = array(
+			'basedatos' => $results,
 			'links' => $this->pagination->create_links(),
 			'errors' => $this->session->flashdata('error')
 		);

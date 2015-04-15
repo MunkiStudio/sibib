@@ -51,10 +51,11 @@ $route['ebooks/categoria/(:num)'] = 'ebooks/categoria/$1';
 $route['admin'] = "admin/admin";
 
 $route['admin/noticias'] = "admin/admin_noticias";
-$route['admin/noticias/(:num)'] = "admin/admin_noticias/edit/$1";
-$route['admin/noticias/delete'] = "admin/admin_noticias/delete";
-$route['admin/noticias/new'] = "admin/admin_noticias/add";
-$route['admin/noticias/save'] = "admin/admin_noticias/save";
+$route['admin/noticias/(:num)'] = "admin/admin_noticias";
+$route['admin/noticia/(:num)'] = "admin/admin_noticias/edit/$1";
+$route['admin/noticia/delete'] = "admin/admin_noticias/delete";
+$route['admin/noticia/new'] = "admin/admin_noticias/add";
+$route['admin/noticia/save'] = "admin/admin_noticias/save";
 
 
 $route['admin/categorias-ebooks'] = "admin/admin_categorias";
@@ -65,23 +66,26 @@ $route['admin/categorias-ebooks/save'] = "admin/admin_categorias/save";
 
 
 $route['admin/ebooks'] = "admin/admin_ebooks";
-$route['admin/ebooks/(:num)'] = "admin/admin_ebooks/edit/$1";
-$route['admin/ebooks/delete'] = "admin/admin_ebooks/delete";
-$route['admin/ebooks/new'] = "admin/admin_ebooks/add";
-$route['admin/ebooks/save'] = "admin/admin_ebooks/save";
+$route['admin/ebooks/(:num)'] = "admin/admin_ebooks";
+$route['admin/ebook/(:num)'] = "admin/admin_ebooks/edit/$1";
+$route['admin/ebook/delete'] = "admin/admin_ebooks/delete";
+$route['admin/ebook/new'] = "admin/admin_ebooks/add";
+$route['admin/ebook/save'] = "admin/admin_ebooks/save";
 
 
 $route['admin/basedatos'] = "admin/admin_basedatos";
-$route['admin/basedatos/(:num)'] = "admin/admin_basedatos/edit/$1";
-$route['admin/basedatos/delete'] = "admin/admin_basedatos/delete";
-$route['admin/basedatos/new'] = "admin/admin_basedatos/add";
-$route['admin/basedatos/save'] = "admin/admin_basedatos/save";
+$route['admin/basedatos/(:num)'] = "admin/admin_basedatos";
+$route['admin/basedato/(:num)'] = "admin/admin_basedatos/edit/$1";
+$route['admin/basedato/delete'] = "admin/admin_basedatos/delete";
+$route['admin/basedato/new'] = "admin/admin_basedatos/add";
+$route['admin/basedato/save'] = "admin/admin_basedatos/save";
 
 $route['admin/otrosrepos'] = "admin/admin_otrosrepos";
-$route['admin/otrosrepos/(:num)'] = "admin/admin_otrosrepos/edit/$1";
-$route['admin/otrosrepos/delete'] = "admin/admin_otrosrepos/delete";
-$route['admin/otrosrepos/new'] = "admin/admin_otrosrepos/add";
-$route['admin/otrosrepos/save'] = "admin/admin_otrosrepos/save";
+$route['admin/otrosrepos/(:num)'] = "admin/admin_otrosrepos";
+$route['admin/otrosrepo/(:num)'] = "admin/admin_otrosrepos/edit/$1";
+$route['admin/otrosrepo/delete'] = "admin/admin_otrosrepos/delete";
+$route['admin/otrosrepo/new'] = "admin/admin_otrosrepos/add";
+$route['admin/otrosrepo/save'] = "admin/admin_otrosrepos/save";
 
 
 $route['admin/servicios'] = 'admin/admin_servicios';

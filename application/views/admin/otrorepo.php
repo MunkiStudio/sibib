@@ -29,14 +29,14 @@
 		</span>
 		<?php if($otrorepo): ?>
 		<span class="btn-right">
-			<form method="POST" action="/admin/otrosrepos/delete">
+			<form method="POST" action="/admin/otrosrepo/delete">
 			<input type="hidden" value="<?php echo $otrorepo->id?>" name="id" >
 			<button type="submit" class="buttons btn-secondary"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</button>
 			</form>
 		</span>
 		<?php endif; ?>
 	</div>
-	<form method="post" action="/admin/otrosrepos/save" enctype="multipart/form-data" />
+	<form method="post" action="/admin/otrosrepo/save" enctype="multipart/form-data" />
 		<?php if($otrorepo): ?>
 			<input type="hidden" name="id" value="<?php echo $otrorepo->id;?>">
 		<?php endif; ?>

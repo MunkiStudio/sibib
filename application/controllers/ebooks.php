@@ -21,7 +21,7 @@ class Ebooks extends CI_Controller {
 		$config['base_url'] = base_url('/ebooks');
 		$config['uri_segment'] = 2;
 		$this->pagination->initialize($config);
-		$ebooks = $this->ebooks->limit($this->config->item('per_page'),$this->uri->segment(2))->get_all();
+		$ebooks = $this->ebooks->limit($this->config->item('per_page'),$this->uri->segment(2))->order_by('titulo')->get_all();
 		$data = array(
 			'images_folder' => '/resources/images/',
 			'ebooks' => $ebooks,

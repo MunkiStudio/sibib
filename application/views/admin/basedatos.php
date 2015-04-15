@@ -24,40 +24,40 @@
 <div class="container">
 
 	<div class="buttons-container">
-		<a href="/admin/basedatos/new" class="buttons btn-primary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/plus.png"/>Nuevo</a>
+		<a href="/admin/basedato/new" class="buttons btn-primary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/plus.png"/>Nuevo</a>
 		<!-- TODO USE JAVASCRIPT TO DELETE -->
-		<a class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</a>
-		
+		<!-- <a class="buttons btn-secondary" href="#"><img src="<?php echo base_url() ?>resources/images/admin/delete_black.png"/>Eliminar</a> -->
+
 	</div>
 	<div class="list">
 		<table>
 			<tr>
 				<th class="check"></th>
-				<th class="title">Título</th> 
+				<th class="title">Título</th>
 				<th class="actions">Acciones</th>
 			</tr>
 			<?php foreach($basedatos as $basedato): ?>
 			<tr class="table-content">
 				<td><input type="checkbox" name="select_news" value="<?php echo $basedato->id;?>" /></td>
-				<td><?php echo $basedato->titulo; ?></td> 
+				<td><?php echo $basedato->titulo; ?></td>
 				<td>
-					<a href="/admin/basedatos/<?php echo $basedato->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
-					<form method="POST" action="/admin/basedatos/delete" class="list-inline">
+					<a href="/admin/basedato/<?php echo $basedato->id;?>" class="simptip-position-top simptip-fade" data-tooltip="Editar"><img src="<?php echo base_url() ?>resources/images/admin/edit.png" alt="Editar" /></a>
+					<form method="POST" action="/admin/basedato/delete" class="list-inline">
 					<input type="hidden" value="<?php echo $basedato->id?>" name="id" >
 					<button type="submit" class="simptip-position-top simptip-fade delete" data-tooltip="Eliminar"><img src="<?php echo base_url() ?>resources/images/admin/delete.png" alt="Borrar" /></button>
 					</form>
 				</td>
 			</tr>
 			<?php endforeach; ?>
-			
+
 		</table>
-		
+
 	</div>
 </div>
 
 <div class="container">
 		<nav class="pagination">
 			<?php echo $links; ?>
-			
+
 		</nav>
 	</div>
