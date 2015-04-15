@@ -81,10 +81,11 @@ $route['admin/basedato/new'] = "admin/admin_basedatos/add";
 $route['admin/basedato/save'] = "admin/admin_basedatos/save";
 
 $route['admin/otrosrepos'] = "admin/admin_otrosrepos";
-$route['admin/otrosrepos/(:num)'] = "admin/admin_otrosrepos/edit/$1";
-$route['admin/otrosrepos/delete'] = "admin/admin_otrosrepos/delete";
-$route['admin/otrosrepos/new'] = "admin/admin_otrosrepos/add";
-$route['admin/otrosrepos/save'] = "admin/admin_otrosrepos/save";
+$route['admin/otrosrepos/(:num)'] = "admin/admin_otrosrepos";
+$route['admin/otrosrepo/(:num)'] = "admin/admin_otrosrepos/edit/$1";
+$route['admin/otrosrepo/delete'] = "admin/admin_otrosrepos/delete";
+$route['admin/otrosrepo/new'] = "admin/admin_otrosrepos/add";
+$route['admin/otrosrepo/save'] = "admin/admin_otrosrepos/save";
 
 
 $route['admin/servicios'] = 'admin/admin_servicios';
