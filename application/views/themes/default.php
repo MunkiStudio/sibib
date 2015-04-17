@@ -49,7 +49,7 @@
             <li><a href="/base_datos">Base de datos</a></li>
             <li><a href="http://atoz.ebsco.com/titles/6371">Revistas electrónicas</a></li>
             <li><a href="http://gliese.ucm.cl:8991/F/-/?func=find-b-0&local_base=UCM01">Catálogo UCM</a></li>
-            <li><a href="http://sibibtest.ucm.cl/catalogos">Otros catálogos</a></li>
+            <li><a href="/catalogos">Otros catálogos</a></li>
             <li><a href="http://guiastematicas.biblioteca.ucm.cl/">Guías temáticas</a></li>
             <li><a href="/categorias">eBooks</a></li>
             <li><a href="http://cibertesis.ucm.cl:8080/jspui/">Tesis digitales</a></li>
@@ -74,7 +74,7 @@
         <nav>
           <a href="http://www.sibib.ucm.cl/acreditacion/login.php">Acreditación</a>
           <a href="/resources/Reglamento SIBIB.docx">Reglamento</a>
-          <a href="http://sibibtest.ucm.cl/resources/Reglamento%20SIBIB.docx">Normativas</a>
+          <a href="http://bmo.ucm.cl">Normativas</a>
         </nav>
       </div>
     </div>
