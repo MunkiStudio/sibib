@@ -45,7 +45,7 @@
 			<label for="">Normativas</label>
 			</div>
 		</a>
-		<a href="http://sibib.ucm.cl/descargas/Formulario_BMO_BC.xls" class="btn-link">
+		<a href="http://bmo.ucm.cl" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="datos">
 				<img src="<?php echo $images_folder ?>icons/icon-revistas.png" />

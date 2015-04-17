@@ -28,14 +28,14 @@
 			<img src="<?php echo $images_folder ?>icons/icon-ebooks.png" alt="" />
 			<h1 class="title-section">Ebooks</h1>
 			<hr class="title-line" />
-			<div class="search-bar">
+			<!--<div class="search-bar">
 				<form action="<?php echo site_url('ebooks/search');?>" method="post">
 				<input type="" name="search" placeholder="¿Buscas alguno en particular?" autofocus="true"/>
 					<button type="submit" class="btn-search">
 						<img id="btn-icon" style="position: relative;top: -7px;left: -8px;" src="<?php echo $images_folder ?>icons/icon-search.png" alt="search" />
 					</button>
 				</form>
-			</div>
+			</div>-->
 		</div>
 	</div>
 
@@ -56,7 +56,7 @@
           <div class="content-link">
             <label for="" class="title-ebook"><?php echo $ebook->titulo;?></label>
           <hr />
-          <label for="" class="author-ebook">Autor: <?php echo $ebook->autor;?></label>
+          <!--<label for="" class="author-ebook">Autor: <?php echo $ebook->autor;?></label>-->
           <div class="p-standard">
             <?php
                 if(str_word_count($ebook->descripcion) > 10){
