@@ -33,7 +33,7 @@
           <label for="">Gestión</label>
           <ul>
             <li><a href="/informacion">Gestión</a></li>
-            <li><a href="http://sibib.ucm.cl/descargas/Formulario_BMO_BC.xls">Solicitud de Bibliografía</a></li>
+            <li><a href="http://bmo.ucm.cl">Solicitud de Bibliografía</a></li>
           </ul>
         </div>
         <div class="links">

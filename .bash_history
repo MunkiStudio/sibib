@@ -185,3 +185,27 @@ nano application/config/routes.php
 nano application/config/routes.php 
 nano application/config/pagination.php 
 nano application/views/home.php 
+git st
+git status
+git commit -am 'fixes'
+git push origin master
+git pull
+nano application/views/home.php 
+nano application/views/base-datos.php
+nano application/views/base-datos.php
+nano application/config/pagination.php
+git st
+git status
+git commit -am 'merging'
+git push origin master
+ls
+git st
+git status
+git pull
+ls resources/images/
+ls resources/images/
+exit
+git pull
+exit
+git pull
+nano application/views/themes/default.php 
