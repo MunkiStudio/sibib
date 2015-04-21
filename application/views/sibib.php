@@ -31,7 +31,7 @@
 		</div>
 
 		<div class="container title">
-			<img class="img-section" src="<?php echo $images_folder ?>sibib/mision.png" alt="" />
+			<img class="img-section" src="<?php echo $images_folder ?>sibib/mision.jpg" alt="" />
 			<div class="info-section">
 				<h3>Misión</h3>
 				<p class="p-standard">Al interior de la Universidad, el Sistema de Bibliotecas tiene como misión colaborar en el logro de la excelencia académica y en la formación integral humana y profesional, apoyando la docencia, investigación y extensión y facilitando a la comunidad universitaria el acceso oportuno y expedito a recursos de información, mediante la implementación de servicios de alta calidad tanto internos como externos, locales como virtuales.</p>
@@ -48,7 +48,7 @@
 					<br /><br />
 					Entre los servicios que se ofrecen destacan: el Catálogo Electrónico vía web, Metabuscador de recursos de información, Préstamo de material bibliográfico, Información y referencia, Capacitación de Usuarios, Provisión de documentos, Acceso a bases de datos generales y especializadas, servicio de biblioteca virtual, boletín informativo, entre otros.</p>
 				</div>
-				<img class="img-section" src="<?php echo $images_folder ?>sibib/descripcion.png" alt="" />
+				<img class="img-section" src="<?php echo $images_folder ?>sibib/descripcion.jpg" alt="" />
 			</div>
 		</div>
 	</div>
