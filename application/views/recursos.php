@@ -60,7 +60,7 @@
 			<label for="">E-BOOKS</label>
 			</div>
 		</a>
-		<a href="http://cibertesis.ucm.cl:8080/jspui/" class="btn-link" target="_blank">
+		<a href="http://dspace2.ucm.cl:8080/jspui/" class="btn-link" target="_blank">
 			<div class="btn-content">
 			<div class="icon-link" id="repo">
 				<img src="<?php echo $images_folder ?>icons/icon-repo.png" />

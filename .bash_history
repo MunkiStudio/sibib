@@ -209,3 +209,9 @@ git pull
 exit
 git pull
 nano application/views/themes/default.php 
+git st
+git status
+git comit -am 'fixes'
+git commit -am 'fixes'
+git pull
+exit

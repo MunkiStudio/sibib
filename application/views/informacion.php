@@ -21,7 +21,7 @@
 	</div>
 
 	<div class="container small">
-		<a href="http://www.sibib.ucm.cl/acreditacion/login.php" class="btn-link">
+		<a href="/construccion" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="ebooks">
 				<img src="<?php echo $images_folder ?>icons/icon-revistas.png" />
@@ -29,7 +29,7 @@
 			<label for="">Acreditación</label>
 			</div>
 		</a>
-		<a href="http://www.sibib.ucm.cl/adquisiciones/titulos/tituloss.php" class="btn-link">
+		<a href="/construccion" class="btn-link">
 			<div class="btn-content">
 			<div class="icon-link" id="area">
 				<img src="<?php echo $images_folder ?>icons/icon-revistas.png" />
