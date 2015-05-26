@@ -92,7 +92,7 @@
     <!-- Your right Slidebar content. -->
     <ul class="nav-mobile">
       <ul class="nav-mobile">
-        <li><label class="mobile-link mobile-selected">Inicio</label></li>
+        <li><label class="mobile-link mobile-selected" href="/">Inicio</label></li>
         <li><a class="mobile-link" href="/noticias">Noticias</a></li>
         <li><a class="mobile-link" href="/sibib">SIBIB</a></li>
         <li><a class="mobile-link" href="/recursos">Recursos de Información</a></li>
